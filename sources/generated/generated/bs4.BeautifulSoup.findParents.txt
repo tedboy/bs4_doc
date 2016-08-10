@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.findParents
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.findParents

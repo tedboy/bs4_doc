@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13.1.4. bs4.Comment &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="13. bs4" href="../bs4.html"/>
+        <link rel="next" title="13.1.4.1. bs4.Comment.name" href="bs4.Comment.name.html"/>
+        <link rel="prev" title="13.1.3.93. bs4.CData.zfill" href="bs4.CData.zfill.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bs4.html">13. bs4</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bs4.html#classes">13.1. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulSoup.html">13.1.1. bs4.BeautifulSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulStoneSoup.html">13.1.2. bs4.BeautifulStoneSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.CData.html">13.1.3. bs4.CData</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">13.1.4. bs4.Comment</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.name.html">13.1.4.1. bs4.Comment.name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.next.html">13.1.4.2. bs4.Comment.next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.nextSibling.html">13.1.4.3. bs4.Comment.nextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.next_elements.html">13.1.4.4. bs4.Comment.next_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.next_siblings.html">13.1.4.5. bs4.Comment.next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.parents.html">13.1.4.6. bs4.Comment.parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.previous.html">13.1.4.7. bs4.Comment.previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.previousSibling.html">13.1.4.8. bs4.Comment.previousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.previous_elements.html">13.1.4.9. bs4.Comment.previous_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.previous_siblings.html">13.1.4.10. bs4.Comment.previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.append.html">13.1.4.11. bs4.Comment.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.capitalize.html">13.1.4.12. bs4.Comment.capitalize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.center.html">13.1.4.13. bs4.Comment.center</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.count.html">13.1.4.14. bs4.Comment.count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.decode.html">13.1.4.15. bs4.Comment.decode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.encode.html">13.1.4.16. bs4.Comment.encode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.endswith.html">13.1.4.17. bs4.Comment.endswith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.expandtabs.html">13.1.4.18. bs4.Comment.expandtabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.extract.html">13.1.4.19. bs4.Comment.extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.fetchNextSiblings.html">13.1.4.20. bs4.Comment.fetchNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.fetchParents.html">13.1.4.21. bs4.Comment.fetchParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.fetchPrevious.html">13.1.4.22. bs4.Comment.fetchPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.fetchPreviousSiblings.html">13.1.4.23. bs4.Comment.fetchPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find.html">13.1.4.24. bs4.Comment.find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findAllNext.html">13.1.4.25. bs4.Comment.findAllNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findAllPrevious.html">13.1.4.26. bs4.Comment.findAllPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findNext.html">13.1.4.27. bs4.Comment.findNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findNextSibling.html">13.1.4.28. bs4.Comment.findNextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findNextSiblings.html">13.1.4.29. bs4.Comment.findNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findParent.html">13.1.4.30. bs4.Comment.findParent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findParents.html">13.1.4.31. bs4.Comment.findParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findPrevious.html">13.1.4.32. bs4.Comment.findPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findPreviousSibling.html">13.1.4.33. bs4.Comment.findPreviousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.findPreviousSiblings.html">13.1.4.34. bs4.Comment.findPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_all_next.html">13.1.4.35. bs4.Comment.find_all_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_all_previous.html">13.1.4.36. bs4.Comment.find_all_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_next.html">13.1.4.37. bs4.Comment.find_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_next_sibling.html">13.1.4.38. bs4.Comment.find_next_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_next_siblings.html">13.1.4.39. bs4.Comment.find_next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_parent.html">13.1.4.40. bs4.Comment.find_parent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_parents.html">13.1.4.41. bs4.Comment.find_parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_previous.html">13.1.4.42. bs4.Comment.find_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_previous_sibling.html">13.1.4.43. bs4.Comment.find_previous_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.find_previous_siblings.html">13.1.4.44. bs4.Comment.find_previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.format.html">13.1.4.45. bs4.Comment.format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.format_string.html">13.1.4.46. bs4.Comment.format_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.index.html">13.1.4.47. bs4.Comment.index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.insert.html">13.1.4.48. bs4.Comment.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.insert_after.html">13.1.4.49. bs4.Comment.insert_after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.insert_before.html">13.1.4.50. bs4.Comment.insert_before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isalnum.html">13.1.4.51. bs4.Comment.isalnum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isalpha.html">13.1.4.52. bs4.Comment.isalpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isdecimal.html">13.1.4.53. bs4.Comment.isdecimal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isdigit.html">13.1.4.54. bs4.Comment.isdigit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.islower.html">13.1.4.55. bs4.Comment.islower</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isnumeric.html">13.1.4.56. bs4.Comment.isnumeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isspace.html">13.1.4.57. bs4.Comment.isspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.istitle.html">13.1.4.58. bs4.Comment.istitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.isupper.html">13.1.4.59. bs4.Comment.isupper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.join.html">13.1.4.60. bs4.Comment.join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.ljust.html">13.1.4.61. bs4.Comment.ljust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.lower.html">13.1.4.62. bs4.Comment.lower</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.lstrip.html">13.1.4.63. bs4.Comment.lstrip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.nextGenerator.html">13.1.4.64. bs4.Comment.nextGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.nextSiblingGenerator.html">13.1.4.65. bs4.Comment.nextSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.output_ready.html">13.1.4.66. bs4.Comment.output_ready</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.parentGenerator.html">13.1.4.67. bs4.Comment.parentGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.partition.html">13.1.4.68. bs4.Comment.partition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.previousGenerator.html">13.1.4.69. bs4.Comment.previousGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.previousSiblingGenerator.html">13.1.4.70. bs4.Comment.previousSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.replace.html">13.1.4.71. bs4.Comment.replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.replaceWith.html">13.1.4.72. bs4.Comment.replaceWith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.replaceWithChildren.html">13.1.4.73. bs4.Comment.replaceWithChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.replace_with.html">13.1.4.74. bs4.Comment.replace_with</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.replace_with_children.html">13.1.4.75. bs4.Comment.replace_with_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.rfind.html">13.1.4.76. bs4.Comment.rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.rindex.html">13.1.4.77. bs4.Comment.rindex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.rjust.html">13.1.4.78. bs4.Comment.rjust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.rpartition.html">13.1.4.79. bs4.Comment.rpartition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.rsplit.html">13.1.4.80. bs4.Comment.rsplit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.rstrip.html">13.1.4.81. bs4.Comment.rstrip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.setup.html">13.1.4.82. bs4.Comment.setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.split.html">13.1.4.83. bs4.Comment.split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.splitlines.html">13.1.4.84. bs4.Comment.splitlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.startswith.html">13.1.4.85. bs4.Comment.startswith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.strip.html">13.1.4.86. bs4.Comment.strip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.swapcase.html">13.1.4.87. bs4.Comment.swapcase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.title.html">13.1.4.88. bs4.Comment.title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.translate.html">13.1.4.89. bs4.Comment.translate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.unwrap.html">13.1.4.90. bs4.Comment.unwrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.upper.html">13.1.4.91. bs4.Comment.upper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.wrap.html">13.1.4.92. bs4.Comment.wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Comment.zfill.html">13.1.4.93. bs4.Comment.zfill</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Declaration.html">13.1.5. bs4.Declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Doctype.html">13.1.6. bs4.Doctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.NavigableString.html">13.1.7. bs4.NavigableString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.PageElement.html">13.1.8. bs4.PageElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ProcessingInstruction.html">13.1.9. bs4.ProcessingInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ResultSet.html">13.1.10. bs4.ResultSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.SoupStrainer.html">13.1.11. bs4.SoupStrainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Tag.html">13.1.12. bs4.Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.UnicodeDammit.html">13.1.13. bs4.UnicodeDammit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bs4.html#exceptions">13.2. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../bs4.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../bs4.html">13. bs4</a> &raquo;</li>
+        
+      <li>13.1.4. bs4.Comment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/bs4.Comment.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bs4-comment">
+<h1>13.1.4. bs4.Comment<a class="headerlink" href="#bs4-comment" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bs4.Comment">
+<em class="property">class </em><code class="descclassname">bs4.</code><code class="descname">Comment</code><a class="reference internal" href="../../modules/bs4/element.html#Comment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bs4.Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.name.html#bs4.Comment.name" title="bs4.Comment.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.next.html#bs4.Comment.next" title="bs4.Comment.next"><code class="xref py py-obj docutils literal"><span class="pre">next</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.nextSibling.html#bs4.Comment.nextSibling" title="bs4.Comment.nextSibling"><code class="xref py py-obj docutils literal"><span class="pre">nextSibling</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.next_elements.html#bs4.Comment.next_elements" title="bs4.Comment.next_elements"><code class="xref py py-obj docutils literal"><span class="pre">next_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.next_siblings.html#bs4.Comment.next_siblings" title="bs4.Comment.next_siblings"><code class="xref py py-obj docutils literal"><span class="pre">next_siblings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.parents.html#bs4.Comment.parents" title="bs4.Comment.parents"><code class="xref py py-obj docutils literal"><span class="pre">parents</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.previous.html#bs4.Comment.previous" title="bs4.Comment.previous"><code class="xref py py-obj docutils literal"><span class="pre">previous</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.previousSibling.html#bs4.Comment.previousSibling" title="bs4.Comment.previousSibling"><code class="xref py py-obj docutils literal"><span class="pre">previousSibling</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.previous_elements.html#bs4.Comment.previous_elements" title="bs4.Comment.previous_elements"><code class="xref py py-obj docutils literal"><span class="pre">previous_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.previous_siblings.html#bs4.Comment.previous_siblings" title="bs4.Comment.previous_siblings"><code class="xref py py-obj docutils literal"><span class="pre">previous_siblings</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.append.html#bs4.Comment.append" title="bs4.Comment.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(tag)</td>
+<td>Appends the given tag to the contents of this tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.capitalize.html#bs4.Comment.capitalize" title="bs4.Comment.capitalize"><code class="xref py py-obj docutils literal"><span class="pre">capitalize</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a capitalized version of S, i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.center.html#bs4.Comment.center" title="bs4.Comment.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return S centered in a Unicode string of length width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.count.html#bs4.Comment.count" title="bs4.Comment.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>((sub[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the number of non-overlapping occurrences of substring sub in Unicode string S[start:end].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.decode.html#bs4.Comment.decode" title="bs4.Comment.decode"><code class="xref py py-obj docutils literal"><span class="pre">decode</span></code></a>(...)</td>
+<td>Decodes S using the codec registered for encoding.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.encode.html#bs4.Comment.encode" title="bs4.Comment.encode"><code class="xref py py-obj docutils literal"><span class="pre">encode</span></code></a>(...)</td>
+<td>Encodes S using the codec registered for encoding.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.endswith.html#bs4.Comment.endswith" title="bs4.Comment.endswith"><code class="xref py py-obj docutils literal"><span class="pre">endswith</span></code></a>((suffix[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S ends with the specified suffix, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.expandtabs.html#bs4.Comment.expandtabs" title="bs4.Comment.expandtabs"><code class="xref py py-obj docutils literal"><span class="pre">expandtabs</span></code></a>(([tabsize])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S where all tab characters are expanded using spaces.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.extract.html#bs4.Comment.extract" title="bs4.Comment.extract"><code class="xref py py-obj docutils literal"><span class="pre">extract</span></code></a>()</td>
+<td>Destructively rips this element out of the tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.fetchNextSiblings.html#bs4.Comment.fetchNextSiblings" title="bs4.Comment.fetchNextSiblings"><code class="xref py py-obj docutils literal"><span class="pre">fetchNextSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.fetchParents.html#bs4.Comment.fetchParents" title="bs4.Comment.fetchParents"><code class="xref py py-obj docutils literal"><span class="pre">fetchParents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.fetchPrevious.html#bs4.Comment.fetchPrevious" title="bs4.Comment.fetchPrevious"><code class="xref py py-obj docutils literal"><span class="pre">fetchPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.fetchPreviousSiblings.html#bs4.Comment.fetchPreviousSiblings" title="bs4.Comment.fetchPreviousSiblings"><code class="xref py py-obj docutils literal"><span class="pre">fetchPreviousSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.find.html#bs4.Comment.find" title="bs4.Comment.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the lowest index in S where substring sub is found, such that sub is contained within S[start:end].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.findAllNext.html#bs4.Comment.findAllNext" title="bs4.Comment.findAllNext"><code class="xref py py-obj docutils literal"><span class="pre">findAllNext</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.findAllPrevious.html#bs4.Comment.findAllPrevious" title="bs4.Comment.findAllPrevious"><code class="xref py py-obj docutils literal"><span class="pre">findAllPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.findNext.html#bs4.Comment.findNext" title="bs4.Comment.findNext"><code class="xref py py-obj docutils literal"><span class="pre">findNext</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.findNextSibling.html#bs4.Comment.findNextSibling" title="bs4.Comment.findNextSibling"><code class="xref py py-obj docutils literal"><span class="pre">findNextSibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.findNextSiblings.html#bs4.Comment.findNextSiblings" title="bs4.Comment.findNextSiblings"><code class="xref py py-obj docutils literal"><span class="pre">findNextSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.findParent.html#bs4.Comment.findParent" title="bs4.Comment.findParent"><code class="xref py py-obj docutils literal"><span class="pre">findParent</span></code></a>([name,&nbsp;attrs])</td>
+<td>Returns the closest parent of this Tag that matches the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.findParents.html#bs4.Comment.findParents" title="bs4.Comment.findParents"><code class="xref py py-obj docutils literal"><span class="pre">findParents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.findPrevious.html#bs4.Comment.findPrevious" title="bs4.Comment.findPrevious"><code class="xref py py-obj docutils literal"><span class="pre">findPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.findPreviousSibling.html#bs4.Comment.findPreviousSibling" title="bs4.Comment.findPreviousSibling"><code class="xref py py-obj docutils literal"><span class="pre">findPreviousSibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.findPreviousSiblings.html#bs4.Comment.findPreviousSiblings" title="bs4.Comment.findPreviousSiblings"><code class="xref py py-obj docutils literal"><span class="pre">findPreviousSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.find_all_next.html#bs4.Comment.find_all_next" title="bs4.Comment.find_all_next"><code class="xref py py-obj docutils literal"><span class="pre">find_all_next</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.find_all_previous.html#bs4.Comment.find_all_previous" title="bs4.Comment.find_all_previous"><code class="xref py py-obj docutils literal"><span class="pre">find_all_previous</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.find_next.html#bs4.Comment.find_next" title="bs4.Comment.find_next"><code class="xref py py-obj docutils literal"><span class="pre">find_next</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.find_next_sibling.html#bs4.Comment.find_next_sibling" title="bs4.Comment.find_next_sibling"><code class="xref py py-obj docutils literal"><span class="pre">find_next_sibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.find_next_siblings.html#bs4.Comment.find_next_siblings" title="bs4.Comment.find_next_siblings"><code class="xref py py-obj docutils literal"><span class="pre">find_next_siblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.find_parent.html#bs4.Comment.find_parent" title="bs4.Comment.find_parent"><code class="xref py py-obj docutils literal"><span class="pre">find_parent</span></code></a>([name,&nbsp;attrs])</td>
+<td>Returns the closest parent of this Tag that matches the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.find_parents.html#bs4.Comment.find_parents" title="bs4.Comment.find_parents"><code class="xref py py-obj docutils literal"><span class="pre">find_parents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.find_previous.html#bs4.Comment.find_previous" title="bs4.Comment.find_previous"><code class="xref py py-obj docutils literal"><span class="pre">find_previous</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.find_previous_sibling.html#bs4.Comment.find_previous_sibling" title="bs4.Comment.find_previous_sibling"><code class="xref py py-obj docutils literal"><span class="pre">find_previous_sibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.find_previous_siblings.html#bs4.Comment.find_previous_siblings" title="bs4.Comment.find_previous_siblings"><code class="xref py py-obj docutils literal"><span class="pre">find_previous_siblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;...])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.format.html#bs4.Comment.format" title="bs4.Comment.format"><code class="xref py py-obj docutils literal"><span class="pre">format</span></code></a>((*args,&nbsp;**kwargs)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a formatted version of S, using substitutions from args and kwargs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.format_string.html#bs4.Comment.format_string" title="bs4.Comment.format_string"><code class="xref py py-obj docutils literal"><span class="pre">format_string</span></code></a>(s[,&nbsp;formatter])</td>
+<td>Format the given string using the given formatter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.index.html#bs4.Comment.index" title="bs4.Comment.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Like S.find() but raise ValueError when the substring is not found.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.insert.html#bs4.Comment.insert" title="bs4.Comment.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(position,&nbsp;new_child)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.insert_after.html#bs4.Comment.insert_after" title="bs4.Comment.insert_after"><code class="xref py py-obj docutils literal"><span class="pre">insert_after</span></code></a>(successor)</td>
+<td>Makes the given element the immediate successor of this one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.insert_before.html#bs4.Comment.insert_before" title="bs4.Comment.insert_before"><code class="xref py py-obj docutils literal"><span class="pre">insert_before</span></code></a>(predecessor)</td>
+<td>Makes the given element the immediate predecessor of this one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.isalnum.html#bs4.Comment.isalnum" title="bs4.Comment.isalnum"><code class="xref py py-obj docutils literal"><span class="pre">isalnum</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.isalpha.html#bs4.Comment.isalpha" title="bs4.Comment.isalpha"><code class="xref py py-obj docutils literal"><span class="pre">isalpha</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are alphabetic and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.isdecimal.html#bs4.Comment.isdecimal" title="bs4.Comment.isdecimal"><code class="xref py py-obj docutils literal"><span class="pre">isdecimal</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if there are only decimal characters in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.isdigit.html#bs4.Comment.isdigit" title="bs4.Comment.isdigit"><code class="xref py py-obj docutils literal"><span class="pre">isdigit</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are digits and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.islower.html#bs4.Comment.islower" title="bs4.Comment.islower"><code class="xref py py-obj docutils literal"><span class="pre">islower</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all cased characters in S are lowercase and there is at least one cased character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.isnumeric.html#bs4.Comment.isnumeric" title="bs4.Comment.isnumeric"><code class="xref py py-obj docutils literal"><span class="pre">isnumeric</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if there are only numeric characters in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.isspace.html#bs4.Comment.isspace" title="bs4.Comment.isspace"><code class="xref py py-obj docutils literal"><span class="pre">isspace</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are whitespace and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.istitle.html#bs4.Comment.istitle" title="bs4.Comment.istitle"><code class="xref py py-obj docutils literal"><span class="pre">istitle</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S is a titlecased string and there is at least one character in S, i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.isupper.html#bs4.Comment.isupper" title="bs4.Comment.isupper"><code class="xref py py-obj docutils literal"><span class="pre">isupper</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all cased characters in S are uppercase and there is at least one cased character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.join.html#bs4.Comment.join" title="bs4.Comment.join"><code class="xref py py-obj docutils literal"><span class="pre">join</span></code></a>((iterable)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a string which is the concatenation of the strings in the iterable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.ljust.html#bs4.Comment.ljust" title="bs4.Comment.ljust"><code class="xref py py-obj docutils literal"><span class="pre">ljust</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return S left-justified in a Unicode string of length width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.lower.html#bs4.Comment.lower" title="bs4.Comment.lower"><code class="xref py py-obj docutils literal"><span class="pre">lower</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S converted to lowercase.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.lstrip.html#bs4.Comment.lstrip" title="bs4.Comment.lstrip"><code class="xref py py-obj docutils literal"><span class="pre">lstrip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with leading whitespace removed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.nextGenerator.html#bs4.Comment.nextGenerator" title="bs4.Comment.nextGenerator"><code class="xref py py-obj docutils literal"><span class="pre">nextGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.nextSiblingGenerator.html#bs4.Comment.nextSiblingGenerator" title="bs4.Comment.nextSiblingGenerator"><code class="xref py py-obj docutils literal"><span class="pre">nextSiblingGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.output_ready.html#bs4.Comment.output_ready" title="bs4.Comment.output_ready"><code class="xref py py-obj docutils literal"><span class="pre">output_ready</span></code></a>([formatter])</td>
+<td>CData strings are passed into the formatter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.parentGenerator.html#bs4.Comment.parentGenerator" title="bs4.Comment.parentGenerator"><code class="xref py py-obj docutils literal"><span class="pre">parentGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.partition.html#bs4.Comment.partition" title="bs4.Comment.partition"><code class="xref py py-obj docutils literal"><span class="pre">partition</span></code></a>(sep)&nbsp;-&gt;&nbsp;(head,&nbsp;sep,&nbsp;tail)</td>
+<td>Search for the separator sep in S, and return the part before it, the separator itself, and the part after it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.previousGenerator.html#bs4.Comment.previousGenerator" title="bs4.Comment.previousGenerator"><code class="xref py py-obj docutils literal"><span class="pre">previousGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.previousSiblingGenerator.html#bs4.Comment.previousSiblingGenerator" title="bs4.Comment.previousSiblingGenerator"><code class="xref py py-obj docutils literal"><span class="pre">previousSiblingGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.replace.html#bs4.Comment.replace" title="bs4.Comment.replace"><code class="xref py py-obj docutils literal"><span class="pre">replace</span></code></a>((old,&nbsp;new[,&nbsp;count])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S with all occurrences of substring old replaced by new.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.replaceWith.html#bs4.Comment.replaceWith" title="bs4.Comment.replaceWith"><code class="xref py py-obj docutils literal"><span class="pre">replaceWith</span></code></a>(replace_with)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.replaceWithChildren.html#bs4.Comment.replaceWithChildren" title="bs4.Comment.replaceWithChildren"><code class="xref py py-obj docutils literal"><span class="pre">replaceWithChildren</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.replace_with.html#bs4.Comment.replace_with" title="bs4.Comment.replace_with"><code class="xref py py-obj docutils literal"><span class="pre">replace_with</span></code></a>(replace_with)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.replace_with_children.html#bs4.Comment.replace_with_children" title="bs4.Comment.replace_with_children"><code class="xref py py-obj docutils literal"><span class="pre">replace_with_children</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.rfind.html#bs4.Comment.rfind" title="bs4.Comment.rfind"><code class="xref py py-obj docutils literal"><span class="pre">rfind</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the highest index in S where substring sub is found, such that sub is contained within S[start:end].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.rindex.html#bs4.Comment.rindex" title="bs4.Comment.rindex"><code class="xref py py-obj docutils literal"><span class="pre">rindex</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Like S.rfind() but raise ValueError when the substring is not found.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.rjust.html#bs4.Comment.rjust" title="bs4.Comment.rjust"><code class="xref py py-obj docutils literal"><span class="pre">rjust</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return S right-justified in a Unicode string of length width.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.rpartition.html#bs4.Comment.rpartition" title="bs4.Comment.rpartition"><code class="xref py py-obj docutils literal"><span class="pre">rpartition</span></code></a>(sep)&nbsp;-&gt;&nbsp;(head,&nbsp;sep,&nbsp;tail)</td>
+<td>Search for the separator sep in S, starting at the end of S, and return the part before it, the separator itself, and the part after it.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.rsplit.html#bs4.Comment.rsplit" title="bs4.Comment.rsplit"><code class="xref py py-obj docutils literal"><span class="pre">rsplit</span></code></a>(([sep&nbsp;[,maxsplit]])&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the words in S, using sep as the delimiter string, starting at the end of the string and working to the front.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.rstrip.html#bs4.Comment.rstrip" title="bs4.Comment.rstrip"><code class="xref py py-obj docutils literal"><span class="pre">rstrip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with trailing whitespace removed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.setup.html#bs4.Comment.setup" title="bs4.Comment.setup"><code class="xref py py-obj docutils literal"><span class="pre">setup</span></code></a>([parent,&nbsp;previous_element,&nbsp;...])</td>
+<td>Sets up the initial relations between this element and other elements.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.split.html#bs4.Comment.split" title="bs4.Comment.split"><code class="xref py py-obj docutils literal"><span class="pre">split</span></code></a>(([sep&nbsp;[,maxsplit]])&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the words in S, using sep as the delimiter string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.splitlines.html#bs4.Comment.splitlines" title="bs4.Comment.splitlines"><code class="xref py py-obj docutils literal"><span class="pre">splitlines</span></code></a>((keepends=False)&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the lines in S, breaking at line boundaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.startswith.html#bs4.Comment.startswith" title="bs4.Comment.startswith"><code class="xref py py-obj docutils literal"><span class="pre">startswith</span></code></a>((prefix[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S starts with the specified prefix, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.strip.html#bs4.Comment.strip" title="bs4.Comment.strip"><code class="xref py py-obj docutils literal"><span class="pre">strip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with leading and trailing whitespace removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.swapcase.html#bs4.Comment.swapcase" title="bs4.Comment.swapcase"><code class="xref py py-obj docutils literal"><span class="pre">swapcase</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S with uppercase characters converted to lowercase and vice versa.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.title.html#bs4.Comment.title" title="bs4.Comment.title"><code class="xref py py-obj docutils literal"><span class="pre">title</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a titlecased version of S, i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.translate.html#bs4.Comment.translate" title="bs4.Comment.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>((table)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S, where all characters have been mapped through the given translation table, which must be a mapping of Unicode ordinals to Unicode ordinals, Unicode strings or None.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.unwrap.html#bs4.Comment.unwrap" title="bs4.Comment.unwrap"><code class="xref py py-obj docutils literal"><span class="pre">unwrap</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.upper.html#bs4.Comment.upper" title="bs4.Comment.upper"><code class="xref py py-obj docutils literal"><span class="pre">upper</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S converted to uppercase.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Comment.wrap.html#bs4.Comment.wrap" title="bs4.Comment.wrap"><code class="xref py py-obj docutils literal"><span class="pre">wrap</span></code></a>(wrap_inside)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Comment.zfill.html#bs4.Comment.zfill" title="bs4.Comment.zfill"><code class="xref py py-obj docutils literal"><span class="pre">zfill</span></code></a>((width)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Pad a numeric string S with zeros on the left, to fill a field of the specified width.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.Comment.name.html" class="btn btn-neutral float-right" title="13.1.4.1. bs4.Comment.name" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bs4.CData.zfill.html" class="btn btn-neutral" title="13.1.3.93. bs4.CData.zfill" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

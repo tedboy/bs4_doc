@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.tag_name_re
+=====================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: ProcessingInstruction.tag_name_re

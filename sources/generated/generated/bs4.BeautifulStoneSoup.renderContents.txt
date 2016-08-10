@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.renderContents
+=====================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.renderContents

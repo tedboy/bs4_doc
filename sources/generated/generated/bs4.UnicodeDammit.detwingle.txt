@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.detwingle
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: UnicodeDammit.detwingle

@@ -1,0 +1,6 @@
+bs4.Comment.findAllNext
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.findAllNext

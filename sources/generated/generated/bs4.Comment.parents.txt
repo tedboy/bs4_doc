@@ -1,0 +1,6 @@
+bs4.Comment.parents
+===================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Comment.parents

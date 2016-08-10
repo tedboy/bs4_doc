@@ -1,0 +1,6 @@
+bs4.Doctype.ljust
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.ljust

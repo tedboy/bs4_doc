@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.expandtabs
+====================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.expandtabs

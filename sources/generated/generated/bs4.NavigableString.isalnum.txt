@@ -1,0 +1,6 @@
+bs4.NavigableString.isalnum
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.isalnum

@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.select_one
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.select_one

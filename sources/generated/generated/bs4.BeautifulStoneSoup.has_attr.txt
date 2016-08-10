@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.has_attr
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.has_attr

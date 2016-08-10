@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.rindex
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.rindex

@@ -1,0 +1,6 @@
+bs4.CData.previousGenerator
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.previousGenerator

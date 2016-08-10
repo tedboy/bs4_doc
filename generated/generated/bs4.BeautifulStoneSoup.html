@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13.1.2. bs4.BeautifulStoneSoup &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="13. bs4" href="../bs4.html"/>
+        <link rel="next" title="13.1.2.1. bs4.BeautifulStoneSoup.children" href="bs4.BeautifulStoneSoup.children.html"/>
+        <link rel="prev" title="13.1.1.93. bs4.BeautifulSoup.wrap" href="bs4.BeautifulSoup.wrap.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bs4.html">13. bs4</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bs4.html#classes">13.1. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulSoup.html">13.1.1. bs4.BeautifulSoup</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">13.1.2. bs4.BeautifulStoneSoup</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.children.html">13.1.2.1. bs4.BeautifulStoneSoup.children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.descendants.html">13.1.2.2. bs4.BeautifulStoneSoup.descendants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.isSelfClosing.html">13.1.2.3. bs4.BeautifulStoneSoup.isSelfClosing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.is_empty_element.html">13.1.2.4. bs4.BeautifulStoneSoup.is_empty_element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.next.html">13.1.2.5. bs4.BeautifulStoneSoup.next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.nextSibling.html">13.1.2.6. bs4.BeautifulStoneSoup.nextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.next_elements.html">13.1.2.7. bs4.BeautifulStoneSoup.next_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.next_siblings.html">13.1.2.8. bs4.BeautifulStoneSoup.next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.parents.html">13.1.2.9. bs4.BeautifulStoneSoup.parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.parserClass.html">13.1.2.10. bs4.BeautifulStoneSoup.parserClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previous.html">13.1.2.11. bs4.BeautifulStoneSoup.previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previousSibling.html">13.1.2.12. bs4.BeautifulStoneSoup.previousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previous_elements.html">13.1.2.13. bs4.BeautifulStoneSoup.previous_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previous_siblings.html">13.1.2.14. bs4.BeautifulStoneSoup.previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.string.html">13.1.2.15. bs4.BeautifulStoneSoup.string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.strings.html">13.1.2.16. bs4.BeautifulStoneSoup.strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.stripped_strings.html">13.1.2.17. bs4.BeautifulStoneSoup.stripped_strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.text.html">13.1.2.18. bs4.BeautifulStoneSoup.text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.append.html">13.1.2.19. bs4.BeautifulStoneSoup.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.childGenerator.html">13.1.2.20. bs4.BeautifulStoneSoup.childGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.clear.html">13.1.2.21. bs4.BeautifulStoneSoup.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.decode.html">13.1.2.22. bs4.BeautifulStoneSoup.decode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.decode_contents.html">13.1.2.23. bs4.BeautifulStoneSoup.decode_contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.decompose.html">13.1.2.24. bs4.BeautifulStoneSoup.decompose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.encode.html">13.1.2.25. bs4.BeautifulStoneSoup.encode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.encode_contents.html">13.1.2.26. bs4.BeautifulStoneSoup.encode_contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.endData.html">13.1.2.27. bs4.BeautifulStoneSoup.endData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.extract.html">13.1.2.28. bs4.BeautifulStoneSoup.extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchNextSiblings.html">13.1.2.29. bs4.BeautifulStoneSoup.fetchNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchParents.html">13.1.2.30. bs4.BeautifulStoneSoup.fetchParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchPrevious.html">13.1.2.31. bs4.BeautifulStoneSoup.fetchPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchPreviousSiblings.html">13.1.2.32. bs4.BeautifulStoneSoup.fetchPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find.html">13.1.2.33. bs4.BeautifulStoneSoup.find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findAll.html">13.1.2.34. bs4.BeautifulStoneSoup.findAll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findAllNext.html">13.1.2.35. bs4.BeautifulStoneSoup.findAllNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findAllPrevious.html">13.1.2.36. bs4.BeautifulStoneSoup.findAllPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findChild.html">13.1.2.37. bs4.BeautifulStoneSoup.findChild</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findChildren.html">13.1.2.38. bs4.BeautifulStoneSoup.findChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findNext.html">13.1.2.39. bs4.BeautifulStoneSoup.findNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findNextSibling.html">13.1.2.40. bs4.BeautifulStoneSoup.findNextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findNextSiblings.html">13.1.2.41. bs4.BeautifulStoneSoup.findNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findParent.html">13.1.2.42. bs4.BeautifulStoneSoup.findParent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findParents.html">13.1.2.43. bs4.BeautifulStoneSoup.findParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findPrevious.html">13.1.2.44. bs4.BeautifulStoneSoup.findPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findPreviousSibling.html">13.1.2.45. bs4.BeautifulStoneSoup.findPreviousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findPreviousSiblings.html">13.1.2.46. bs4.BeautifulStoneSoup.findPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all.html">13.1.2.47. bs4.BeautifulStoneSoup.find_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all_next.html">13.1.2.48. bs4.BeautifulStoneSoup.find_all_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all_previous.html">13.1.2.49. bs4.BeautifulStoneSoup.find_all_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next.html">13.1.2.50. bs4.BeautifulStoneSoup.find_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next_sibling.html">13.1.2.51. bs4.BeautifulStoneSoup.find_next_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next_siblings.html">13.1.2.52. bs4.BeautifulStoneSoup.find_next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_parent.html">13.1.2.53. bs4.BeautifulStoneSoup.find_parent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_parents.html">13.1.2.54. bs4.BeautifulStoneSoup.find_parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous.html">13.1.2.55. bs4.BeautifulStoneSoup.find_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous_sibling.html">13.1.2.56. bs4.BeautifulStoneSoup.find_previous_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous_siblings.html">13.1.2.57. bs4.BeautifulStoneSoup.find_previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.format_string.html">13.1.2.58. bs4.BeautifulStoneSoup.format_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.get.html">13.1.2.59. bs4.BeautifulStoneSoup.get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.getText.html">13.1.2.60. bs4.BeautifulStoneSoup.getText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.get_text.html">13.1.2.61. bs4.BeautifulStoneSoup.get_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_data.html">13.1.2.62. bs4.BeautifulStoneSoup.handle_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_endtag.html">13.1.2.63. bs4.BeautifulStoneSoup.handle_endtag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_starttag.html">13.1.2.64. bs4.BeautifulStoneSoup.handle_starttag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.has_attr.html">13.1.2.65. bs4.BeautifulStoneSoup.has_attr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.has_key.html">13.1.2.66. bs4.BeautifulStoneSoup.has_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.index.html">13.1.2.67. bs4.BeautifulStoneSoup.index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.insert.html">13.1.2.68. bs4.BeautifulStoneSoup.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.insert_after.html">13.1.2.69. bs4.BeautifulStoneSoup.insert_after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.insert_before.html">13.1.2.70. bs4.BeautifulStoneSoup.insert_before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.new_string.html">13.1.2.71. bs4.BeautifulStoneSoup.new_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.new_tag.html">13.1.2.72. bs4.BeautifulStoneSoup.new_tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.nextGenerator.html">13.1.2.73. bs4.BeautifulStoneSoup.nextGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.nextSiblingGenerator.html">13.1.2.74. bs4.BeautifulStoneSoup.nextSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.object_was_parsed.html">13.1.2.75. bs4.BeautifulStoneSoup.object_was_parsed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.parentGenerator.html">13.1.2.76. bs4.BeautifulStoneSoup.parentGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.popTag.html">13.1.2.77. bs4.BeautifulStoneSoup.popTag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.prettify.html">13.1.2.78. bs4.BeautifulStoneSoup.prettify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previousGenerator.html">13.1.2.79. bs4.BeautifulStoneSoup.previousGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previousSiblingGenerator.html">13.1.2.80. bs4.BeautifulStoneSoup.previousSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.pushTag.html">13.1.2.81. bs4.BeautifulStoneSoup.pushTag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.recursiveChildGenerator.html">13.1.2.82. bs4.BeautifulStoneSoup.recursiveChildGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.renderContents.html">13.1.2.83. bs4.BeautifulStoneSoup.renderContents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replaceWith.html">13.1.2.84. bs4.BeautifulStoneSoup.replaceWith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replaceWithChildren.html">13.1.2.85. bs4.BeautifulStoneSoup.replaceWithChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replace_with.html">13.1.2.86. bs4.BeautifulStoneSoup.replace_with</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replace_with_children.html">13.1.2.87. bs4.BeautifulStoneSoup.replace_with_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.reset.html">13.1.2.88. bs4.BeautifulStoneSoup.reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.select.html">13.1.2.89. bs4.BeautifulStoneSoup.select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.select_one.html">13.1.2.90. bs4.BeautifulStoneSoup.select_one</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.setup.html">13.1.2.91. bs4.BeautifulStoneSoup.setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.unwrap.html">13.1.2.92. bs4.BeautifulStoneSoup.unwrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.wrap.html">13.1.2.93. bs4.BeautifulStoneSoup.wrap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.CData.html">13.1.3. bs4.CData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Comment.html">13.1.4. bs4.Comment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Declaration.html">13.1.5. bs4.Declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Doctype.html">13.1.6. bs4.Doctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.NavigableString.html">13.1.7. bs4.NavigableString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.PageElement.html">13.1.8. bs4.PageElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ProcessingInstruction.html">13.1.9. bs4.ProcessingInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ResultSet.html">13.1.10. bs4.ResultSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.SoupStrainer.html">13.1.11. bs4.SoupStrainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Tag.html">13.1.12. bs4.Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.UnicodeDammit.html">13.1.13. bs4.UnicodeDammit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bs4.html#exceptions">13.2. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../bs4.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../bs4.html">13. bs4</a> &raquo;</li>
+        
+      <li>13.1.2. bs4.BeautifulStoneSoup</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/bs4.BeautifulStoneSoup.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bs4-beautifulstonesoup">
+<h1>13.1.2. bs4.BeautifulStoneSoup<a class="headerlink" href="#bs4-beautifulstonesoup" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bs4.BeautifulStoneSoup">
+<em class="property">class </em><code class="descclassname">bs4.</code><code class="descname">BeautifulStoneSoup</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../modules/bs4.html#BeautifulStoneSoup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bs4.BeautifulStoneSoup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecated interface to an XML parser.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.children.html#bs4.BeautifulStoneSoup.children" title="bs4.BeautifulStoneSoup.children"><code class="xref py py-obj docutils literal"><span class="pre">children</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.descendants.html#bs4.BeautifulStoneSoup.descendants" title="bs4.BeautifulStoneSoup.descendants"><code class="xref py py-obj docutils literal"><span class="pre">descendants</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.isSelfClosing.html#bs4.BeautifulStoneSoup.isSelfClosing" title="bs4.BeautifulStoneSoup.isSelfClosing"><code class="xref py py-obj docutils literal"><span class="pre">isSelfClosing</span></code></a></td>
+<td>Is this tag an empty-element tag? (aka a self-closing tag)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.is_empty_element.html#bs4.BeautifulStoneSoup.is_empty_element" title="bs4.BeautifulStoneSoup.is_empty_element"><code class="xref py py-obj docutils literal"><span class="pre">is_empty_element</span></code></a></td>
+<td>Is this tag an empty-element tag? (aka a self-closing tag)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.next.html#bs4.BeautifulStoneSoup.next" title="bs4.BeautifulStoneSoup.next"><code class="xref py py-obj docutils literal"><span class="pre">next</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.nextSibling.html#bs4.BeautifulStoneSoup.nextSibling" title="bs4.BeautifulStoneSoup.nextSibling"><code class="xref py py-obj docutils literal"><span class="pre">nextSibling</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.next_elements.html#bs4.BeautifulStoneSoup.next_elements" title="bs4.BeautifulStoneSoup.next_elements"><code class="xref py py-obj docutils literal"><span class="pre">next_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.next_siblings.html#bs4.BeautifulStoneSoup.next_siblings" title="bs4.BeautifulStoneSoup.next_siblings"><code class="xref py py-obj docutils literal"><span class="pre">next_siblings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.parents.html#bs4.BeautifulStoneSoup.parents" title="bs4.BeautifulStoneSoup.parents"><code class="xref py py-obj docutils literal"><span class="pre">parents</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.parserClass.html#bs4.BeautifulStoneSoup.parserClass" title="bs4.BeautifulStoneSoup.parserClass"><code class="xref py py-obj docutils literal"><span class="pre">parserClass</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.previous.html#bs4.BeautifulStoneSoup.previous" title="bs4.BeautifulStoneSoup.previous"><code class="xref py py-obj docutils literal"><span class="pre">previous</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.previousSibling.html#bs4.BeautifulStoneSoup.previousSibling" title="bs4.BeautifulStoneSoup.previousSibling"><code class="xref py py-obj docutils literal"><span class="pre">previousSibling</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.previous_elements.html#bs4.BeautifulStoneSoup.previous_elements" title="bs4.BeautifulStoneSoup.previous_elements"><code class="xref py py-obj docutils literal"><span class="pre">previous_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.previous_siblings.html#bs4.BeautifulStoneSoup.previous_siblings" title="bs4.BeautifulStoneSoup.previous_siblings"><code class="xref py py-obj docutils literal"><span class="pre">previous_siblings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.string.html#bs4.BeautifulStoneSoup.string" title="bs4.BeautifulStoneSoup.string"><code class="xref py py-obj docutils literal"><span class="pre">string</span></code></a></td>
+<td>Convenience property to get the single string within this tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.strings.html#bs4.BeautifulStoneSoup.strings" title="bs4.BeautifulStoneSoup.strings"><code class="xref py py-obj docutils literal"><span class="pre">strings</span></code></a></td>
+<td>Yield all strings of certain classes, possibly stripping them.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.stripped_strings.html#bs4.BeautifulStoneSoup.stripped_strings" title="bs4.BeautifulStoneSoup.stripped_strings"><code class="xref py py-obj docutils literal"><span class="pre">stripped_strings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.text.html#bs4.BeautifulStoneSoup.text" title="bs4.BeautifulStoneSoup.text"><code class="xref py py-obj docutils literal"><span class="pre">text</span></code></a></td>
+<td>Get all child strings, concatenated using the given separator.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Calling a tag like a function is the same as calling its find_all() method.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.append.html#bs4.BeautifulStoneSoup.append" title="bs4.BeautifulStoneSoup.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(tag)</td>
+<td>Appends the given tag to the contents of this tag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.childGenerator.html#bs4.BeautifulStoneSoup.childGenerator" title="bs4.BeautifulStoneSoup.childGenerator"><code class="xref py py-obj docutils literal"><span class="pre">childGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.clear.html#bs4.BeautifulStoneSoup.clear" title="bs4.BeautifulStoneSoup.clear"><code class="xref py py-obj docutils literal"><span class="pre">clear</span></code></a>([decompose])</td>
+<td>Extract all children.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.decode.html#bs4.BeautifulStoneSoup.decode" title="bs4.BeautifulStoneSoup.decode"><code class="xref py py-obj docutils literal"><span class="pre">decode</span></code></a>([pretty_print,&nbsp;eventual_encoding,&nbsp;...])</td>
+<td>Returns a string or Unicode representation of this document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.decode_contents.html#bs4.BeautifulStoneSoup.decode_contents" title="bs4.BeautifulStoneSoup.decode_contents"><code class="xref py py-obj docutils literal"><span class="pre">decode_contents</span></code></a>([indent_level,&nbsp;...])</td>
+<td>Renders the contents of this tag as a Unicode string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.decompose.html#bs4.BeautifulStoneSoup.decompose" title="bs4.BeautifulStoneSoup.decompose"><code class="xref py py-obj docutils literal"><span class="pre">decompose</span></code></a>()</td>
+<td>Recursively destroys the contents of this tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.encode.html#bs4.BeautifulStoneSoup.encode" title="bs4.BeautifulStoneSoup.encode"><code class="xref py py-obj docutils literal"><span class="pre">encode</span></code></a>([encoding,&nbsp;indent_level,&nbsp;formatter,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.encode_contents.html#bs4.BeautifulStoneSoup.encode_contents" title="bs4.BeautifulStoneSoup.encode_contents"><code class="xref py py-obj docutils literal"><span class="pre">encode_contents</span></code></a>([indent_level,&nbsp;encoding,&nbsp;...])</td>
+<td>Renders the contents of this tag as a bytestring.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.endData.html#bs4.BeautifulStoneSoup.endData" title="bs4.BeautifulStoneSoup.endData"><code class="xref py py-obj docutils literal"><span class="pre">endData</span></code></a>([containerClass])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.extract.html#bs4.BeautifulStoneSoup.extract" title="bs4.BeautifulStoneSoup.extract"><code class="xref py py-obj docutils literal"><span class="pre">extract</span></code></a>()</td>
+<td>Destructively rips this element out of the tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchNextSiblings.html#bs4.BeautifulStoneSoup.fetchNextSiblings" title="bs4.BeautifulStoneSoup.fetchNextSiblings"><code class="xref py py-obj docutils literal"><span class="pre">fetchNextSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchParents.html#bs4.BeautifulStoneSoup.fetchParents" title="bs4.BeautifulStoneSoup.fetchParents"><code class="xref py py-obj docutils literal"><span class="pre">fetchParents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchPrevious.html#bs4.BeautifulStoneSoup.fetchPrevious" title="bs4.BeautifulStoneSoup.fetchPrevious"><code class="xref py py-obj docutils literal"><span class="pre">fetchPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchPreviousSiblings.html#bs4.BeautifulStoneSoup.fetchPreviousSiblings" title="bs4.BeautifulStoneSoup.fetchPreviousSiblings"><code class="xref py py-obj docutils literal"><span class="pre">fetchPreviousSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find.html#bs4.BeautifulStoneSoup.find" title="bs4.BeautifulStoneSoup.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>([name,&nbsp;attrs,&nbsp;recursive,&nbsp;text])</td>
+<td>Return only the first child of this Tag matching the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findAll.html#bs4.BeautifulStoneSoup.findAll" title="bs4.BeautifulStoneSoup.findAll"><code class="xref py py-obj docutils literal"><span class="pre">findAll</span></code></a>([name,&nbsp;attrs,&nbsp;recursive,&nbsp;text,&nbsp;limit])</td>
+<td>Extracts a list of Tag objects that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findAllNext.html#bs4.BeautifulStoneSoup.findAllNext" title="bs4.BeautifulStoneSoup.findAllNext"><code class="xref py py-obj docutils literal"><span class="pre">findAllNext</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findAllPrevious.html#bs4.BeautifulStoneSoup.findAllPrevious" title="bs4.BeautifulStoneSoup.findAllPrevious"><code class="xref py py-obj docutils literal"><span class="pre">findAllPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findChild.html#bs4.BeautifulStoneSoup.findChild" title="bs4.BeautifulStoneSoup.findChild"><code class="xref py py-obj docutils literal"><span class="pre">findChild</span></code></a>([name,&nbsp;attrs,&nbsp;recursive,&nbsp;text])</td>
+<td>Return only the first child of this Tag matching the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findChildren.html#bs4.BeautifulStoneSoup.findChildren" title="bs4.BeautifulStoneSoup.findChildren"><code class="xref py py-obj docutils literal"><span class="pre">findChildren</span></code></a>([name,&nbsp;attrs,&nbsp;recursive,&nbsp;text,&nbsp;...])</td>
+<td>Extracts a list of Tag objects that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findNext.html#bs4.BeautifulStoneSoup.findNext" title="bs4.BeautifulStoneSoup.findNext"><code class="xref py py-obj docutils literal"><span class="pre">findNext</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findNextSibling.html#bs4.BeautifulStoneSoup.findNextSibling" title="bs4.BeautifulStoneSoup.findNextSibling"><code class="xref py py-obj docutils literal"><span class="pre">findNextSibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findNextSiblings.html#bs4.BeautifulStoneSoup.findNextSiblings" title="bs4.BeautifulStoneSoup.findNextSiblings"><code class="xref py py-obj docutils literal"><span class="pre">findNextSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findParent.html#bs4.BeautifulStoneSoup.findParent" title="bs4.BeautifulStoneSoup.findParent"><code class="xref py py-obj docutils literal"><span class="pre">findParent</span></code></a>([name,&nbsp;attrs])</td>
+<td>Returns the closest parent of this Tag that matches the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findParents.html#bs4.BeautifulStoneSoup.findParents" title="bs4.BeautifulStoneSoup.findParents"><code class="xref py py-obj docutils literal"><span class="pre">findParents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findPrevious.html#bs4.BeautifulStoneSoup.findPrevious" title="bs4.BeautifulStoneSoup.findPrevious"><code class="xref py py-obj docutils literal"><span class="pre">findPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findPreviousSibling.html#bs4.BeautifulStoneSoup.findPreviousSibling" title="bs4.BeautifulStoneSoup.findPreviousSibling"><code class="xref py py-obj docutils literal"><span class="pre">findPreviousSibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.findPreviousSiblings.html#bs4.BeautifulStoneSoup.findPreviousSiblings" title="bs4.BeautifulStoneSoup.findPreviousSiblings"><code class="xref py py-obj docutils literal"><span class="pre">findPreviousSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all.html#bs4.BeautifulStoneSoup.find_all" title="bs4.BeautifulStoneSoup.find_all"><code class="xref py py-obj docutils literal"><span class="pre">find_all</span></code></a>([name,&nbsp;attrs,&nbsp;recursive,&nbsp;text,&nbsp;limit])</td>
+<td>Extracts a list of Tag objects that match the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all_next.html#bs4.BeautifulStoneSoup.find_all_next" title="bs4.BeautifulStoneSoup.find_all_next"><code class="xref py py-obj docutils literal"><span class="pre">find_all_next</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all_previous.html#bs4.BeautifulStoneSoup.find_all_previous" title="bs4.BeautifulStoneSoup.find_all_previous"><code class="xref py py-obj docutils literal"><span class="pre">find_all_previous</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next.html#bs4.BeautifulStoneSoup.find_next" title="bs4.BeautifulStoneSoup.find_next"><code class="xref py py-obj docutils literal"><span class="pre">find_next</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next_sibling.html#bs4.BeautifulStoneSoup.find_next_sibling" title="bs4.BeautifulStoneSoup.find_next_sibling"><code class="xref py py-obj docutils literal"><span class="pre">find_next_sibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next_siblings.html#bs4.BeautifulStoneSoup.find_next_siblings" title="bs4.BeautifulStoneSoup.find_next_siblings"><code class="xref py py-obj docutils literal"><span class="pre">find_next_siblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_parent.html#bs4.BeautifulStoneSoup.find_parent" title="bs4.BeautifulStoneSoup.find_parent"><code class="xref py py-obj docutils literal"><span class="pre">find_parent</span></code></a>([name,&nbsp;attrs])</td>
+<td>Returns the closest parent of this Tag that matches the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_parents.html#bs4.BeautifulStoneSoup.find_parents" title="bs4.BeautifulStoneSoup.find_parents"><code class="xref py py-obj docutils literal"><span class="pre">find_parents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous.html#bs4.BeautifulStoneSoup.find_previous" title="bs4.BeautifulStoneSoup.find_previous"><code class="xref py py-obj docutils literal"><span class="pre">find_previous</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous_sibling.html#bs4.BeautifulStoneSoup.find_previous_sibling" title="bs4.BeautifulStoneSoup.find_previous_sibling"><code class="xref py py-obj docutils literal"><span class="pre">find_previous_sibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous_siblings.html#bs4.BeautifulStoneSoup.find_previous_siblings" title="bs4.BeautifulStoneSoup.find_previous_siblings"><code class="xref py py-obj docutils literal"><span class="pre">find_previous_siblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;...])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.format_string.html#bs4.BeautifulStoneSoup.format_string" title="bs4.BeautifulStoneSoup.format_string"><code class="xref py py-obj docutils literal"><span class="pre">format_string</span></code></a>(s[,&nbsp;formatter])</td>
+<td>Format the given string using the given formatter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.get.html#bs4.BeautifulStoneSoup.get" title="bs4.BeautifulStoneSoup.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;default])</td>
+<td>Returns the value of the &#8216;key&#8217; attribute for the tag, or the value given for &#8216;default&#8217; if it doesn&#8217;t have that attribute.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.getText.html#bs4.BeautifulStoneSoup.getText" title="bs4.BeautifulStoneSoup.getText"><code class="xref py py-obj docutils literal"><span class="pre">getText</span></code></a>([separator,&nbsp;strip,&nbsp;types])</td>
+<td>Get all child strings, concatenated using the given separator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.get_text.html#bs4.BeautifulStoneSoup.get_text" title="bs4.BeautifulStoneSoup.get_text"><code class="xref py py-obj docutils literal"><span class="pre">get_text</span></code></a>([separator,&nbsp;strip,&nbsp;types])</td>
+<td>Get all child strings, concatenated using the given separator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_data.html#bs4.BeautifulStoneSoup.handle_data" title="bs4.BeautifulStoneSoup.handle_data"><code class="xref py py-obj docutils literal"><span class="pre">handle_data</span></code></a>(data)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_endtag.html#bs4.BeautifulStoneSoup.handle_endtag" title="bs4.BeautifulStoneSoup.handle_endtag"><code class="xref py py-obj docutils literal"><span class="pre">handle_endtag</span></code></a>(name[,&nbsp;nsprefix])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_starttag.html#bs4.BeautifulStoneSoup.handle_starttag" title="bs4.BeautifulStoneSoup.handle_starttag"><code class="xref py py-obj docutils literal"><span class="pre">handle_starttag</span></code></a>(name,&nbsp;namespace,&nbsp;nsprefix,&nbsp;attrs)</td>
+<td>Push a start tag on to the stack.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.has_attr.html#bs4.BeautifulStoneSoup.has_attr" title="bs4.BeautifulStoneSoup.has_attr"><code class="xref py py-obj docutils literal"><span class="pre">has_attr</span></code></a>(key)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.has_key.html#bs4.BeautifulStoneSoup.has_key" title="bs4.BeautifulStoneSoup.has_key"><code class="xref py py-obj docutils literal"><span class="pre">has_key</span></code></a>(key)</td>
+<td>This was kind of misleading because has_key() (attributes) was different from __in__ (contents).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.index.html#bs4.BeautifulStoneSoup.index" title="bs4.BeautifulStoneSoup.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(element)</td>
+<td>Find the index of a child by identity, not value.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.insert.html#bs4.BeautifulStoneSoup.insert" title="bs4.BeautifulStoneSoup.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(position,&nbsp;new_child)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.insert_after.html#bs4.BeautifulStoneSoup.insert_after" title="bs4.BeautifulStoneSoup.insert_after"><code class="xref py py-obj docutils literal"><span class="pre">insert_after</span></code></a>(successor)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.insert_before.html#bs4.BeautifulStoneSoup.insert_before" title="bs4.BeautifulStoneSoup.insert_before"><code class="xref py py-obj docutils literal"><span class="pre">insert_before</span></code></a>(successor)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.new_string.html#bs4.BeautifulStoneSoup.new_string" title="bs4.BeautifulStoneSoup.new_string"><code class="xref py py-obj docutils literal"><span class="pre">new_string</span></code></a>(s[,&nbsp;subclass])</td>
+<td>Create a new NavigableString associated with this soup.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.new_tag.html#bs4.BeautifulStoneSoup.new_tag" title="bs4.BeautifulStoneSoup.new_tag"><code class="xref py py-obj docutils literal"><span class="pre">new_tag</span></code></a>(name[,&nbsp;namespace,&nbsp;nsprefix])</td>
+<td>Create a new tag associated with this soup.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.nextGenerator.html#bs4.BeautifulStoneSoup.nextGenerator" title="bs4.BeautifulStoneSoup.nextGenerator"><code class="xref py py-obj docutils literal"><span class="pre">nextGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.nextSiblingGenerator.html#bs4.BeautifulStoneSoup.nextSiblingGenerator" title="bs4.BeautifulStoneSoup.nextSiblingGenerator"><code class="xref py py-obj docutils literal"><span class="pre">nextSiblingGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.object_was_parsed.html#bs4.BeautifulStoneSoup.object_was_parsed" title="bs4.BeautifulStoneSoup.object_was_parsed"><code class="xref py py-obj docutils literal"><span class="pre">object_was_parsed</span></code></a>(o[,&nbsp;parent,&nbsp;...])</td>
+<td>Add an object to the parse tree.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.parentGenerator.html#bs4.BeautifulStoneSoup.parentGenerator" title="bs4.BeautifulStoneSoup.parentGenerator"><code class="xref py py-obj docutils literal"><span class="pre">parentGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.popTag.html#bs4.BeautifulStoneSoup.popTag" title="bs4.BeautifulStoneSoup.popTag"><code class="xref py py-obj docutils literal"><span class="pre">popTag</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.prettify.html#bs4.BeautifulStoneSoup.prettify" title="bs4.BeautifulStoneSoup.prettify"><code class="xref py py-obj docutils literal"><span class="pre">prettify</span></code></a>([encoding,&nbsp;formatter])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.previousGenerator.html#bs4.BeautifulStoneSoup.previousGenerator" title="bs4.BeautifulStoneSoup.previousGenerator"><code class="xref py py-obj docutils literal"><span class="pre">previousGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.previousSiblingGenerator.html#bs4.BeautifulStoneSoup.previousSiblingGenerator" title="bs4.BeautifulStoneSoup.previousSiblingGenerator"><code class="xref py py-obj docutils literal"><span class="pre">previousSiblingGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.pushTag.html#bs4.BeautifulStoneSoup.pushTag" title="bs4.BeautifulStoneSoup.pushTag"><code class="xref py py-obj docutils literal"><span class="pre">pushTag</span></code></a>(tag)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.recursiveChildGenerator.html#bs4.BeautifulStoneSoup.recursiveChildGenerator" title="bs4.BeautifulStoneSoup.recursiveChildGenerator"><code class="xref py py-obj docutils literal"><span class="pre">recursiveChildGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.renderContents.html#bs4.BeautifulStoneSoup.renderContents" title="bs4.BeautifulStoneSoup.renderContents"><code class="xref py py-obj docutils literal"><span class="pre">renderContents</span></code></a>([encoding,&nbsp;prettyPrint,&nbsp;...])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.replaceWith.html#bs4.BeautifulStoneSoup.replaceWith" title="bs4.BeautifulStoneSoup.replaceWith"><code class="xref py py-obj docutils literal"><span class="pre">replaceWith</span></code></a>(replace_with)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.replaceWithChildren.html#bs4.BeautifulStoneSoup.replaceWithChildren" title="bs4.BeautifulStoneSoup.replaceWithChildren"><code class="xref py py-obj docutils literal"><span class="pre">replaceWithChildren</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.replace_with.html#bs4.BeautifulStoneSoup.replace_with" title="bs4.BeautifulStoneSoup.replace_with"><code class="xref py py-obj docutils literal"><span class="pre">replace_with</span></code></a>(replace_with)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.replace_with_children.html#bs4.BeautifulStoneSoup.replace_with_children" title="bs4.BeautifulStoneSoup.replace_with_children"><code class="xref py py-obj docutils literal"><span class="pre">replace_with_children</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.reset.html#bs4.BeautifulStoneSoup.reset" title="bs4.BeautifulStoneSoup.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.select.html#bs4.BeautifulStoneSoup.select" title="bs4.BeautifulStoneSoup.select"><code class="xref py py-obj docutils literal"><span class="pre">select</span></code></a>(selector[,&nbsp;_candidate_generator,&nbsp;limit])</td>
+<td>Perform a CSS selection operation on the current element.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.select_one.html#bs4.BeautifulStoneSoup.select_one" title="bs4.BeautifulStoneSoup.select_one"><code class="xref py py-obj docutils literal"><span class="pre">select_one</span></code></a>(selector)</td>
+<td>Perform a CSS selection operation on the current element.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.setup.html#bs4.BeautifulStoneSoup.setup" title="bs4.BeautifulStoneSoup.setup"><code class="xref py py-obj docutils literal"><span class="pre">setup</span></code></a>([parent,&nbsp;previous_element,&nbsp;...])</td>
+<td>Sets up the initial relations between this element and other elements.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.unwrap.html#bs4.BeautifulStoneSoup.unwrap" title="bs4.BeautifulStoneSoup.unwrap"><code class="xref py py-obj docutils literal"><span class="pre">unwrap</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.BeautifulStoneSoup.wrap.html#bs4.BeautifulStoneSoup.wrap" title="bs4.BeautifulStoneSoup.wrap"><code class="xref py py-obj docutils literal"><span class="pre">wrap</span></code></a>(wrap_inside)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.BeautifulStoneSoup.children.html" class="btn btn-neutral float-right" title="13.1.2.1. bs4.BeautifulStoneSoup.children" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bs4.BeautifulSoup.wrap.html" class="btn btn-neutral" title="13.1.1.93. bs4.BeautifulSoup.wrap" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

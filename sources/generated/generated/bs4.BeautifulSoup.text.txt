@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.text
+======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.text

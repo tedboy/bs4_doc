@@ -1,0 +1,6 @@
+bs4.Doctype.previous_elements
+=============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.previous_elements

@@ -1,0 +1,6 @@
+bs4.PageElement.findParent
+==========================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.findParent

@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES
+=============================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES

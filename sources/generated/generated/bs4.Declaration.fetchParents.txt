@@ -1,0 +1,6 @@
+bs4.Declaration.fetchParents
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.fetchParents

@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.popTag
+========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.popTag

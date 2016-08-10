@@ -1,0 +1,6 @@
+bs4.Declaration.isdecimal
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.isdecimal

@@ -1,0 +1,6 @@
+bs4.Doctype.endswith
+====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.endswith

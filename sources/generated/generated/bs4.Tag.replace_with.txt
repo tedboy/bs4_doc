@@ -1,0 +1,6 @@
+bs4.Tag.replace_with
+====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.replace_with

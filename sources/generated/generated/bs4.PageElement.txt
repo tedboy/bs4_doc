@@ -1,0 +1,84 @@
+bs4.PageElement
+===============
+
+.. currentmodule:: bs4
+
+.. autoclass:: PageElement
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~PageElement.append
+   ~PageElement.extract
+   ~PageElement.fetchNextSiblings
+   ~PageElement.fetchParents
+   ~PageElement.fetchPrevious
+   ~PageElement.fetchPreviousSiblings
+   ~PageElement.findAllNext
+   ~PageElement.findAllPrevious
+   ~PageElement.findNext
+   ~PageElement.findNextSibling
+   ~PageElement.findNextSiblings
+   ~PageElement.findParent
+   ~PageElement.findParents
+   ~PageElement.findPrevious
+   ~PageElement.findPreviousSibling
+   ~PageElement.findPreviousSiblings
+   ~PageElement.find_all_next
+   ~PageElement.find_all_previous
+   ~PageElement.find_next
+   ~PageElement.find_next_sibling
+   ~PageElement.find_next_siblings
+   ~PageElement.find_parent
+   ~PageElement.find_parents
+   ~PageElement.find_previous
+   ~PageElement.find_previous_sibling
+   ~PageElement.find_previous_siblings
+   ~PageElement.format_string
+   ~PageElement.insert
+   ~PageElement.insert_after
+   ~PageElement.insert_before
+   ~PageElement.nextGenerator
+   ~PageElement.nextSiblingGenerator
+   ~PageElement.parentGenerator
+   ~PageElement.previousGenerator
+   ~PageElement.previousSiblingGenerator
+   ~PageElement.replaceWith
+   ~PageElement.replaceWithChildren
+   ~PageElement.replace_with
+   ~PageElement.replace_with_children
+   ~PageElement.setup
+   ~PageElement.unwrap
+   ~PageElement.wrap
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~PageElement.HTML_FORMATTERS
+   ~PageElement.XML_FORMATTERS
+   ~PageElement.attribselect_re
+   ~PageElement.next
+   ~PageElement.nextSibling
+   ~PageElement.next_elements
+   ~PageElement.next_siblings
+   ~PageElement.parents
+   ~PageElement.previous
+   ~PageElement.previousSibling
+   ~PageElement.previous_elements
+   ~PageElement.previous_siblings
+   ~PageElement.tag_name_re
+

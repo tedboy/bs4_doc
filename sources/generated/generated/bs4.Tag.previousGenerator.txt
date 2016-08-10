@@ -1,0 +1,6 @@
+bs4.Tag.previousGenerator
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.previousGenerator

@@ -1,0 +1,6 @@
+bs4.CData.splitlines
+====================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.splitlines

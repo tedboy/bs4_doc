@@ -1,0 +1,6 @@
+bs4.CData.output_ready
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.output_ready

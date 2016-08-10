@@ -1,0 +1,6 @@
+bs4.Declaration.SUFFIX
+======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.SUFFIX

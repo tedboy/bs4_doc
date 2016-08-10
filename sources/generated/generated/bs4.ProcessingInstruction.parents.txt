@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.parents
+=================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: ProcessingInstruction.parents

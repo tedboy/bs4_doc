@@ -1,0 +1,6 @@
+bs4.PageElement.findPreviousSibling
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.findPreviousSibling

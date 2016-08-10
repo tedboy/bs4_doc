@@ -1,0 +1,6 @@
+bs4.NavigableString.SUFFIX
+==========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.SUFFIX

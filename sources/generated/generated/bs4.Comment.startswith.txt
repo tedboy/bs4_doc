@@ -1,0 +1,6 @@
+bs4.Comment.startswith
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.startswith

@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.parentGenerator
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.parentGenerator

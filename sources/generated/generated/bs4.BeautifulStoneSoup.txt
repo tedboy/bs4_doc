@@ -1,0 +1,131 @@
+bs4.BeautifulStoneSoup
+======================
+
+.. currentmodule:: bs4
+
+.. autoclass:: BeautifulStoneSoup
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~BeautifulStoneSoup.__init__
+   ~BeautifulStoneSoup.append
+   ~BeautifulStoneSoup.childGenerator
+   ~BeautifulStoneSoup.clear
+   ~BeautifulStoneSoup.decode
+   ~BeautifulStoneSoup.decode_contents
+   ~BeautifulStoneSoup.decompose
+   ~BeautifulStoneSoup.encode
+   ~BeautifulStoneSoup.encode_contents
+   ~BeautifulStoneSoup.endData
+   ~BeautifulStoneSoup.extract
+   ~BeautifulStoneSoup.fetchNextSiblings
+   ~BeautifulStoneSoup.fetchParents
+   ~BeautifulStoneSoup.fetchPrevious
+   ~BeautifulStoneSoup.fetchPreviousSiblings
+   ~BeautifulStoneSoup.find
+   ~BeautifulStoneSoup.findAll
+   ~BeautifulStoneSoup.findAllNext
+   ~BeautifulStoneSoup.findAllPrevious
+   ~BeautifulStoneSoup.findChild
+   ~BeautifulStoneSoup.findChildren
+   ~BeautifulStoneSoup.findNext
+   ~BeautifulStoneSoup.findNextSibling
+   ~BeautifulStoneSoup.findNextSiblings
+   ~BeautifulStoneSoup.findParent
+   ~BeautifulStoneSoup.findParents
+   ~BeautifulStoneSoup.findPrevious
+   ~BeautifulStoneSoup.findPreviousSibling
+   ~BeautifulStoneSoup.findPreviousSiblings
+   ~BeautifulStoneSoup.find_all
+   ~BeautifulStoneSoup.find_all_next
+   ~BeautifulStoneSoup.find_all_previous
+   ~BeautifulStoneSoup.find_next
+   ~BeautifulStoneSoup.find_next_sibling
+   ~BeautifulStoneSoup.find_next_siblings
+   ~BeautifulStoneSoup.find_parent
+   ~BeautifulStoneSoup.find_parents
+   ~BeautifulStoneSoup.find_previous
+   ~BeautifulStoneSoup.find_previous_sibling
+   ~BeautifulStoneSoup.find_previous_siblings
+   ~BeautifulStoneSoup.format_string
+   ~BeautifulStoneSoup.get
+   ~BeautifulStoneSoup.getText
+   ~BeautifulStoneSoup.get_text
+   ~BeautifulStoneSoup.handle_data
+   ~BeautifulStoneSoup.handle_endtag
+   ~BeautifulStoneSoup.handle_starttag
+   ~BeautifulStoneSoup.has_attr
+   ~BeautifulStoneSoup.has_key
+   ~BeautifulStoneSoup.index
+   ~BeautifulStoneSoup.insert
+   ~BeautifulStoneSoup.insert_after
+   ~BeautifulStoneSoup.insert_before
+   ~BeautifulStoneSoup.new_string
+   ~BeautifulStoneSoup.new_tag
+   ~BeautifulStoneSoup.nextGenerator
+   ~BeautifulStoneSoup.nextSiblingGenerator
+   ~BeautifulStoneSoup.object_was_parsed
+   ~BeautifulStoneSoup.parentGenerator
+   ~BeautifulStoneSoup.popTag
+   ~BeautifulStoneSoup.prettify
+   ~BeautifulStoneSoup.previousGenerator
+   ~BeautifulStoneSoup.previousSiblingGenerator
+   ~BeautifulStoneSoup.pushTag
+   ~BeautifulStoneSoup.recursiveChildGenerator
+   ~BeautifulStoneSoup.renderContents
+   ~BeautifulStoneSoup.replaceWith
+   ~BeautifulStoneSoup.replaceWithChildren
+   ~BeautifulStoneSoup.replace_with
+   ~BeautifulStoneSoup.replace_with_children
+   ~BeautifulStoneSoup.reset
+   ~BeautifulStoneSoup.select
+   ~BeautifulStoneSoup.select_one
+   ~BeautifulStoneSoup.setup
+   ~BeautifulStoneSoup.unwrap
+   ~BeautifulStoneSoup.wrap
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~BeautifulStoneSoup.ASCII_SPACES
+   ~BeautifulStoneSoup.DEFAULT_BUILDER_FEATURES
+   ~BeautifulStoneSoup.HTML_FORMATTERS
+   ~BeautifulStoneSoup.NO_PARSER_SPECIFIED_WARNING
+   ~BeautifulStoneSoup.ROOT_TAG_NAME
+   ~BeautifulStoneSoup.XML_FORMATTERS
+   ~BeautifulStoneSoup.attribselect_re
+   ~BeautifulStoneSoup.children
+   ~BeautifulStoneSoup.descendants
+   ~BeautifulStoneSoup.isSelfClosing
+   ~BeautifulStoneSoup.is_empty_element
+   ~BeautifulStoneSoup.next
+   ~BeautifulStoneSoup.nextSibling
+   ~BeautifulStoneSoup.next_elements
+   ~BeautifulStoneSoup.next_siblings
+   ~BeautifulStoneSoup.parents
+   ~BeautifulStoneSoup.parserClass
+   ~BeautifulStoneSoup.previous
+   ~BeautifulStoneSoup.previousSibling
+   ~BeautifulStoneSoup.previous_elements
+   ~BeautifulStoneSoup.previous_siblings
+   ~BeautifulStoneSoup.string
+   ~BeautifulStoneSoup.strings
+   ~BeautifulStoneSoup.stripped_strings
+   ~BeautifulStoneSoup.tag_name_re
+   ~BeautifulStoneSoup.text
+

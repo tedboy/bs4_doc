@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.previous
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.previous

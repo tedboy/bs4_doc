@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.fetchParents
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.fetchParents

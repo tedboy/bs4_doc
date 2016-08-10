@@ -1,0 +1,6 @@
+bs4.NavigableString.next
+========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.next

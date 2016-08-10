@@ -1,0 +1,6 @@
+bs4.Comment.ljust
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.ljust

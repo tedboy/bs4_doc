@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.__init__
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.__init__

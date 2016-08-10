@@ -1,0 +1,6 @@
+bs4.ParserRejectedMarkup
+========================
+
+.. currentmodule:: bs4
+
+.. autoexception:: ParserRejectedMarkup

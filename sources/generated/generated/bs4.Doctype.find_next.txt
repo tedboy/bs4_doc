@@ -1,0 +1,6 @@
+bs4.Doctype.find_next
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.find_next

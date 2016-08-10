@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.has_key
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.has_key

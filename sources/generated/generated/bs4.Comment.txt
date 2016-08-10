@@ -1,0 +1,128 @@
+bs4.Comment
+===========
+
+.. currentmodule:: bs4
+
+.. autoclass:: Comment
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~Comment.append
+   ~Comment.capitalize
+   ~Comment.center
+   ~Comment.count
+   ~Comment.decode
+   ~Comment.encode
+   ~Comment.endswith
+   ~Comment.expandtabs
+   ~Comment.extract
+   ~Comment.fetchNextSiblings
+   ~Comment.fetchParents
+   ~Comment.fetchPrevious
+   ~Comment.fetchPreviousSiblings
+   ~Comment.find
+   ~Comment.findAllNext
+   ~Comment.findAllPrevious
+   ~Comment.findNext
+   ~Comment.findNextSibling
+   ~Comment.findNextSiblings
+   ~Comment.findParent
+   ~Comment.findParents
+   ~Comment.findPrevious
+   ~Comment.findPreviousSibling
+   ~Comment.findPreviousSiblings
+   ~Comment.find_all_next
+   ~Comment.find_all_previous
+   ~Comment.find_next
+   ~Comment.find_next_sibling
+   ~Comment.find_next_siblings
+   ~Comment.find_parent
+   ~Comment.find_parents
+   ~Comment.find_previous
+   ~Comment.find_previous_sibling
+   ~Comment.find_previous_siblings
+   ~Comment.format
+   ~Comment.format_string
+   ~Comment.index
+   ~Comment.insert
+   ~Comment.insert_after
+   ~Comment.insert_before
+   ~Comment.isalnum
+   ~Comment.isalpha
+   ~Comment.isdecimal
+   ~Comment.isdigit
+   ~Comment.islower
+   ~Comment.isnumeric
+   ~Comment.isspace
+   ~Comment.istitle
+   ~Comment.isupper
+   ~Comment.join
+   ~Comment.ljust
+   ~Comment.lower
+   ~Comment.lstrip
+   ~Comment.nextGenerator
+   ~Comment.nextSiblingGenerator
+   ~Comment.output_ready
+   ~Comment.parentGenerator
+   ~Comment.partition
+   ~Comment.previousGenerator
+   ~Comment.previousSiblingGenerator
+   ~Comment.replace
+   ~Comment.replaceWith
+   ~Comment.replaceWithChildren
+   ~Comment.replace_with
+   ~Comment.replace_with_children
+   ~Comment.rfind
+   ~Comment.rindex
+   ~Comment.rjust
+   ~Comment.rpartition
+   ~Comment.rsplit
+   ~Comment.rstrip
+   ~Comment.setup
+   ~Comment.split
+   ~Comment.splitlines
+   ~Comment.startswith
+   ~Comment.strip
+   ~Comment.swapcase
+   ~Comment.title
+   ~Comment.translate
+   ~Comment.unwrap
+   ~Comment.upper
+   ~Comment.wrap
+   ~Comment.zfill
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~Comment.HTML_FORMATTERS
+   ~Comment.PREFIX
+   ~Comment.SUFFIX
+   ~Comment.XML_FORMATTERS
+   ~Comment.attribselect_re
+   ~Comment.name
+   ~Comment.next
+   ~Comment.nextSibling
+   ~Comment.next_elements
+   ~Comment.next_siblings
+   ~Comment.parents
+   ~Comment.previous
+   ~Comment.previousSibling
+   ~Comment.previous_elements
+   ~Comment.previous_siblings
+   ~Comment.tag_name_re
+

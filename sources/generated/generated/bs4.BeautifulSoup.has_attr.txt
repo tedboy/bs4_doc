@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.has_attr
+==========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.has_attr

@@ -1,0 +1,6 @@
+bs4.NavigableString.attribselect_re
+===================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.attribselect_re

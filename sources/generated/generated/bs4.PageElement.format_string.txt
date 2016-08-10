@@ -1,0 +1,6 @@
+bs4.PageElement.format_string
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.format_string

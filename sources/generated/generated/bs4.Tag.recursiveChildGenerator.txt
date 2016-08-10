@@ -1,0 +1,6 @@
+bs4.Tag.recursiveChildGenerator
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.recursiveChildGenerator

@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.format_string
+=======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.format_string

@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.parentGenerator
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.parentGenerator

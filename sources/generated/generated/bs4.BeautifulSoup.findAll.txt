@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.findAll
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.findAll

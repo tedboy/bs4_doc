@@ -1,0 +1,6 @@
+bs4.Doctype.index
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.index

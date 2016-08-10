@@ -1,0 +1,6 @@
+bs4.Declaration.replace
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.replace

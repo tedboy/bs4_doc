@@ -1,0 +1,6 @@
+bs4.CData.findParents
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.findParents

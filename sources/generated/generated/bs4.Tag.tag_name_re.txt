@@ -1,0 +1,6 @@
+bs4.Tag.tag_name_re
+===================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.tag_name_re

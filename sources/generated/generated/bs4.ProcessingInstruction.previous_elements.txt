@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.previous_elements
+===========================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: ProcessingInstruction.previous_elements

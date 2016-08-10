@@ -1,0 +1,6 @@
+bs4.CData.isspace
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.isspace

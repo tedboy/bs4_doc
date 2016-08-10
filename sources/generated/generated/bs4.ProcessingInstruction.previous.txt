@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.previous
+==================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: ProcessingInstruction.previous

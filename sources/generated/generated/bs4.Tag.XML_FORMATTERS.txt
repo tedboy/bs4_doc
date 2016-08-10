@@ -1,0 +1,6 @@
+bs4.Tag.XML_FORMATTERS
+======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.XML_FORMATTERS

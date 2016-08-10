@@ -1,0 +1,6 @@
+bs4.Doctype.parentGenerator
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.parentGenerator

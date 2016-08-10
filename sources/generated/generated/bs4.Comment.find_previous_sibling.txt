@@ -1,0 +1,6 @@
+bs4.Comment.find_previous_sibling
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.find_previous_sibling

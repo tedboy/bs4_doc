@@ -1,0 +1,6 @@
+bs4.NavigableString.isspace
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.isspace

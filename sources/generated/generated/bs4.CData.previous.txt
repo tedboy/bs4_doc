@@ -1,0 +1,6 @@
+bs4.CData.previous
+==================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: CData.previous

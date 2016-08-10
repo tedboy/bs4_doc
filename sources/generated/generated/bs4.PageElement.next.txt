@@ -1,0 +1,6 @@
+bs4.PageElement.next
+====================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: PageElement.next

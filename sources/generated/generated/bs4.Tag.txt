@@ -1,0 +1,117 @@
+bs4.Tag
+=======
+
+.. currentmodule:: bs4
+
+.. autoclass:: Tag
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~Tag.__init__
+   ~Tag.append
+   ~Tag.childGenerator
+   ~Tag.clear
+   ~Tag.decode
+   ~Tag.decode_contents
+   ~Tag.decompose
+   ~Tag.encode
+   ~Tag.encode_contents
+   ~Tag.extract
+   ~Tag.fetchNextSiblings
+   ~Tag.fetchParents
+   ~Tag.fetchPrevious
+   ~Tag.fetchPreviousSiblings
+   ~Tag.find
+   ~Tag.findAll
+   ~Tag.findAllNext
+   ~Tag.findAllPrevious
+   ~Tag.findChild
+   ~Tag.findChildren
+   ~Tag.findNext
+   ~Tag.findNextSibling
+   ~Tag.findNextSiblings
+   ~Tag.findParent
+   ~Tag.findParents
+   ~Tag.findPrevious
+   ~Tag.findPreviousSibling
+   ~Tag.findPreviousSiblings
+   ~Tag.find_all
+   ~Tag.find_all_next
+   ~Tag.find_all_previous
+   ~Tag.find_next
+   ~Tag.find_next_sibling
+   ~Tag.find_next_siblings
+   ~Tag.find_parent
+   ~Tag.find_parents
+   ~Tag.find_previous
+   ~Tag.find_previous_sibling
+   ~Tag.find_previous_siblings
+   ~Tag.format_string
+   ~Tag.get
+   ~Tag.getText
+   ~Tag.get_text
+   ~Tag.has_attr
+   ~Tag.has_key
+   ~Tag.index
+   ~Tag.insert
+   ~Tag.insert_after
+   ~Tag.insert_before
+   ~Tag.nextGenerator
+   ~Tag.nextSiblingGenerator
+   ~Tag.parentGenerator
+   ~Tag.prettify
+   ~Tag.previousGenerator
+   ~Tag.previousSiblingGenerator
+   ~Tag.recursiveChildGenerator
+   ~Tag.renderContents
+   ~Tag.replaceWith
+   ~Tag.replaceWithChildren
+   ~Tag.replace_with
+   ~Tag.replace_with_children
+   ~Tag.select
+   ~Tag.select_one
+   ~Tag.setup
+   ~Tag.unwrap
+   ~Tag.wrap
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~Tag.HTML_FORMATTERS
+   ~Tag.XML_FORMATTERS
+   ~Tag.attribselect_re
+   ~Tag.children
+   ~Tag.descendants
+   ~Tag.isSelfClosing
+   ~Tag.is_empty_element
+   ~Tag.next
+   ~Tag.nextSibling
+   ~Tag.next_elements
+   ~Tag.next_siblings
+   ~Tag.parents
+   ~Tag.parserClass
+   ~Tag.previous
+   ~Tag.previousSibling
+   ~Tag.previous_elements
+   ~Tag.previous_siblings
+   ~Tag.string
+   ~Tag.strings
+   ~Tag.stripped_strings
+   ~Tag.tag_name_re
+   ~Tag.text
+

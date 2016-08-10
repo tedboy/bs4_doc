@@ -1,0 +1,6 @@
+bs4.Tag.has_key
+===============
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.has_key

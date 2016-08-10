@@ -1,0 +1,128 @@
+bs4.ProcessingInstruction
+=========================
+
+.. currentmodule:: bs4
+
+.. autoclass:: ProcessingInstruction
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~ProcessingInstruction.append
+   ~ProcessingInstruction.capitalize
+   ~ProcessingInstruction.center
+   ~ProcessingInstruction.count
+   ~ProcessingInstruction.decode
+   ~ProcessingInstruction.encode
+   ~ProcessingInstruction.endswith
+   ~ProcessingInstruction.expandtabs
+   ~ProcessingInstruction.extract
+   ~ProcessingInstruction.fetchNextSiblings
+   ~ProcessingInstruction.fetchParents
+   ~ProcessingInstruction.fetchPrevious
+   ~ProcessingInstruction.fetchPreviousSiblings
+   ~ProcessingInstruction.find
+   ~ProcessingInstruction.findAllNext
+   ~ProcessingInstruction.findAllPrevious
+   ~ProcessingInstruction.findNext
+   ~ProcessingInstruction.findNextSibling
+   ~ProcessingInstruction.findNextSiblings
+   ~ProcessingInstruction.findParent
+   ~ProcessingInstruction.findParents
+   ~ProcessingInstruction.findPrevious
+   ~ProcessingInstruction.findPreviousSibling
+   ~ProcessingInstruction.findPreviousSiblings
+   ~ProcessingInstruction.find_all_next
+   ~ProcessingInstruction.find_all_previous
+   ~ProcessingInstruction.find_next
+   ~ProcessingInstruction.find_next_sibling
+   ~ProcessingInstruction.find_next_siblings
+   ~ProcessingInstruction.find_parent
+   ~ProcessingInstruction.find_parents
+   ~ProcessingInstruction.find_previous
+   ~ProcessingInstruction.find_previous_sibling
+   ~ProcessingInstruction.find_previous_siblings
+   ~ProcessingInstruction.format
+   ~ProcessingInstruction.format_string
+   ~ProcessingInstruction.index
+   ~ProcessingInstruction.insert
+   ~ProcessingInstruction.insert_after
+   ~ProcessingInstruction.insert_before
+   ~ProcessingInstruction.isalnum
+   ~ProcessingInstruction.isalpha
+   ~ProcessingInstruction.isdecimal
+   ~ProcessingInstruction.isdigit
+   ~ProcessingInstruction.islower
+   ~ProcessingInstruction.isnumeric
+   ~ProcessingInstruction.isspace
+   ~ProcessingInstruction.istitle
+   ~ProcessingInstruction.isupper
+   ~ProcessingInstruction.join
+   ~ProcessingInstruction.ljust
+   ~ProcessingInstruction.lower
+   ~ProcessingInstruction.lstrip
+   ~ProcessingInstruction.nextGenerator
+   ~ProcessingInstruction.nextSiblingGenerator
+   ~ProcessingInstruction.output_ready
+   ~ProcessingInstruction.parentGenerator
+   ~ProcessingInstruction.partition
+   ~ProcessingInstruction.previousGenerator
+   ~ProcessingInstruction.previousSiblingGenerator
+   ~ProcessingInstruction.replace
+   ~ProcessingInstruction.replaceWith
+   ~ProcessingInstruction.replaceWithChildren
+   ~ProcessingInstruction.replace_with
+   ~ProcessingInstruction.replace_with_children
+   ~ProcessingInstruction.rfind
+   ~ProcessingInstruction.rindex
+   ~ProcessingInstruction.rjust
+   ~ProcessingInstruction.rpartition
+   ~ProcessingInstruction.rsplit
+   ~ProcessingInstruction.rstrip
+   ~ProcessingInstruction.setup
+   ~ProcessingInstruction.split
+   ~ProcessingInstruction.splitlines
+   ~ProcessingInstruction.startswith
+   ~ProcessingInstruction.strip
+   ~ProcessingInstruction.swapcase
+   ~ProcessingInstruction.title
+   ~ProcessingInstruction.translate
+   ~ProcessingInstruction.unwrap
+   ~ProcessingInstruction.upper
+   ~ProcessingInstruction.wrap
+   ~ProcessingInstruction.zfill
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~ProcessingInstruction.HTML_FORMATTERS
+   ~ProcessingInstruction.PREFIX
+   ~ProcessingInstruction.SUFFIX
+   ~ProcessingInstruction.XML_FORMATTERS
+   ~ProcessingInstruction.attribselect_re
+   ~ProcessingInstruction.name
+   ~ProcessingInstruction.next
+   ~ProcessingInstruction.nextSibling
+   ~ProcessingInstruction.next_elements
+   ~ProcessingInstruction.next_siblings
+   ~ProcessingInstruction.parents
+   ~ProcessingInstruction.previous
+   ~ProcessingInstruction.previousSibling
+   ~ProcessingInstruction.previous_elements
+   ~ProcessingInstruction.previous_siblings
+   ~ProcessingInstruction.tag_name_re
+

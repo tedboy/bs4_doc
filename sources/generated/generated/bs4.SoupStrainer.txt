@@ -1,0 +1,25 @@
+bs4.SoupStrainer
+================
+
+.. currentmodule:: bs4
+
+.. autoclass:: SoupStrainer
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~SoupStrainer.__init__
+   ~SoupStrainer.search
+   ~SoupStrainer.searchTag
+   ~SoupStrainer.search_tag
+
+
+
+
+

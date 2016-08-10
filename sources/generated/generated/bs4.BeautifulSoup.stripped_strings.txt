@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.stripped_strings
+==================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.stripped_strings

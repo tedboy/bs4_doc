@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.parents
+==============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.parents

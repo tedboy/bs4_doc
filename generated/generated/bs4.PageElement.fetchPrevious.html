@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13.1.8.14. bs4.PageElement.fetchPrevious &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="13.1.8. bs4.PageElement" href="bs4.PageElement.html"/>
+        <link rel="next" title="13.1.8.15. bs4.PageElement.fetchPreviousSiblings" href="bs4.PageElement.fetchPreviousSiblings.html"/>
+        <link rel="prev" title="13.1.8.13. bs4.PageElement.fetchParents" href="bs4.PageElement.fetchParents.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bs4.html">13. bs4</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bs4.html#classes">13.1. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulSoup.html">13.1.1. bs4.BeautifulSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulStoneSoup.html">13.1.2. bs4.BeautifulStoneSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.CData.html">13.1.3. bs4.CData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Comment.html">13.1.4. bs4.Comment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Declaration.html">13.1.5. bs4.Declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Doctype.html">13.1.6. bs4.Doctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.NavigableString.html">13.1.7. bs4.NavigableString</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="bs4.PageElement.html">13.1.8. bs4.PageElement</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.next.html">13.1.8.1. bs4.PageElement.next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.nextSibling.html">13.1.8.2. bs4.PageElement.nextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.next_elements.html">13.1.8.3. bs4.PageElement.next_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.next_siblings.html">13.1.8.4. bs4.PageElement.next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.parents.html">13.1.8.5. bs4.PageElement.parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.previous.html">13.1.8.6. bs4.PageElement.previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.previousSibling.html">13.1.8.7. bs4.PageElement.previousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.previous_elements.html">13.1.8.8. bs4.PageElement.previous_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.previous_siblings.html">13.1.8.9. bs4.PageElement.previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.append.html">13.1.8.10. bs4.PageElement.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.extract.html">13.1.8.11. bs4.PageElement.extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.fetchNextSiblings.html">13.1.8.12. bs4.PageElement.fetchNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.fetchParents.html">13.1.8.13. bs4.PageElement.fetchParents</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">13.1.8.14. bs4.PageElement.fetchPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.fetchPreviousSiblings.html">13.1.8.15. bs4.PageElement.fetchPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findAllNext.html">13.1.8.16. bs4.PageElement.findAllNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findAllPrevious.html">13.1.8.17. bs4.PageElement.findAllPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findNext.html">13.1.8.18. bs4.PageElement.findNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findNextSibling.html">13.1.8.19. bs4.PageElement.findNextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findNextSiblings.html">13.1.8.20. bs4.PageElement.findNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findParent.html">13.1.8.21. bs4.PageElement.findParent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findParents.html">13.1.8.22. bs4.PageElement.findParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findPrevious.html">13.1.8.23. bs4.PageElement.findPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findPreviousSibling.html">13.1.8.24. bs4.PageElement.findPreviousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.findPreviousSiblings.html">13.1.8.25. bs4.PageElement.findPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_all_next.html">13.1.8.26. bs4.PageElement.find_all_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_all_previous.html">13.1.8.27. bs4.PageElement.find_all_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_next.html">13.1.8.28. bs4.PageElement.find_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_next_sibling.html">13.1.8.29. bs4.PageElement.find_next_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_next_siblings.html">13.1.8.30. bs4.PageElement.find_next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_parent.html">13.1.8.31. bs4.PageElement.find_parent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_parents.html">13.1.8.32. bs4.PageElement.find_parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_previous.html">13.1.8.33. bs4.PageElement.find_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_previous_sibling.html">13.1.8.34. bs4.PageElement.find_previous_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.find_previous_siblings.html">13.1.8.35. bs4.PageElement.find_previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.format_string.html">13.1.8.36. bs4.PageElement.format_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.insert.html">13.1.8.37. bs4.PageElement.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.insert_after.html">13.1.8.38. bs4.PageElement.insert_after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.insert_before.html">13.1.8.39. bs4.PageElement.insert_before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.nextGenerator.html">13.1.8.40. bs4.PageElement.nextGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.nextSiblingGenerator.html">13.1.8.41. bs4.PageElement.nextSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.parentGenerator.html">13.1.8.42. bs4.PageElement.parentGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.previousGenerator.html">13.1.8.43. bs4.PageElement.previousGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.previousSiblingGenerator.html">13.1.8.44. bs4.PageElement.previousSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.replaceWith.html">13.1.8.45. bs4.PageElement.replaceWith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.replaceWithChildren.html">13.1.8.46. bs4.PageElement.replaceWithChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.replace_with.html">13.1.8.47. bs4.PageElement.replace_with</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.replace_with_children.html">13.1.8.48. bs4.PageElement.replace_with_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.setup.html">13.1.8.49. bs4.PageElement.setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.unwrap.html">13.1.8.50. bs4.PageElement.unwrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.PageElement.wrap.html">13.1.8.51. bs4.PageElement.wrap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ProcessingInstruction.html">13.1.9. bs4.ProcessingInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ResultSet.html">13.1.10. bs4.ResultSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.SoupStrainer.html">13.1.11. bs4.SoupStrainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Tag.html">13.1.12. bs4.Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.UnicodeDammit.html">13.1.13. bs4.UnicodeDammit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bs4.html#exceptions">13.2. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../bs4.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../bs4.html">13. bs4</a> &raquo;</li>
+        
+          <li><a href="bs4.PageElement.html">13.1.8. bs4.PageElement</a> &raquo;</li>
+        
+      <li>13.1.8.14. bs4.PageElement.fetchPrevious</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/bs4.PageElement.fetchPrevious.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bs4-pageelement-fetchprevious">
+<h1>13.1.8.14. bs4.PageElement.fetchPrevious<a class="headerlink" href="#bs4-pageelement-fetchprevious" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="bs4.PageElement.fetchPrevious">
+<code class="descclassname">PageElement.</code><code class="descname">fetchPrevious</code><span class="sig-paren">(</span><em>name=None</em>, <em>attrs={}</em>, <em>text=None</em>, <em>limit=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#bs4.PageElement.fetchPrevious" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all items that match the given criteria and appear
+before this Tag in the document.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.PageElement.fetchPreviousSiblings.html" class="btn btn-neutral float-right" title="13.1.8.15. bs4.PageElement.fetchPreviousSiblings" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bs4.PageElement.fetchParents.html" class="btn btn-neutral" title="13.1.8.13. bs4.PageElement.fetchParents" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

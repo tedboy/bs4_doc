@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.DEFAULT_BUILDER_FEATURES
+==========================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.DEFAULT_BUILDER_FEATURES

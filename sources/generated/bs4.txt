@@ -1,0 +1,67 @@
+bs4
+===
+
+.. automodule:: bs4
+
+   
+   
+   
+
+   
+   
+   Classes
+   ---------
+   .. autosummary::
+      :toctree:generated/
+      :template:class_custom.rst
+
+   
+      BeautifulSoup
+      BeautifulStoneSoup
+      CData
+      Comment
+      Declaration
+      Doctype
+      NavigableString
+      PageElement
+      ProcessingInstruction
+      ResultSet
+      SoupStrainer
+      Tag
+      UnicodeDammit
+
+   .. toctree::
+       :maxdepth: 1
+       :hidden:
+
+   
+       generated/bs4.BeautifulSoup
+       generated/bs4.BeautifulStoneSoup
+       generated/bs4.CData
+       generated/bs4.Comment
+       generated/bs4.Declaration
+       generated/bs4.Doctype
+       generated/bs4.NavigableString
+       generated/bs4.PageElement
+       generated/bs4.ProcessingInstruction
+       generated/bs4.ResultSet
+       generated/bs4.SoupStrainer
+       generated/bs4.Tag
+       generated/bs4.UnicodeDammit
+
+   
+   
+
+   
+   
+   Exceptions
+   ---------
+   .. autosummary::
+      :toctree:
+
+   
+      FeatureNotFound
+      ParserRejectedMarkup
+      StopParsing
+   
+   

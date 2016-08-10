@@ -1,0 +1,6 @@
+bs4.Doctype.findParents
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.findParents

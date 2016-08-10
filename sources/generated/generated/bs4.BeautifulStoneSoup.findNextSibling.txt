@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.findNextSibling
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.findNextSibling

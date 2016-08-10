@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.isdigit
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.isdigit

@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.isdecimal
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.isdecimal

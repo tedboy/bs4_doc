@@ -1,0 +1,497 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7. Modifying the tree &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/>
+        <link rel="next" title="8. Output" href="8_output.html"/>
+        <link rel="prev" title="6. Searching the tree" href="6_searching_the_tree.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Modifying the tree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#changing-tag-names-and-attributes">7.1. Changing tag names and attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-string">7.2. Modifying <code class="docutils literal"><span class="pre">.string</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#append">7.3. <code class="docutils literal"><span class="pre">append()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beautifulsoup-new-string-and-new-tag">7.4. <code class="docutils literal"><span class="pre">BeautifulSoup.new_string()</span></code> and <code class="docutils literal"><span class="pre">.new_tag()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#insert">7.5. <code class="docutils literal"><span class="pre">insert()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#insert-before-and-insert-after">7.6. <code class="docutils literal"><span class="pre">insert_before()</span></code> and <code class="docutils literal"><span class="pre">insert_after()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#clear">7.7. <code class="docutils literal"><span class="pre">clear()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#extract">7.8. <code class="docutils literal"><span class="pre">extract()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#decompose">7.9. <code class="docutils literal"><span class="pre">decompose()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#replace-with">7.10. <code class="docutils literal"><span class="pre">replace_with()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wrap">7.11. <code class="docutils literal"><span class="pre">wrap()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unwrap">7.12. <code class="docutils literal"><span class="pre">unwrap()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>7. Modifying the tree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/7_modifying_the_tree.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="modifying-the-tree">
+<h1>7. Modifying the tree<a class="headerlink" href="#modifying-the-tree" title="Permalink to this headline">¶</a></h1>
+<p>Beautiful Soup&#8217;s main strength is in searching the parse tree, but you
+can also modify the tree and write your changes as a new HTML or XML
+document.</p>
+<div class="section" id="changing-tag-names-and-attributes">
+<h2>7.1. Changing tag names and attributes<a class="headerlink" href="#changing-tag-names-and-attributes" title="Permalink to this headline">¶</a></h2>
+<p>I covered this earlier, in <a class="reference internal" href="4_kind_of_objects.html#kind-of-obj-attributes"><span class="std std-ref">Attributes</span></a>, but it bears repeating. You
+can rename a tag, change the values of its attributes, add new
+attributes, and delete attributes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;boldest&quot;&gt;Extremely bold&lt;/b&gt;&#39;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+
+<span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;blockquote&quot;</span>
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;verybold&#39;</span>
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;blockquote class=&quot;verybold&quot; id=&quot;1&quot;&gt;Extremely bold&lt;/blockquote&gt;</span>
+
+<span class="k">del</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;blockquote&gt;Extremely bold&lt;/blockquote&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="modifying-string">
+<h2>7.2. Modifying <code class="docutils literal"><span class="pre">.string</span></code><a class="headerlink" href="#modifying-string" title="Permalink to this headline">¶</a></h2>
+<p>If you set a tag&#8217;s <code class="docutils literal"><span class="pre">.string</span></code> attribute, the tag&#8217;s contents are
+replaced with the string you give:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;New link text.&quot;</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;New link text.&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>Be careful: if the tag contained other tags, they and all their
+contents will be destroyed.</p>
+</div>
+<div class="section" id="append">
+<h2>7.3. <code class="docutils literal"><span class="pre">append()</span></code><a class="headerlink" href="#append" title="Permalink to this headline">¶</a></h2>
+<p>You can add to a tag&#8217;s contents with <code class="docutils literal"><span class="pre">Tag.append()</span></code>. It works just
+like calling <code class="docutils literal"><span class="pre">.append()</span></code> on a Python list:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;a&gt;Foo&lt;/a&gt;&quot;</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Bar&quot;</span><span class="p">)</span>
+
+<span class="n">soup</span>
+<span class="c1"># &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;a&gt;FooBar&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [u&#39;Foo&#39;, u&#39;Bar&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="beautifulsoup-new-string-and-new-tag">
+<h2>7.4. <code class="docutils literal"><span class="pre">BeautifulSoup.new_string()</span></code> and <code class="docutils literal"><span class="pre">.new_tag()</span></code><a class="headerlink" href="#beautifulsoup-new-string-and-new-tag" title="Permalink to this headline">¶</a></h2>
+<p>If you need to add a string to a document, no problem&#8211;you can pass a
+Python string in to <code class="docutils literal"><span class="pre">append()</span></code>, or you can call the factory method
+<code class="docutils literal"><span class="pre">BeautifulSoup.new_string()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;b&gt;&lt;/b&gt;&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="n">new_string</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">new_string</span><span class="p">(</span><span class="s2">&quot; there&quot;</span><span class="p">)</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_string</span><span class="p">)</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;b&gt;Hello there.&lt;/b&gt;</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [u&#39;Hello&#39;, u&#39; there&#39;]</span>
+</pre></div>
+</div>
+<p>If you want to create a comment or some other subclass of
+<code class="docutils literal"><span class="pre">NavigableString</span></code>, pass that class as the second argument to
+<code class="docutils literal"><span class="pre">new_string()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">Comment</span>
+<span class="n">new_comment</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">new_string</span><span class="p">(</span><span class="s2">&quot;Nice to see you.&quot;</span><span class="p">,</span> <span class="n">Comment</span><span class="p">)</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_comment</span><span class="p">)</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;b&gt;Hello there&lt;!--Nice to see you.--&gt;&lt;/b&gt;</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [u&#39;Hello&#39;, u&#39; there&#39;, u&#39;Nice to see you.&#39;]</span>
+</pre></div>
+</div>
+<p>(This is a new feature in Beautiful Soup 4.2.1.)</p>
+<p>What if you need to create a whole new tag?  The best solution is to
+call the factory method <code class="docutils literal"><span class="pre">BeautifulSoup.new_tag()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;b&gt;&lt;/b&gt;&quot;</span><span class="p">)</span>
+<span class="n">original_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+
+<span class="n">new_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">new_tag</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="s2">&quot;http://www.example.com&quot;</span><span class="p">)</span>
+<span class="n">original_tag</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_tag</span><span class="p">)</span>
+<span class="n">original_tag</span>
+<span class="c1"># &lt;b&gt;&lt;a href=&quot;http://www.example.com&quot;&gt;&lt;/a&gt;&lt;/b&gt;</span>
+
+<span class="n">new_tag</span><span class="o">.</span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Link text.&quot;</span>
+<span class="n">original_tag</span>
+<span class="c1"># &lt;b&gt;&lt;a href=&quot;http://www.example.com&quot;&gt;Link text.&lt;/a&gt;&lt;/b&gt;</span>
+</pre></div>
+</div>
+<p>Only the first argument, the tag name, is required.</p>
+</div>
+<div class="section" id="insert">
+<h2>7.5. <code class="docutils literal"><span class="pre">insert()</span></code><a class="headerlink" href="#insert" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">Tag.insert()</span></code> is just like <code class="docutils literal"><span class="pre">Tag.append()</span></code>, except the new element
+doesn&#8217;t necessarily go at the end of its parent&#8217;s
+<code class="docutils literal"><span class="pre">.contents</span></code>. It&#8217;ll be inserted at whatever numeric position you
+say. It works just like <code class="docutils literal"><span class="pre">.insert()</span></code> on a Python list:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">tag</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;but did not endorse &quot;</span><span class="p">)</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;I linked to but did not endorse &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [u&#39;I linked to &#39;, u&#39;but did not endorse&#39;, &lt;i&gt;example.com&lt;/i&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="insert-before-and-insert-after">
+<h2>7.6. <code class="docutils literal"><span class="pre">insert_before()</span></code> and <code class="docutils literal"><span class="pre">insert_after()</span></code><a class="headerlink" href="#insert-before-and-insert-after" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">insert_before()</span></code> method inserts a tag or string immediately
+before something else in the parse tree:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;b&gt;stop&lt;/b&gt;&quot;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">new_tag</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+<span class="n">tag</span><span class="o">.</span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Don&#39;t&quot;</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">insert_before</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="c1"># &lt;b&gt;&lt;i&gt;Don&#39;t&lt;/i&gt;stop&lt;/b&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">insert_after()</span></code> method moves a tag or string so that it
+immediately follows something else in the parse tree:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">i</span><span class="o">.</span><span class="n">insert_after</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">new_string</span><span class="p">(</span><span class="s2">&quot; ever &quot;</span><span class="p">))</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="c1"># &lt;b&gt;&lt;i&gt;Don&#39;t&lt;/i&gt; ever stop&lt;/b&gt;</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">contents</span>
+<span class="c1"># [&lt;i&gt;Don&#39;t&lt;/i&gt;, u&#39; ever &#39;, u&#39;stop&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clear">
+<h2>7.7. <code class="docutils literal"><span class="pre">clear()</span></code><a class="headerlink" href="#clear" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">Tag.clear()</span></code> removes the contents of a tag:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">tag</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;&lt;/a&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="extract">
+<h2>7.8. <code class="docutils literal"><span class="pre">extract()</span></code><a class="headerlink" href="#extract" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">PageElement.extract()</span></code> removes a tag or string from the tree. It
+returns the tag or string that was extracted:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">a_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">i_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">i</span><span class="o">.</span><span class="n">extract</span><span class="p">()</span>
+
+<span class="n">a_tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;I linked to&lt;/a&gt;</span>
+
+<span class="n">i_tag</span>
+<span class="c1"># &lt;i&gt;example.com&lt;/i&gt;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">i_tag</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
+<span class="kc">None</span>
+</pre></div>
+</div>
+<p>At this point you effectively have two parse trees: one rooted at the
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object you used to parse the document, and one rooted
+at the tag that was extracted. You can go on to call <code class="docutils literal"><span class="pre">extract</span></code> on
+a child of the element you extracted:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">my_string</span> <span class="o">=</span> <span class="n">i_tag</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">extract</span><span class="p">()</span>
+<span class="n">my_string</span>
+<span class="c1"># u&#39;example.com&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">my_string</span><span class="o">.</span><span class="n">parent</span><span class="p">)</span>
+<span class="c1"># None</span>
+<span class="n">i_tag</span>
+<span class="c1"># &lt;i&gt;&lt;/i&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decompose">
+<h2>7.9. <code class="docutils literal"><span class="pre">decompose()</span></code><a class="headerlink" href="#decompose" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">Tag.decompose()</span></code> removes a tag from the tree, then <cite>completely
+destroys it and its contents</cite>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">a_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">i</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
+
+<span class="n">a_tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;I linked to&lt;/a&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="replace-with">
+<span id="id1"></span><h2>7.10. <code class="docutils literal"><span class="pre">replace_with()</span></code><a class="headerlink" href="#replace-with" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">PageElement.replace_with()</span></code> removes a tag or string from the tree,
+and replaces it with the tag or string of your choice:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">a_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">new_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">new_tag</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">new_tag</span><span class="o">.</span><span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;example.net&quot;</span>
+<span class="n">a_tag</span><span class="o">.</span><span class="n">i</span><span class="o">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">new_tag</span><span class="p">)</span>
+
+<span class="n">a_tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;b&gt;example.net&lt;/b&gt;&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">replace_with()</span></code> returns the tag or string that was replaced, so
+that you can examine it or add it back to another part of the tree.</p>
+</div>
+<div class="section" id="wrap">
+<h2>7.11. <code class="docutils literal"><span class="pre">wrap()</span></code><a class="headerlink" href="#wrap" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">PageElement.wrap()</span></code> wraps an element in the tag you specify. It
+returns the new wrapper:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s2">&quot;&lt;p&gt;I wish I was bold.&lt;/p&gt;&quot;</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">new_tag</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">))</span>
+<span class="c1"># &lt;b&gt;I wish I was bold.&lt;/b&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">wrap</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">new_tag</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;div&gt;&lt;p&gt;&lt;b&gt;I wish I was bold.&lt;/b&gt;&lt;/p&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+<p>This method is new in Beautiful Soup 4.0.5.</p>
+</div>
+<div class="section" id="unwrap">
+<h2>7.12. <code class="docutils literal"><span class="pre">unwrap()</span></code><a class="headerlink" href="#unwrap" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">Tag.unwrap()</span></code> is the opposite of <code class="docutils literal"><span class="pre">wrap()</span></code>. It replaces a tag with
+whatever&#8217;s inside that tag. It&#8217;s good for stripping out markup:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s1">&#39;&lt;a href=&quot;http://example.com/&quot;&gt;I linked to &lt;i&gt;example.com&lt;/i&gt;&lt;/a&gt;&#39;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">a_tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+
+<span class="n">a_tag</span><span class="o">.</span><span class="n">i</span><span class="o">.</span><span class="n">unwrap</span><span class="p">()</span>
+<span class="n">a_tag</span>
+<span class="c1"># &lt;a href=&quot;http://example.com/&quot;&gt;I linked to example.com&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>Like <code class="docutils literal"><span class="pre">replace_with()</span></code>, <code class="docutils literal"><span class="pre">unwrap()</span></code> returns the tag
+that was replaced.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="8_output.html" class="btn btn-neutral float-right" title="8. Output" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="6_searching_the_tree.html" class="btn btn-neutral" title="6. Searching the tree" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

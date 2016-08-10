@@ -1,0 +1,57 @@
+Beautiful Soup Documentation
+============================
+
+.. image:: 6.1.jpg
+   :align: right
+   :alt: "The Fish-Footman began by producing from under his arm a great letter, nearly as large as himself."
+
+`Beautiful Soup <http://www.crummy.com/software/BeautifulSoup/>`_ is a
+Python library for pulling data out of HTML and XML files. It works
+with your favorite parser to provide idiomatic ways of navigating,
+searching, and modifying the parse tree. It commonly saves programmers
+hours or days of work.
+
+These instructions illustrate all major features of Beautiful Soup 4,
+with examples. I show you what the library is good for, how it works,
+how to use it, how to make it do what you want, and what to do when it
+violates your expectations.
+
+The examples in this documentation should work the same way in Python
+2.7 and Python 3.2.
+
+You might be looking for the documentation for `Beautiful Soup 3
+<http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html>`_.
+If so, you should know that Beautiful Soup 3 is no longer being
+developed, and that Beautiful Soup 4 is recommended for all new
+projects. If you want to learn about the differences between Beautiful
+Soup 3 and Beautiful Soup 4, see :ref:`porting_to_bs4`.
+
+Getting help
+------------
+
+If you have questions about Beautiful Soup, or run into problems,
+`send mail to the discussion group
+<https://groups.google.com/forum/?fromgroups#!forum/beautifulsoup>`_. If
+your problem involves parsing an HTML document, be sure to mention
+:ref:`what the diagnose() function says <diagnose>` about
+that document.
+
+
+.. toctree::
+    :maxdepth: 2
+    :numbered:
+    :caption: Table of Contents
+ 
+    1_quick_start.rst
+    2_installation.rst
+    3_making_the_soup.rst
+    4_kind_of_objects.rst
+    5_navigating_the_tree.rst
+    6_searching_the_tree.rst
+    7_modifying_the_tree.rst
+    8_output.rst
+    9_specifying_the_parser.rst
+    10_encodings.rst
+    11_parsing_parts_of_doc.rst
+    12_troubleshooting.rst
+    bs4

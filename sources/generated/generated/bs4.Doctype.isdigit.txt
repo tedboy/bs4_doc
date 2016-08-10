@@ -1,0 +1,6 @@
+bs4.Doctype.isdigit
+===================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.isdigit

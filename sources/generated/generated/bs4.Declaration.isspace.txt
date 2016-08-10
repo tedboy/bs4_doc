@@ -1,0 +1,6 @@
+bs4.Declaration.isspace
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.isspace

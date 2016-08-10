@@ -1,0 +1,6 @@
+bs4.Comment.next_elements
+=========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Comment.next_elements

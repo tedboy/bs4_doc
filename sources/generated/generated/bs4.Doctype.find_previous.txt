@@ -1,0 +1,6 @@
+bs4.Doctype.find_previous
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.find_previous

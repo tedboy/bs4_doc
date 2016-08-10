@@ -1,0 +1,6 @@
+bs4.Declaration.append
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.append

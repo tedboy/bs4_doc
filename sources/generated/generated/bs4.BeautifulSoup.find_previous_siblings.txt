@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.find_previous_siblings
+========================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.find_previous_siblings

@@ -1,0 +1,344 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Quick Start &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/>
+        <link rel="next" title="2. Installing Beautiful Soup" href="2_installation.html"/>
+        <link rel="prev" title="Beautiful Soup Documentation" href="index.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>1. Quick Start</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/1_quick_start.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quick-start">
+<span id="id1"></span><h1>1. Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this headline">¶</a></h1>
+<p>Here&#8217;s an HTML document I&#8217;ll be using as an example throughout this
+document. It&#8217;s part of a story from <cite>Alice in Wonderland</cite>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+<span class="s2">&lt;body&gt;</span>
+<span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span>
+<span class="s2">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="s2">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span>
+<span class="s2">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span>
+<span class="s2">and they lived at the bottom of a well.&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Running the &#8220;three sisters&#8221; document through Beautiful Soup gives us a
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object, which represents the document as a nested
+data structure:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span class="c1"># &lt;html&gt;</span>
+<span class="c1">#  &lt;head&gt;</span>
+<span class="c1">#   &lt;title&gt;</span>
+<span class="c1">#    The Dormouse&#39;s story</span>
+<span class="c1">#   &lt;/title&gt;</span>
+<span class="c1">#  &lt;/head&gt;</span>
+<span class="c1">#  &lt;body&gt;</span>
+<span class="c1">#   &lt;p class=&quot;title&quot;&gt;</span>
+<span class="c1">#    &lt;b&gt;</span>
+<span class="c1">#     The Dormouse&#39;s story</span>
+<span class="c1">#    &lt;/b&gt;</span>
+<span class="c1">#   &lt;/p&gt;</span>
+<span class="c1">#   &lt;p class=&quot;story&quot;&gt;</span>
+<span class="c1">#    Once upon a time there were three little sisters; and their names were</span>
+<span class="c1">#    &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;</span>
+<span class="c1">#     Elsie</span>
+<span class="c1">#    &lt;/a&gt;</span>
+<span class="c1">#    ,</span>
+<span class="c1">#    &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;</span>
+<span class="c1">#     Lacie</span>
+<span class="c1">#    &lt;/a&gt;</span>
+<span class="c1">#    and</span>
+<span class="c1">#    &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link2&quot;&gt;</span>
+<span class="c1">#     Tillie</span>
+<span class="c1">#    &lt;/a&gt;</span>
+<span class="c1">#    ; and they lived at the bottom of a well.</span>
+<span class="c1">#   &lt;/p&gt;</span>
+<span class="c1">#   &lt;p class=&quot;story&quot;&gt;</span>
+<span class="c1">#    ...</span>
+<span class="c1">#   &lt;/p&gt;</span>
+<span class="c1">#  &lt;/body&gt;</span>
+<span class="c1"># &lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>Here are some simple ways to navigate that data structure:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;title&#39;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;The Dormouse&#39;s story&#39;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;head&#39;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span>
+<span class="c1"># &lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># u&#39;title&#39;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span>
+</pre></div>
+</div>
+<p>One common task is extracting all the URLs found within a page&#8217;s &lt;a&gt; tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span>
+<span class="c1"># http://example.com/elsie</span>
+<span class="c1"># http://example.com/lacie</span>
+<span class="c1"># http://example.com/tillie</span>
+</pre></div>
+</div>
+<p>Another common task is extracting all the text from a page:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">get_text</span><span class="p">())</span>
+<span class="c1"># The Dormouse&#39;s story</span>
+<span class="c1">#</span>
+<span class="c1"># The Dormouse&#39;s story</span>
+<span class="c1">#</span>
+<span class="c1"># Once upon a time there were three little sisters; and their names were</span>
+<span class="c1"># Elsie,</span>
+<span class="c1"># Lacie and</span>
+<span class="c1"># Tillie;</span>
+<span class="c1"># and they lived at the bottom of a well.</span>
+<span class="c1">#</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Does this look like what you need? If so, read on.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2_installation.html" class="btn btn-neutral float-right" title="2. Installing Beautiful Soup" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Beautiful Soup Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

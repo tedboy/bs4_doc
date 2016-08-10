@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.insert_after
+==============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.insert_after

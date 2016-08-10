@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.previousSiblingGenerator
+===============================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.previousSiblingGenerator

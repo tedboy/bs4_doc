@@ -1,0 +1,6 @@
+bs4.Doctype.title
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.title

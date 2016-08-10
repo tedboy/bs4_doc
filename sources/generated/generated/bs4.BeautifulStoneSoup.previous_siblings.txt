@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.previous_siblings
+========================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.previous_siblings

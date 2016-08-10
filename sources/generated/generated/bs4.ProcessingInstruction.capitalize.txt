@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.capitalize
+====================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.capitalize

@@ -1,0 +1,6 @@
+bs4.Doctype.nextSibling
+=======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.nextSibling

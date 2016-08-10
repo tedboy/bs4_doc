@@ -1,0 +1,6 @@
+bs4.Declaration.previousGenerator
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.previousGenerator

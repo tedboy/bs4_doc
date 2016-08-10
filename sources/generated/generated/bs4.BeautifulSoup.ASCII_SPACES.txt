@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.ASCII_SPACES
+==============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.ASCII_SPACES

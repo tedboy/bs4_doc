@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.split
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.split

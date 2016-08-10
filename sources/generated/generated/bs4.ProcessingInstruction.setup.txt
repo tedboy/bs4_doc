@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.setup
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.setup

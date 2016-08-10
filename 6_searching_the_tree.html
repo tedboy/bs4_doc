@@ -1,0 +1,947 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. Searching the tree &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/>
+        <link rel="next" title="7. Modifying the tree" href="7_modifying_the_tree.html"/>
+        <link rel="prev" title="5. Navigating the tree" href="5_navigating_the_tree.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Searching the tree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#kinds-of-filters">6.1. Kinds of filters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#a-string">6.1.1. A string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-regular-expression">6.1.2. A regular expression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-list">6.1.3. A list</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#true">6.1.4. <code class="docutils literal"><span class="pre">True</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-function">6.1.5. A function</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#find-all">6.2. <code class="docutils literal"><span class="pre">find_all()</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-name-argument">6.2.1. The <code class="docutils literal"><span class="pre">name</span></code> argument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-keyword-arguments">6.2.2. The keyword arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#searching-by-css-class">6.2.3. Searching by CSS class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-text-argument">6.2.4. The <code class="docutils literal"><span class="pre">text</span></code> argument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-limit-argument">6.2.5. The <code class="docutils literal"><span class="pre">limit</span></code> argument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-recursive-argument">6.2.6. The <code class="docutils literal"><span class="pre">recursive</span></code> argument</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calling-a-tag-is-like-calling-find-all">6.3. Calling a tag is like calling <code class="docutils literal"><span class="pre">find_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find">6.4. <code class="docutils literal"><span class="pre">find()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-parents-and-find-parent">6.5. <code class="docutils literal"><span class="pre">find_parents()</span></code> and <code class="docutils literal"><span class="pre">find_parent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-next-siblings-and-find-next-sibling">6.6. <code class="docutils literal"><span class="pre">find_next_siblings()</span></code> and <code class="docutils literal"><span class="pre">find_next_sibling()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-previous-siblings-and-find-previous-sibling">6.7. <code class="docutils literal"><span class="pre">find_previous_siblings()</span></code> and <code class="docutils literal"><span class="pre">find_previous_sibling()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-all-next-and-find-next">6.8. <code class="docutils literal"><span class="pre">find_all_next()</span></code> and <code class="docutils literal"><span class="pre">find_next()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#find-all-previous-and-find-previous">6.9. <code class="docutils literal"><span class="pre">find_all_previous()</span></code> and <code class="docutils literal"><span class="pre">find_previous()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#css-selectors">6.10. CSS selectors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>6. Searching the tree</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/6_searching_the_tree.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="searching-the-tree">
+<span id="id1"></span><h1>6. Searching the tree<a class="headerlink" href="#searching-the-tree" title="Permalink to this headline">¶</a></h1>
+<p>Beautiful Soup defines a lot of methods for searching the parse tree,
+but they&#8217;re all very similar. I&#8217;m going to spend a lot of time explaining
+the two most popular methods: <code class="docutils literal"><span class="pre">find()</span></code> and <code class="docutils literal"><span class="pre">find_all()</span></code>. The other
+methods take almost exactly the same arguments, so I&#8217;ll just cover
+them briefly.</p>
+<p>Once again, I&#8217;ll be using the &#8220;three sisters&#8221; document as an example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">html_doc</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;html&gt;&lt;head&gt;&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;&lt;/head&gt;</span>
+
+<span class="s2">&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span>
+<span class="s2">&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="s2">&lt;a href=&quot;http://example.com/lacie&quot; class=&quot;sister&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span>
+<span class="s2">&lt;a href=&quot;http://example.com/tillie&quot; class=&quot;sister&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span>
+<span class="s2">and they lived at the bottom of a well.&lt;/p&gt;</span>
+
+<span class="s2">&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_doc</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>By passing in a filter to an argument like <code class="docutils literal"><span class="pre">find_all()</span></code>, you can
+zoom in on the parts of the document you&#8217;re interested in.</p>
+<div class="section" id="kinds-of-filters">
+<h2>6.1. Kinds of filters<a class="headerlink" href="#kinds-of-filters" title="Permalink to this headline">¶</a></h2>
+<p>Before talking in detail about <code class="docutils literal"><span class="pre">find_all()</span></code> and similar methods, I
+want to show examples of different filters you can pass into these
+methods. These filters show up again and again, throughout the
+search API. You can use them to filter based on a tag&#8217;s name,
+on its attributes, on the text of a string, or on some combination of
+these.</p>
+<div class="section" id="a-string">
+<span id="id2"></span><h3>6.1.1. A string<a class="headerlink" href="#a-string" title="Permalink to this headline">¶</a></h3>
+<p>The simplest filter is a string. Pass a string to a search method and
+Beautiful Soup will perform a match against that exact string. This
+code finds all the &lt;b&gt; tags in the document:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;]</span>
+</pre></div>
+</div>
+<p>If you pass in a byte string, Beautiful Soup will assume the string is
+encoded as UTF-8. You can avoid this by passing in a Unicode string instead.</p>
+</div>
+<div class="section" id="a-regular-expression">
+<span id="id3"></span><h3>6.1.2. A regular expression<a class="headerlink" href="#a-regular-expression" title="Permalink to this headline">¶</a></h3>
+<p>If you pass in a regular expression object, Beautiful Soup will filter
+against that regular expression using its <code class="docutils literal"><span class="pre">match()</span></code> method. This code
+finds all the tags whose names start with the letter &#8220;b&#8221;; in this
+case, the &lt;body&gt; tag and the &lt;b&gt; tag:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;^b&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># body</span>
+<span class="c1"># b</span>
+</pre></div>
+</div>
+<p>This code finds all the tags whose names contain the letter &#8216;t&#8217;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;t&quot;</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># html</span>
+<span class="c1"># title</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-list">
+<span id="id4"></span><h3>6.1.3. A list<a class="headerlink" href="#a-list" title="Permalink to this headline">¶</a></h3>
+<p>If you pass in a list, Beautiful Soup will allow a string match
+against <cite>any</cite> item in that list. This code finds all the &lt;a&gt; tags
+<cite>and</cite> all the &lt;b&gt; tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">])</span>
+<span class="c1"># [&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="true">
+<span id="the-value-true"></span><h3>6.1.4. <code class="docutils literal"><span class="pre">True</span></code><a class="headerlink" href="#true" title="Permalink to this headline">¶</a></h3>
+<p>The value <code class="docutils literal"><span class="pre">True</span></code> matches everything it can. This code finds <cite>all</cite>
+the tags in the document, but none of the text strings:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c1"># html</span>
+<span class="c1"># head</span>
+<span class="c1"># title</span>
+<span class="c1"># body</span>
+<span class="c1"># p</span>
+<span class="c1"># b</span>
+<span class="c1"># p</span>
+<span class="c1"># a</span>
+<span class="c1"># a</span>
+<span class="c1"># a</span>
+<span class="c1"># p</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-function">
+<h3>6.1.5. A function<a class="headerlink" href="#a-function" title="Permalink to this headline">¶</a></h3>
+<p>If none of the other matches work for you, define a function that
+takes an element as its only argument. The function should return
+<code class="docutils literal"><span class="pre">True</span></code> if the argument matches, and <code class="docutils literal"><span class="pre">False</span></code> otherwise.</p>
+<p>Here&#8217;s a function that returns <code class="docutils literal"><span class="pre">True</span></code> if a tag defines the &#8220;class&#8221;
+attribute but doesn&#8217;t define the &#8220;id&#8221; attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">has_class_but_no_id</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">tag</span><span class="o">.</span><span class="n">has_attr</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">tag</span><span class="o">.</span><span class="n">has_attr</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pass this function into <code class="docutils literal"><span class="pre">find_all()</span></code> and you&#8217;ll pick up all the &lt;p&gt;
+tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">has_class_but_no_id</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;,</span>
+<span class="c1">#  &lt;p class=&quot;story&quot;&gt;Once upon a time there were...&lt;/p&gt;,</span>
+<span class="c1">#  &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>This function only picks up the &lt;p&gt; tags. It doesn&#8217;t pick up the &lt;a&gt;
+tags, because those tags define both &#8220;class&#8221; and &#8220;id&#8221;. It doesn&#8217;t pick
+up tags like &lt;html&gt; and &lt;title&gt;, because those tags don&#8217;t define
+&#8220;class&#8221;.</p>
+<p>Here&#8217;s a function that returns <code class="docutils literal"><span class="pre">True</span></code> if a tag is surrounded by
+string objects:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">NavigableString</span>
+<span class="k">def</span> <span class="nf">surrounded_by_strings</span><span class="p">(</span><span class="n">tag</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">next_element</span><span class="p">,</span> <span class="n">NavigableString</span><span class="p">)</span>
+            <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">previous_element</span><span class="p">,</span> <span class="n">NavigableString</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">surrounded_by_strings</span><span class="p">):</span>
+    <span class="nb">print</span> <span class="n">tag</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># p</span>
+<span class="c1"># a</span>
+<span class="c1"># a</span>
+<span class="c1"># a</span>
+<span class="c1"># p</span>
+</pre></div>
+</div>
+<p>Now we&#8217;re ready to look at the search methods in detail.</p>
+</div>
+</div>
+<div class="section" id="find-all">
+<h2>6.2. <code class="docutils literal"><span class="pre">find_all()</span></code><a class="headerlink" href="#find-all" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find_all(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#recursive"><span class="std std-ref">recursive</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#limit"><span class="std std-ref">limit</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>The <code class="docutils literal"><span class="pre">find_all()</span></code> method looks through a tag&#8217;s descendants and
+retrieves <cite>all</cite> descendants that match your filters. I gave several
+examples in <a class="reference internal" href="#kinds-of-filters">Kinds of filters</a>, but here are a few more:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link2&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;sisters&quot;</span><span class="p">))</span>
+<span class="c1"># u&#39;Once upon a time there were three little sisters; and their names were\n&#39;</span>
+</pre></div>
+</div>
+<p>Some of these should look familiar, but others are new. What does it
+mean to pass in a value for <code class="docutils literal"><span class="pre">text</span></code>, or <code class="docutils literal"><span class="pre">id</span></code>? Why does
+<code class="docutils literal"><span class="pre">find_all(&quot;p&quot;,</span> <span class="pre">&quot;title&quot;)</span></code> find a &lt;p&gt; tag with the CSS class &#8220;title&#8221;?
+Let&#8217;s look at the arguments to <code class="docutils literal"><span class="pre">find_all()</span></code>.</p>
+<div class="section" id="the-name-argument">
+<span id="name"></span><h3>6.2.1. The <code class="docutils literal"><span class="pre">name</span></code> argument<a class="headerlink" href="#the-name-argument" title="Permalink to this headline">¶</a></h3>
+<p>Pass in a value for <code class="docutils literal"><span class="pre">name</span></code> and you&#8217;ll tell Beautiful Soup to only
+consider tags with certain names. Text strings will be ignored, as
+will tags whose names that don&#8217;t match.</p>
+<p>This is the simplest usage:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+</pre></div>
+</div>
+<p>Recall from <a class="reference internal" href="#kinds-of-filters">Kinds of filters</a> that the value to <code class="docutils literal"><span class="pre">name</span></code> can be <a class="reference internal" href="#a-string">a
+string</a>, <a class="reference internal" href="#a-regular-expression">a regular expression</a>, <a class="reference internal" href="#a-list">a list</a>, <a class="reference internal" href="#a-function">a function</a>, or <a class="reference internal" href="#the-value-true">the value
+True</a>.</p>
+</div>
+<div class="section" id="the-keyword-arguments">
+<span id="kwargs"></span><h3>6.2.2. The keyword arguments<a class="headerlink" href="#the-keyword-arguments" title="Permalink to this headline">¶</a></h3>
+<p>Any argument that&#8217;s not recognized will be turned into a filter on one
+of a tag&#8217;s attributes. If you pass in a value for an argument called <code class="docutils literal"><span class="pre">id</span></code>,
+Beautiful Soup will filter against each tag&#8217;s &#8216;id&#8217; attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;link2&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>If you pass in a value for <code class="docutils literal"><span class="pre">href</span></code>, Beautiful Soup will filter
+against each tag&#8217;s &#8216;href&#8217; attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">href</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;elsie&quot;</span><span class="p">))</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>You can filter an attribute based on <a class="reference internal" href="#a-string">a string</a>, <a class="reference internal" href="#a-regular-expression">a regular
+expression</a>, <a class="reference internal" href="#a-list">a list</a>, <a class="reference internal" href="#a-function">a function</a>, or <a class="reference internal" href="#the-value-true">the value True</a>.</p>
+<p>This code finds all tags that have an <code class="docutils literal"><span class="pre">id</span></code> attribute, regardless of
+what the value is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>You can filter multiple attributes at once by passing in more than one
+keyword argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">href</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;elsie&quot;</span><span class="p">),</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;link1&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;three&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>Some attributes, like the data-* attributes in HTML 5, have names that
+can&#8217;t be used as the names of keyword arguments:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;div data-foo=&quot;value&quot;&gt;foo!&lt;/div&gt;&#39;</span><span class="p">)</span>
+<span class="n">data_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">data</span><span class="o">-</span><span class="n">foo</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+<span class="c1"># SyntaxError: keyword can&#39;t be an expression</span>
+</pre></div>
+</div>
+<p>You can use these attributes in searches by putting them into a
+dictionary and passing the dictionary into <code class="docutils literal"><span class="pre">find_all()</span></code> as the
+<code class="docutils literal"><span class="pre">attrs</span></code> argument:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">data_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;data-foo&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">})</span>
+<span class="c1"># [&lt;div data-foo=&quot;value&quot;&gt;foo!&lt;/div&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="searching-by-css-class">
+<span id="attrs"></span><h3>6.2.3. Searching by CSS class<a class="headerlink" href="#searching-by-css-class" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s very useful to search for a tag that has a certain CSS class, but
+the name of the CSS attribute, &#8220;class&#8221;, is a reserved word in
+Python. Using <code class="docutils literal"><span class="pre">class</span></code> as a keyword argument will give you a syntax
+error. As of Beautiful Soup 4.1.2, you can search by CSS class using
+the keyword argument <code class="docutils literal"><span class="pre">class_</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>As with any keyword argument, you can pass <code class="docutils literal"><span class="pre">class_</span></code> a string, a regular
+expression, a function, or <code class="docutils literal"><span class="pre">True</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;itl&quot;</span><span class="p">))</span>
+<span class="c1"># [&lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;]</span>
+
+<span class="k">def</span> <span class="nf">has_six_characters</span><span class="p">(</span><span class="n">css_class</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">css_class</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">css_class</span><span class="p">)</span> <span class="o">==</span> <span class="mi">6</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">class_</span><span class="o">=</span><span class="n">has_six_characters</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p><a class="reference internal" href="4_kind_of_objects.html#multivalue"><span class="std std-ref">Remember</span></a> that a single tag can have multiple
+values for its &#8220;class&#8221; attribute. When you search for a tag that
+matches a certain CSS class, you&#8217;re matching against <cite>any</cite> of its CSS
+classes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">css_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">css_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;strikeout&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span>
+
+<span class="n">css_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;body&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>You can also search for the exact string value of the <code class="docutils literal"><span class="pre">class</span></code> attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">css_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;body strikeout&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>But searching for variants of the string value won&#8217;t work:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">css_soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;strikeout body&quot;</span><span class="p">)</span>
+<span class="c1"># []</span>
+</pre></div>
+</div>
+<p>If you want to search for tags that match two or more CSS classes, you
+should use a CSS selector:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">css_soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p.strikeout.body&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>In older versions of Beautiful Soup, which don&#8217;t have the <code class="docutils literal"><span class="pre">class_</span></code>
+shortcut, you can use the <code class="docutils literal"><span class="pre">attrs</span></code> trick mentioned above. Create a
+dictionary whose value for &#8220;class&#8221; is the string (or regular
+expression, or whatever) you want to search for:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">attrs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span> <span class="s2">&quot;sister&quot;</span><span class="p">})</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-text-argument">
+<span id="text"></span><h3>6.2.4. The <code class="docutils literal"><span class="pre">text</span></code> argument<a class="headerlink" href="#the-text-argument" title="Permalink to this headline">¶</a></h3>
+<p>With <code class="docutils literal"><span class="pre">text</span></code> you can search for strings instead of tags. As with
+<code class="docutils literal"><span class="pre">name</span></code> and the keyword arguments, you can pass in <a class="reference internal" href="#a-string">a string</a>, <a class="reference internal" href="#a-regular-expression">a
+regular expression</a>, <a class="reference internal" href="#a-list">a list</a>, <a class="reference internal" href="#a-function">a function</a>, or <a class="reference internal" href="#the-value-true">the value True</a>.
+Here are some examples:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Elsie&quot;</span><span class="p">)</span>
+<span class="c1"># [u&#39;Elsie&#39;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Tillie&quot;</span><span class="p">,</span> <span class="s2">&quot;Elsie&quot;</span><span class="p">,</span> <span class="s2">&quot;Lacie&quot;</span><span class="p">])</span>
+<span class="c1"># [u&#39;Elsie&#39;, u&#39;Lacie&#39;, u&#39;Tillie&#39;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;Dormouse&quot;</span><span class="p">))</span>
+<span class="p">[</span><span class="s2">u&quot;The Dormouse&#39;s story&quot;</span><span class="p">,</span> <span class="s2">u&quot;The Dormouse&#39;s story&quot;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">is_the_only_string_within_a_tag</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return True if this string is the only child of its parent tag.&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">is_the_only_string_within_a_tag</span><span class="p">)</span>
+<span class="c1"># [u&quot;The Dormouse&#39;s story&quot;, u&quot;The Dormouse&#39;s story&quot;, u&#39;Elsie&#39;, u&#39;Lacie&#39;, u&#39;Tillie&#39;, u&#39;...&#39;]</span>
+</pre></div>
+</div>
+<p>Although <code class="docutils literal"><span class="pre">text</span></code> is for finding strings, you can combine it with
+arguments that find tags: Beautiful Soup will find all tags whose
+<code class="docutils literal"><span class="pre">.string</span></code> matches your value for <code class="docutils literal"><span class="pre">text</span></code>. This code finds the &lt;a&gt;
+tags whose <code class="docutils literal"><span class="pre">.string</span></code> is &#8220;Elsie&#8221;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s2">&quot;Elsie&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a href=&quot;http://example.com/elsie&quot; class=&quot;sister&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-limit-argument">
+<span id="limit"></span><h3>6.2.5. The <code class="docutils literal"><span class="pre">limit</span></code> argument<a class="headerlink" href="#the-limit-argument" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">find_all()</span></code> returns all the tags and strings that match your
+filters. This can take a while if the document is large. If you don&#8217;t
+need <cite>all</cite> the results, you can pass in a number for <code class="docutils literal"><span class="pre">limit</span></code>. This
+works just like the LIMIT keyword in SQL. It tells Beautiful Soup to
+stop gathering results after it&#8217;s found a certain number.</p>
+<p>There are three links in the &#8220;three sisters&#8221; document, but this code
+only finds the first two:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-recursive-argument">
+<span id="recursive"></span><h3>6.2.6. The <code class="docutils literal"><span class="pre">recursive</span></code> argument<a class="headerlink" href="#the-recursive-argument" title="Permalink to this headline">¶</a></h3>
+<p>If you call <code class="docutils literal"><span class="pre">mytag.find_all()</span></code>, Beautiful Soup will examine all the
+descendants of <code class="docutils literal"><span class="pre">mytag</span></code>: its children, its children&#8217;s children, and
+so on. If you only want Beautiful Soup to consider direct children,
+you can pass in <code class="docutils literal"><span class="pre">recursive=False</span></code>. See the difference here:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># []</span>
+</pre></div>
+</div>
+<p>Here&#8217;s that part of the document:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
+ <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span>
+   <span class="n">The</span> <span class="n">Dormouse</span><span class="s1">&#39;s story</span>
+  <span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>The &lt;title&gt; tag is beneath the &lt;html&gt; tag, but it&#8217;s not <cite>directly</cite>
+beneath the &lt;html&gt; tag: the &lt;head&gt; tag is in the way. Beautiful Soup
+finds the &lt;title&gt; tag when it&#8217;s allowed to look at all descendants of
+the &lt;html&gt; tag, but when <code class="docutils literal"><span class="pre">recursive=False</span></code> restricts it to the
+&lt;html&gt; tag&#8217;s immediate children, it finds nothing.</p>
+<p>Beautiful Soup offers a lot of tree-searching methods (covered below),
+and they mostly take the same arguments as <code class="docutils literal"><span class="pre">find_all()</span></code>: <code class="docutils literal"><span class="pre">name</span></code>,
+<code class="docutils literal"><span class="pre">attrs</span></code>, <code class="docutils literal"><span class="pre">text</span></code>, <code class="docutils literal"><span class="pre">limit</span></code>, and the keyword arguments. But the
+<code class="docutils literal"><span class="pre">recursive</span></code> argument is different: <code class="docutils literal"><span class="pre">find_all()</span></code> and <code class="docutils literal"><span class="pre">find()</span></code> are
+the only methods that support it. Passing <code class="docutils literal"><span class="pre">recursive=False</span></code> into a
+method like <code class="docutils literal"><span class="pre">find_parents()</span></code> wouldn&#8217;t be very useful.</p>
+</div>
+</div>
+<div class="section" id="calling-a-tag-is-like-calling-find-all">
+<h2>6.3. Calling a tag is like calling <code class="docutils literal"><span class="pre">find_all()</span></code><a class="headerlink" href="#calling-a-tag-is-like-calling-find-all" title="Permalink to this headline">¶</a></h2>
+<p>Because <code class="docutils literal"><span class="pre">find_all()</span></code> is the most popular method in the Beautiful
+Soup search API, you can use a shortcut for it. If you treat the
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object or a <code class="docutils literal"><span class="pre">Tag</span></code> object as though it were a
+function, then it&#8217;s the same as calling <code class="docutils literal"><span class="pre">find_all()</span></code> on that
+object. These two lines of code are equivalent:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="n">soup</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>These two lines are also equivalent:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="find">
+<h2>6.4. <code class="docutils literal"><span class="pre">find()</span></code><a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#recursive"><span class="std std-ref">recursive</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>The <code class="docutils literal"><span class="pre">find_all()</span></code> method scans the entire document looking for
+results, but sometimes you only want to find one result. If you know a
+document only has one &lt;body&gt; tag, it&#8217;s a waste of time to scan the
+entire document looking for more. Rather than passing in <code class="docutils literal"><span class="pre">limit=1</span></code>
+every time you call <code class="docutils literal"><span class="pre">find_all</span></code>, you can use the <code class="docutils literal"><span class="pre">find()</span></code>
+method. These two lines of code are <cite>nearly</cite> equivalent:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">)</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+<p>The only difference is that <code class="docutils literal"><span class="pre">find_all()</span></code> returns a list containing
+the single result, and <code class="docutils literal"><span class="pre">find()</span></code> just returns the result.</p>
+<p>If <code class="docutils literal"><span class="pre">find_all()</span></code> can&#8217;t find anything, it returns an empty list. If
+<code class="docutils literal"><span class="pre">find()</span></code> can&#8217;t find anything, it returns <code class="docutils literal"><span class="pre">None</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;nosuchtag&quot;</span><span class="p">))</span>
+<span class="c1"># None</span>
+</pre></div>
+</div>
+<p>Remember the <code class="docutils literal"><span class="pre">soup.head.title</span></code> trick from <a class="reference internal" href="5_navigating_the_tree.html#navtree-using-tag-names"><span class="std std-ref">Navigating using tag names</span></a>? That trick works by repeatedly calling <code class="docutils literal"><span class="pre">find()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">head</span><span class="o">.</span><span class="n">title</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;head&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="find-parents-and-find-parent">
+<h2>6.5. <code class="docutils literal"><span class="pre">find_parents()</span></code> and <code class="docutils literal"><span class="pre">find_parent()</span></code><a class="headerlink" href="#find-parents-and-find-parent" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find_parents(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#limit"><span class="std std-ref">limit</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>Signature: find_parent(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>I spent a lot of time above covering <code class="docutils literal"><span class="pre">find_all()</span></code> and
+<code class="docutils literal"><span class="pre">find()</span></code>. The Beautiful Soup API defines ten other methods for
+searching the tree, but don&#8217;t be afraid. Five of these methods are
+basically the same as <code class="docutils literal"><span class="pre">find_all()</span></code>, and the other five are basically
+the same as <code class="docutils literal"><span class="pre">find()</span></code>. The only differences are in what parts of the
+tree they search.</p>
+<p>First let&#8217;s consider <code class="docutils literal"><span class="pre">find_parents()</span></code> and
+<code class="docutils literal"><span class="pre">find_parent()</span></code>. Remember that <code class="docutils literal"><span class="pre">find_all()</span></code> and <code class="docutils literal"><span class="pre">find()</span></code> work
+their way down the tree, looking at tag&#8217;s descendants. These methods
+do the opposite: they work their way <cite>up</cite> the tree, looking at a tag&#8217;s
+(or a string&#8217;s) parents. Let&#8217;s try them out, starting from a string
+buried deep in the &#8220;three daughters&#8221; document:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Lacie&quot;</span><span class="p">)</span>
+<span class="n">a_string</span>
+<span class="c1"># u&#39;Lacie&#39;</span>
+
+<span class="n">a_string</span><span class="o">.</span><span class="n">find_parents</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+
+<span class="n">a_string</span><span class="o">.</span><span class="n">find_parent</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; and their names were</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt; and</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;;</span>
+<span class="c1">#  and they lived at the bottom of a well.&lt;/p&gt;</span>
+
+<span class="n">a_string</span><span class="o">.</span><span class="n">find_parents</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># []</span>
+</pre></div>
+</div>
+<p>One of the three &lt;a&gt; tags is the direct parent of the string in
+question, so our search finds it. One of the three &lt;p&gt; tags is an
+indirect parent of the string, and our search finds that as
+well. There&#8217;s a &lt;p&gt; tag with the CSS class &#8220;title&#8221; <cite>somewhere</cite> in the
+document, but it&#8217;s not one of this string&#8217;s parents, so we can&#8217;t find
+it with <code class="docutils literal"><span class="pre">find_parents()</span></code>.</p>
+<p>You may have made the connection between <code class="docutils literal"><span class="pre">find_parent()</span></code> and
+<code class="docutils literal"><span class="pre">find_parents()</span></code>, and the <a class="reference internal" href="5_navigating_the_tree.html#parent"><span class="std std-ref">.parent</span></a> and <a class="reference internal" href="5_navigating_the_tree.html#parents"><span class="std std-ref">.parents</span></a> attributes
+mentioned earlier. The connection is very strong. These search methods
+actually use <code class="docutils literal"><span class="pre">.parents</span></code> to iterate over all the parents, and check
+each one against the provided filter to see if it matches.</p>
+</div>
+<div class="section" id="find-next-siblings-and-find-next-sibling">
+<h2>6.6. <code class="docutils literal"><span class="pre">find_next_siblings()</span></code> and <code class="docutils literal"><span class="pre">find_next_sibling()</span></code><a class="headerlink" href="#find-next-siblings-and-find-next-sibling" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find_next_siblings(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#limit"><span class="std std-ref">limit</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>Signature: find_next_sibling(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>These methods use <a class="reference internal" href="5_navigating_the_tree.html#sibling-generators"><span class="std std-ref">.next_siblings</span></a> to
+iterate over the rest of an element&#8217;s siblings in the tree. The
+<code class="docutils literal"><span class="pre">find_next_siblings()</span></code> method returns all the siblings that match,
+and <code class="docutils literal"><span class="pre">find_next_sibling()</span></code> only returns the first one:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">first_link</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="n">first_link</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+
+<span class="n">first_link</span><span class="o">.</span><span class="n">find_next_siblings</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">first_story_paragraph</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;story&quot;</span><span class="p">)</span>
+<span class="n">first_story_paragraph</span><span class="o">.</span><span class="n">find_next_sibling</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="find-previous-siblings-and-find-previous-sibling">
+<h2>6.7. <code class="docutils literal"><span class="pre">find_previous_siblings()</span></code> and <code class="docutils literal"><span class="pre">find_previous_sibling()</span></code><a class="headerlink" href="#find-previous-siblings-and-find-previous-sibling" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find_previous_siblings(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#limit"><span class="std std-ref">limit</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>Signature: find_previous_sibling(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>These methods use <a class="reference internal" href="5_navigating_the_tree.html#sibling-generators"><span class="std std-ref">.previous_siblings</span></a> to iterate over an element&#8217;s
+siblings that precede it in the tree. The <code class="docutils literal"><span class="pre">find_previous_siblings()</span></code>
+method returns all the siblings that match, and
+<code class="docutils literal"><span class="pre">find_previous_sibling()</span></code> only returns the first one:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">last_link</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;link3&quot;</span><span class="p">)</span>
+<span class="n">last_link</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;</span>
+
+<span class="n">last_link</span><span class="o">.</span><span class="n">find_previous_siblings</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">first_story_paragraph</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;story&quot;</span><span class="p">)</span>
+<span class="n">first_story_paragraph</span><span class="o">.</span><span class="n">find_previous_sibling</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="find-all-next-and-find-next">
+<h2>6.8. <code class="docutils literal"><span class="pre">find_all_next()</span></code> and <code class="docutils literal"><span class="pre">find_next()</span></code><a class="headerlink" href="#find-all-next-and-find-next" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find_all_next(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#limit"><span class="std std-ref">limit</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>Signature: find_next(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>These methods use <a class="reference internal" href="5_navigating_the_tree.html#element-generators"><span class="std std-ref">.next_elements</span></a> to
+iterate over whatever tags and strings that come after it in the
+document. The <code class="docutils literal"><span class="pre">find_all_next()</span></code> method returns all matches, and
+<code class="docutils literal"><span class="pre">find_next()</span></code> only returns the first match:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">first_link</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="n">first_link</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+
+<span class="n">first_link</span><span class="o">.</span><span class="n">find_all_next</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># [u&#39;Elsie&#39;, u&#39;,\n&#39;, u&#39;Lacie&#39;, u&#39; and\n&#39;, u&#39;Tillie&#39;,</span>
+<span class="c1">#  u&#39;;\nand they lived at the bottom of a well.&#39;, u&#39;\n\n&#39;, u&#39;...&#39;, u&#39;\n&#39;]</span>
+
+<span class="n">first_link</span><span class="o">.</span><span class="n">find_next</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>In the first example, the string &#8220;Elsie&#8221; showed up, even though it was
+contained within the &lt;a&gt; tag we started from. In the second example,
+the last &lt;p&gt; tag in the document showed up, even though it&#8217;s not in
+the same part of the tree as the &lt;a&gt; tag we started from. For these
+methods, all that matters is that an element match the filter, and
+show up later in the document than the starting element.</p>
+</div>
+<div class="section" id="find-all-previous-and-find-previous">
+<h2>6.9. <code class="docutils literal"><span class="pre">find_all_previous()</span></code> and <code class="docutils literal"><span class="pre">find_previous()</span></code><a class="headerlink" href="#find-all-previous-and-find-previous" title="Permalink to this headline">¶</a></h2>
+<p>Signature: find_all_previous(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#limit"><span class="std std-ref">limit</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>Signature: find_previous(<a class="reference internal" href="#name"><span class="std std-ref">name</span></a>, <a class="reference internal" href="#attrs"><span class="std std-ref">attrs</span></a>, <a class="reference internal" href="#text"><span class="std std-ref">text</span></a>, <a class="reference internal" href="#kwargs"><span class="std std-ref">**kwargs</span></a>)</p>
+<p>These methods use <a class="reference internal" href="5_navigating_the_tree.html#element-generators"><span class="std std-ref">.previous_elements</span></a> to
+iterate over the tags and strings that came before it in the
+document. The <code class="docutils literal"><span class="pre">find_all_previous()</span></code> method returns all matches, and
+<code class="docutils literal"><span class="pre">find_previous()</span></code> only returns the first match:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">first_link</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">a</span>
+<span class="n">first_link</span>
+<span class="c1"># &lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;</span>
+
+<span class="n">first_link</span><span class="o">.</span><span class="n">find_all_previous</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;story&quot;&gt;Once upon a time there were three little sisters; ...&lt;/p&gt;,</span>
+<span class="c1">#  &lt;p class=&quot;title&quot;&gt;&lt;b&gt;The Dormouse&#39;s story&lt;/b&gt;&lt;/p&gt;]</span>
+
+<span class="n">first_link</span><span class="o">.</span><span class="n">find_previous</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;</span>
+</pre></div>
+</div>
+<p>The call to <code class="docutils literal"><span class="pre">find_all_previous(&quot;p&quot;)</span></code> found the first paragraph in
+the document (the one with class=&#8221;title&#8221;), but it also finds the
+second paragraph, the &lt;p&gt; tag that contains the &lt;a&gt; tag we started
+with. This shouldn&#8217;t be too surprising: we&#8217;re looking at all the tags
+that show up earlier in the document than the one we started with. A
+&lt;p&gt; tag that contains an &lt;a&gt; tag must have shown up before the &lt;a&gt;
+tag it contains.</p>
+</div>
+<div class="section" id="css-selectors">
+<h2>6.10. CSS selectors<a class="headerlink" href="#css-selectors" title="Permalink to this headline">¶</a></h2>
+<p>Beautiful Soup supports the most commonly-used <a class="reference external" href="http://www.w3.org/TR/CSS2/selector.html">CSS selectors</a>. Just pass a string into
+the <code class="docutils literal"><span class="pre">.select()</span></code> method of a <code class="docutils literal"><span class="pre">Tag</span></code> object or the <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>
+object itself.</p>
+<p>You can find tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p nth-of-type(3)&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;p class=&quot;story&quot;&gt;...&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>Find tags beneath other tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;body a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot;  id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;html head title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+</pre></div>
+</div>
+<p>Find tags <cite>directly</cite> beneath other tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;head &gt; title&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;title&gt;The Dormouse&#39;s story&lt;/title&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p &gt; a&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot;  id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p &gt; a:nth-of-type(2)&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;p &gt; #link1&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;body &gt; a&quot;</span><span class="p">)</span>
+<span class="c1"># []</span>
+</pre></div>
+</div>
+<p>Find the siblings of tags:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#link1 ~ .sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot;  id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#link1 + .sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>Find tags by CSS class:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;.sister&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;[class~=sister]&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>Find tags by ID:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;#link1&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;a#link2&quot;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>Test for the existence of an attribute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>Find tags by attribute value:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href=&quot;http://example.com/elsie&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href^=&quot;http://example.com/&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/lacie&quot; id=&quot;link2&quot;&gt;Lacie&lt;/a&gt;,</span>
+<span class="c1">#  &lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href$=&quot;tillie&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/tillie&quot; id=&quot;link3&quot;&gt;Tillie&lt;/a&gt;]</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;a[href*=&quot;.com/el&quot;]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;a class=&quot;sister&quot; href=&quot;http://example.com/elsie&quot; id=&quot;link1&quot;&gt;Elsie&lt;/a&gt;]</span>
+</pre></div>
+</div>
+<p>Match language codes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">multilingual_markup</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2"> &lt;p lang=&quot;en&quot;&gt;Hello&lt;/p&gt;</span>
+<span class="s2"> &lt;p lang=&quot;en-us&quot;&gt;Howdy, y&#39;all&lt;/p&gt;</span>
+<span class="s2"> &lt;p lang=&quot;en-gb&quot;&gt;Pip-pip, old fruit&lt;/p&gt;</span>
+<span class="s2"> &lt;p lang=&quot;fr&quot;&gt;Bonjour mes amis&lt;/p&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">multilingual_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">multilingual_markup</span><span class="p">)</span>
+<span class="n">multilingual_soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;p[lang|=en]&#39;</span><span class="p">)</span>
+<span class="c1"># [&lt;p lang=&quot;en&quot;&gt;Hello&lt;/p&gt;,</span>
+<span class="c1">#  &lt;p lang=&quot;en-us&quot;&gt;Howdy, y&#39;all&lt;/p&gt;,</span>
+<span class="c1">#  &lt;p lang=&quot;en-gb&quot;&gt;Pip-pip, old fruit&lt;/p&gt;]</span>
+</pre></div>
+</div>
+<p>This is a convenience for users who know the CSS selector syntax. You
+can do all this stuff with the Beautiful Soup API. And if CSS
+selectors are all you need, you might as well use lxml directly,
+because it&#8217;s faster. But this lets you <cite>combine</cite> simple CSS selectors
+with the Beautiful Soup API.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="7_modifying_the_tree.html" class="btn btn-neutral float-right" title="7. Modifying the tree" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="5_navigating_the_tree.html" class="btn btn-neutral" title="5. Navigating the tree" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

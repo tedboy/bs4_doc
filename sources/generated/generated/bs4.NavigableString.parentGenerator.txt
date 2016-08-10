@@ -1,0 +1,6 @@
+bs4.NavigableString.parentGenerator
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.parentGenerator

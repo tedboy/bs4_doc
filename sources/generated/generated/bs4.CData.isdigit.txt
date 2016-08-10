@@ -1,0 +1,6 @@
+bs4.CData.isdigit
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.isdigit

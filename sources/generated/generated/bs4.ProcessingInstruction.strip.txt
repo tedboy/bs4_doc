@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.strip
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.strip

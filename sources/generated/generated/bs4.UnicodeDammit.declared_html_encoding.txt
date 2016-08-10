@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.declared_html_encoding
+========================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.declared_html_encoding

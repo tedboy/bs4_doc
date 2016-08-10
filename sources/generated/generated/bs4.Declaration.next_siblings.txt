@@ -1,0 +1,6 @@
+bs4.Declaration.next_siblings
+=============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.next_siblings

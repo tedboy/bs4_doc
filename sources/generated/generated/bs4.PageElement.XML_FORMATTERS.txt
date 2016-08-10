@@ -1,0 +1,6 @@
+bs4.PageElement.XML_FORMATTERS
+==============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: PageElement.XML_FORMATTERS

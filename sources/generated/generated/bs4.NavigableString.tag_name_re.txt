@@ -1,0 +1,6 @@
+bs4.NavigableString.tag_name_re
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.tag_name_re

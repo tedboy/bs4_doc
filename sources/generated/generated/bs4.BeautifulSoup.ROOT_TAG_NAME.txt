@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.ROOT_TAG_NAME
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.ROOT_TAG_NAME

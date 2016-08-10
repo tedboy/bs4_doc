@@ -1,0 +1,6 @@
+bs4.NavigableString.nextSiblingGenerator
+========================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.nextSiblingGenerator

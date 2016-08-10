@@ -1,0 +1,6 @@
+bs4.CData.rpartition
+====================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.rpartition

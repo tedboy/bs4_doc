@@ -1,0 +1,6 @@
+bs4.Doctype.setup
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.setup

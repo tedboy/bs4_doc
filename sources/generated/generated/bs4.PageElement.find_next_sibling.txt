@@ -1,0 +1,6 @@
+bs4.PageElement.find_next_sibling
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.find_next_sibling

@@ -1,0 +1,6 @@
+bs4.Declaration.rjust
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.rjust

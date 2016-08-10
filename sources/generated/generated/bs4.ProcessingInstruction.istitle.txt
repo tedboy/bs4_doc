@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.istitle
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.istitle

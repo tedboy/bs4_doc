@@ -1,0 +1,6 @@
+bs4.CData.unwrap
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.unwrap

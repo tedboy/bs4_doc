@@ -1,0 +1,6 @@
+bs4.Declaration.rindex
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.rindex

@@ -1,0 +1,6 @@
+bs4.Comment.lstrip
+==================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.lstrip

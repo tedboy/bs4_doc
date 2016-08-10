@@ -1,0 +1,6 @@
+bs4.PageElement.previousSibling
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: PageElement.previousSibling

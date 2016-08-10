@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.object_was_parsed
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.object_was_parsed

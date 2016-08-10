@@ -1,0 +1,6 @@
+bs4.CData.replace
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.replace

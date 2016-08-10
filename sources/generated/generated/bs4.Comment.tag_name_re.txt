@@ -1,0 +1,6 @@
+bs4.Comment.tag_name_re
+=======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Comment.tag_name_re

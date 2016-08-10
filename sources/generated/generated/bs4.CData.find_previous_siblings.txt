@@ -1,0 +1,6 @@
+bs4.CData.find_previous_siblings
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.find_previous_siblings

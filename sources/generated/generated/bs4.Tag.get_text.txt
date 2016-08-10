@@ -1,0 +1,6 @@
+bs4.Tag.get_text
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.get_text

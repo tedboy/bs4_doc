@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.new_string
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.new_string

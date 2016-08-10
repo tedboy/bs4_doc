@@ -1,0 +1,6 @@
+bs4.Declaration.findAllPrevious
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.findAllPrevious

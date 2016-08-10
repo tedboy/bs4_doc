@@ -1,0 +1,6 @@
+bs4.ResultSet.__init__
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: ResultSet.__init__

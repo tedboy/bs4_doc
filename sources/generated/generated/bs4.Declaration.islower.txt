@@ -1,0 +1,6 @@
+bs4.Declaration.islower
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.islower

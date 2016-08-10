@@ -1,0 +1,6 @@
+bs4.NavigableString.previousSibling
+===================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.previousSibling

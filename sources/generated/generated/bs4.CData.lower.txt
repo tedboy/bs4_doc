@@ -1,0 +1,6 @@
+bs4.CData.lower
+===============
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.lower

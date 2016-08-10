@@ -1,0 +1,6 @@
+bs4.Tag.findParent
+==================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.findParent

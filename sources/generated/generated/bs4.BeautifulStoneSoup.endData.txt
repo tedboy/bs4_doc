@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.endData
+==============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.endData

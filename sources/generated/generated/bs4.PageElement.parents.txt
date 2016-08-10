@@ -1,0 +1,6 @@
+bs4.PageElement.parents
+=======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: PageElement.parents

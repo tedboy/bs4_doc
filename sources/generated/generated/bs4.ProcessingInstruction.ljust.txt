@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.ljust
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.ljust

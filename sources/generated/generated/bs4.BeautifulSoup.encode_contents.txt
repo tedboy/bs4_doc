@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.encode_contents
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.encode_contents

@@ -1,0 +1,128 @@
+bs4.NavigableString
+===================
+
+.. currentmodule:: bs4
+
+.. autoclass:: NavigableString
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~NavigableString.append
+   ~NavigableString.capitalize
+   ~NavigableString.center
+   ~NavigableString.count
+   ~NavigableString.decode
+   ~NavigableString.encode
+   ~NavigableString.endswith
+   ~NavigableString.expandtabs
+   ~NavigableString.extract
+   ~NavigableString.fetchNextSiblings
+   ~NavigableString.fetchParents
+   ~NavigableString.fetchPrevious
+   ~NavigableString.fetchPreviousSiblings
+   ~NavigableString.find
+   ~NavigableString.findAllNext
+   ~NavigableString.findAllPrevious
+   ~NavigableString.findNext
+   ~NavigableString.findNextSibling
+   ~NavigableString.findNextSiblings
+   ~NavigableString.findParent
+   ~NavigableString.findParents
+   ~NavigableString.findPrevious
+   ~NavigableString.findPreviousSibling
+   ~NavigableString.findPreviousSiblings
+   ~NavigableString.find_all_next
+   ~NavigableString.find_all_previous
+   ~NavigableString.find_next
+   ~NavigableString.find_next_sibling
+   ~NavigableString.find_next_siblings
+   ~NavigableString.find_parent
+   ~NavigableString.find_parents
+   ~NavigableString.find_previous
+   ~NavigableString.find_previous_sibling
+   ~NavigableString.find_previous_siblings
+   ~NavigableString.format
+   ~NavigableString.format_string
+   ~NavigableString.index
+   ~NavigableString.insert
+   ~NavigableString.insert_after
+   ~NavigableString.insert_before
+   ~NavigableString.isalnum
+   ~NavigableString.isalpha
+   ~NavigableString.isdecimal
+   ~NavigableString.isdigit
+   ~NavigableString.islower
+   ~NavigableString.isnumeric
+   ~NavigableString.isspace
+   ~NavigableString.istitle
+   ~NavigableString.isupper
+   ~NavigableString.join
+   ~NavigableString.ljust
+   ~NavigableString.lower
+   ~NavigableString.lstrip
+   ~NavigableString.nextGenerator
+   ~NavigableString.nextSiblingGenerator
+   ~NavigableString.output_ready
+   ~NavigableString.parentGenerator
+   ~NavigableString.partition
+   ~NavigableString.previousGenerator
+   ~NavigableString.previousSiblingGenerator
+   ~NavigableString.replace
+   ~NavigableString.replaceWith
+   ~NavigableString.replaceWithChildren
+   ~NavigableString.replace_with
+   ~NavigableString.replace_with_children
+   ~NavigableString.rfind
+   ~NavigableString.rindex
+   ~NavigableString.rjust
+   ~NavigableString.rpartition
+   ~NavigableString.rsplit
+   ~NavigableString.rstrip
+   ~NavigableString.setup
+   ~NavigableString.split
+   ~NavigableString.splitlines
+   ~NavigableString.startswith
+   ~NavigableString.strip
+   ~NavigableString.swapcase
+   ~NavigableString.title
+   ~NavigableString.translate
+   ~NavigableString.unwrap
+   ~NavigableString.upper
+   ~NavigableString.wrap
+   ~NavigableString.zfill
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~NavigableString.HTML_FORMATTERS
+   ~NavigableString.PREFIX
+   ~NavigableString.SUFFIX
+   ~NavigableString.XML_FORMATTERS
+   ~NavigableString.attribselect_re
+   ~NavigableString.name
+   ~NavigableString.next
+   ~NavigableString.nextSibling
+   ~NavigableString.next_elements
+   ~NavigableString.next_siblings
+   ~NavigableString.parents
+   ~NavigableString.previous
+   ~NavigableString.previousSibling
+   ~NavigableString.previous_elements
+   ~NavigableString.previous_siblings
+   ~NavigableString.tag_name_re
+

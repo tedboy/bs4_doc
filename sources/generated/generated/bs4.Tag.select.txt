@@ -1,0 +1,6 @@
+bs4.Tag.select
+==============
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.select

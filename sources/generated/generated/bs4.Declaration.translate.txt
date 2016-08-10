@@ -1,0 +1,6 @@
+bs4.Declaration.translate
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.translate

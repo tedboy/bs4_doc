@@ -1,0 +1,6 @@
+bs4.Doctype.HTML_FORMATTERS
+===========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.HTML_FORMATTERS

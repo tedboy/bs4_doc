@@ -1,0 +1,31 @@
+bs4.ResultSet
+=============
+
+.. currentmodule:: bs4
+
+.. autoclass:: ResultSet
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~ResultSet.__init__
+   ~ResultSet.append
+   ~ResultSet.count
+   ~ResultSet.extend
+   ~ResultSet.index
+   ~ResultSet.insert
+   ~ResultSet.pop
+   ~ResultSet.remove
+   ~ResultSet.reverse
+   ~ResultSet.sort
+
+
+
+
+

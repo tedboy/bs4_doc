@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>12. Troubleshooting &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="bs4.html"/>
+        <link rel="prev" title="11. Parsing only part of a document" href="11_parsing_parts_of_doc.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#diagnose">12.1. <code class="docutils literal"><span class="pre">diagnose()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#errors-when-parsing-a-document">12.2. Errors when parsing a document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-mismatch-problems">12.3. Version mismatch problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parsing-xml">12.4. Parsing XML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-parser-problems">12.5. Other parser problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#miscellaneous">12.6. Miscellaneous</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#improving-performance">12.7. Improving Performance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>12. Troubleshooting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/12_troubleshooting.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="troubleshooting">
+<h1>12. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="diagnose">
+<span id="id1"></span><h2>12.1. <code class="docutils literal"><span class="pre">diagnose()</span></code><a class="headerlink" href="#diagnose" title="Permalink to this headline">¶</a></h2>
+<p>If you&#8217;re having trouble understanding what Beautiful Soup does to a
+document, pass the document into the <code class="docutils literal"><span class="pre">diagnose()</span></code> function. (New in
+Beautiful Soup 4.2.0.)  Beautiful Soup will print out a report showing
+you how different parsers handle the document, and tell you if you&#8217;re
+missing a parser that Beautiful Soup could be using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4.diagnose</span> <span class="k">import</span> <span class="n">diagnose</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;bad.html&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">diagnose</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Diagnostic running on Beautiful Soup 4.2.0</span>
+<span class="c1"># Python version 2.7.3 (default, Aug  1 2012, 05:16:07)</span>
+<span class="c1"># I noticed that html5lib is not installed. Installing it may help.</span>
+<span class="c1"># Found lxml version 2.3.2.0</span>
+<span class="c1">#</span>
+<span class="c1"># Trying to parse your data with html.parser</span>
+<span class="c1"># Here&#39;s what html.parser did with the document:</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Just looking at the output of diagnose() may show you how to solve the
+problem. Even if not, you can paste the output of <code class="docutils literal"><span class="pre">diagnose()</span></code> when
+asking for help.</p>
+</div>
+<div class="section" id="errors-when-parsing-a-document">
+<h2>12.2. Errors when parsing a document<a class="headerlink" href="#errors-when-parsing-a-document" title="Permalink to this headline">¶</a></h2>
+<p>There are two different kinds of parse errors. There are crashes,
+where you feed a document to Beautiful Soup and it raises an
+exception, usually an <code class="docutils literal"><span class="pre">HTMLParser.HTMLParseError</span></code>. And there is
+unexpected behavior, where a Beautiful Soup parse tree looks a lot
+different than the document used to create it.</p>
+<p>Almost none of these problems turn out to be problems with Beautiful
+Soup. This is not because Beautiful Soup is an amazingly well-written
+piece of software. It&#8217;s because Beautiful Soup doesn&#8217;t include any
+parsing code. Instead, it relies on external parsers. If one parser
+isn&#8217;t working on a certain document, the best solution is to try a
+different parser. See <a class="reference internal" href="2_installation.html#parser-installation"><span class="std std-ref">Installing a parser</span></a> for details and a parser
+comparison.</p>
+<p>The most common parse errors are <code class="docutils literal"><span class="pre">HTMLParser.HTMLParseError:</span>
+<span class="pre">malformed</span> <span class="pre">start</span> <span class="pre">tag</span></code> and <code class="docutils literal"><span class="pre">HTMLParser.HTMLParseError:</span> <span class="pre">bad</span> <span class="pre">end</span>
+<span class="pre">tag</span></code>. These are both generated by Python&#8217;s built-in HTML parser
+library, and the solution is to <a class="reference internal" href="2_installation.html#parser-installation"><span class="std std-ref">install lxml or
+html5lib.</span></a></p>
+<p>The most common type of unexpected behavior is that you can&#8217;t find a
+tag that you know is in the document. You saw it going in, but
+<code class="docutils literal"><span class="pre">find_all()</span></code> returns <code class="docutils literal"><span class="pre">[]</span></code> or <code class="docutils literal"><span class="pre">find()</span></code> returns <code class="docutils literal"><span class="pre">None</span></code>. This is
+another common problem with Python&#8217;s built-in HTML parser, which
+sometimes skips tags it doesn&#8217;t understand.  Again, the solution is to
+<a class="reference internal" href="2_installation.html#parser-installation"><span class="std std-ref">install lxml or html5lib.</span></a></p>
+</div>
+<div class="section" id="version-mismatch-problems">
+<h2>12.3. Version mismatch problems<a class="headerlink" href="#version-mismatch-problems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">SyntaxError:</span> <span class="pre">Invalid</span> <span class="pre">syntax</span></code> (on the line <code class="docutils literal"><span class="pre">ROOT_TAG_NAME</span> <span class="pre">=</span>
+<span class="pre">u'[document]'</span></code>): Caused by running the Python 2 version of
+Beautiful Soup under Python 3, without converting the code.</li>
+<li><code class="docutils literal"><span class="pre">ImportError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">HTMLParser</span></code> - Caused by running the
+Python 2 version of Beautiful Soup under Python 3.</li>
+<li><code class="docutils literal"><span class="pre">ImportError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">html.parser</span></code> - Caused by running the
+Python 3 version of Beautiful Soup under Python 2.</li>
+<li><code class="docutils literal"><span class="pre">ImportError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">BeautifulSoup</span></code> - Caused by running
+Beautiful Soup 3 code on a system that doesn&#8217;t have BS3
+installed. Or, by writing Beautiful Soup 4 code without knowing that
+the package name has changed to <code class="docutils literal"><span class="pre">bs4</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">ImportError:</span> <span class="pre">No</span> <span class="pre">module</span> <span class="pre">named</span> <span class="pre">bs4</span></code> - Caused by running Beautiful
+Soup 4 code on a system that doesn&#8217;t have BS4 installed.</li>
+</ul>
+</div>
+<div class="section" id="parsing-xml">
+<span id="id2"></span><h2>12.4. Parsing XML<a class="headerlink" href="#parsing-xml" title="Permalink to this headline">¶</a></h2>
+<p>By default, Beautiful Soup parses documents as HTML. To parse a
+document as XML, pass in &#8220;xml&#8221; as the second argument to the
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="s2">&quot;xml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You&#8217;ll need to <a class="reference internal" href="2_installation.html#parser-installation"><span class="std std-ref">have lxml installed</span></a>.</p>
+</div>
+<div class="section" id="other-parser-problems">
+<h2>12.5. Other parser problems<a class="headerlink" href="#other-parser-problems" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>If your script works on one computer but not another, it&#8217;s probably
+because the two computers have different parser libraries
+available. For example, you may have developed the script on a
+computer that has lxml installed, and then tried to run it on a
+computer that only has html5lib insgit talled. See <a class="reference internal" href="9_specifying_the_parser.html#parser-differences"><span class="std std-ref">Differences between parsers</span></a> for why this matters, and fix the problem by mentioning a
+specific parser library in the <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor.</li>
+<li>Because <a class="reference external" href="http://www.w3.org/TR/html5/syntax.html#syntax">HTML tags and attributes are case-insensitive</a>, all three HTML
+parsers convert tag and attribute names to lowercase. That is, the
+markup &lt;TAG&gt;&lt;/TAG&gt; is converted to &lt;tag&gt;&lt;/tag&gt;. If you want to
+preserve mixed-case or uppercase tags and attributes, you&#8217;ll need to
+<a class="reference internal" href="#parsing-xml"><span class="std std-ref">parse the document as XML.</span></a></li>
+</ul>
+</div>
+<div class="section" id="miscellaneous">
+<span id="misc"></span><h2>12.6. Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">UnicodeEncodeError:</span> <span class="pre">'charmap'</span> <span class="pre">codec</span> <span class="pre">can't</span> <span class="pre">encode</span> <span class="pre">character</span>
+<span class="pre">u'\xfoo'</span> <span class="pre">in</span> <span class="pre">position</span> <span class="pre">bar</span></code> (or just about any other
+<code class="docutils literal"><span class="pre">UnicodeEncodeError</span></code>) - This is not a problem with Beautiful Soup.
+This problem shows up in two main situations. First, when you try to
+print a Unicode character that your console doesn&#8217;t know how to
+display. (See <a class="reference external" href="http://wiki.python.org/moin/PrintFails">this page on the Python wiki</a> for help.) Second, when
+you&#8217;re writing to a file and you pass in a Unicode character that&#8217;s
+not supported by your default encoding.  In this case, the simplest
+solution is to explicitly encode the Unicode string into UTF-8 with
+<code class="docutils literal"><span class="pre">u.encode(&quot;utf8&quot;)</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">KeyError:</span> <span class="pre">[attr]</span></code> - Caused by accessing <code class="docutils literal"><span class="pre">tag['attr']</span></code> when the
+tag in question doesn&#8217;t define the <code class="docutils literal"><span class="pre">attr</span></code> attribute. The most
+common errors are <code class="docutils literal"><span class="pre">KeyError:</span> <span class="pre">'href'</span></code> and <code class="docutils literal"><span class="pre">KeyError:</span>
+<span class="pre">'class'</span></code>. Use <code class="docutils literal"><span class="pre">tag.get('attr')</span></code> if you&#8217;re not sure <code class="docutils literal"><span class="pre">attr</span></code> is
+defined, just as you would with a Python dictionary.</li>
+<li><code class="docutils literal"><span class="pre">AttributeError:</span> <span class="pre">'ResultSet'</span> <span class="pre">object</span> <span class="pre">has</span> <span class="pre">no</span> <span class="pre">attribute</span> <span class="pre">'foo'</span></code> - This
+usually happens because you expected <code class="docutils literal"><span class="pre">find_all()</span></code> to return a
+single tag or string. But <code class="docutils literal"><span class="pre">find_all()</span></code> returns a _list_ of tags
+and strings&#8211;a <code class="docutils literal"><span class="pre">ResultSet</span></code> object. You need to iterate over the
+list and look at the <code class="docutils literal"><span class="pre">.foo</span></code> of each one. Or, if you really only
+want one result, you need to use <code class="docutils literal"><span class="pre">find()</span></code> instead of
+<code class="docutils literal"><span class="pre">find_all()</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">AttributeError:</span> <span class="pre">'NoneType'</span> <span class="pre">object</span> <span class="pre">has</span> <span class="pre">no</span> <span class="pre">attribute</span> <span class="pre">'foo'</span></code> - This
+usually happens because you called <code class="docutils literal"><span class="pre">find()</span></code> and then tried to
+access the <cite>.foo`</cite> attribute of the result. But in your case,
+<code class="docutils literal"><span class="pre">find()</span></code> didn&#8217;t find anything, so it returned <code class="docutils literal"><span class="pre">None</span></code>, instead of
+returning a tag or a string. You need to figure out why your
+<code class="docutils literal"><span class="pre">find()</span></code> call isn&#8217;t returning anything.</li>
+</ul>
+</div>
+<div class="section" id="improving-performance">
+<h2>12.7. Improving Performance<a class="headerlink" href="#improving-performance" title="Permalink to this headline">¶</a></h2>
+<p>Beautiful Soup will never be as fast as the parsers it sits on top
+of. If response time is critical, if you&#8217;re paying for computer time
+by the hour, or if there&#8217;s any other reason why computer time is more
+valuable than programmer time, you should forget about Beautiful Soup
+and work directly atop <a class="reference external" href="http://lxml.de/">lxml</a>.</p>
+<p>That said, there are things you can do to speed up Beautiful Soup. If
+you&#8217;re not using lxml as the underlying parser, my advice is to
+<a class="reference internal" href="2_installation.html#parser-installation"><span class="std std-ref">start</span></a>. Beautiful Soup parses documents
+significantly faster using lxml than using html.parser or html5lib.</p>
+<p>You can speed up encoding detection significantly by installing the
+<a class="reference external" href="http://pypi.python.org/pypi/cchardet/">cchardet</a> library.</p>
+<p><a class="reference internal" href="11_parsing_parts_of_doc.html#parse-doc-part"><span class="std std-ref">Parsing only part of a document</span></a> won&#8217;t save you much time parsing
+the document, but it can save a lot of memory, and it&#8217;ll make
+<cite>searching</cite> the document much faster.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="11_parsing_parts_of_doc.html" class="btn btn-neutral" title="11. Parsing only part of a document" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

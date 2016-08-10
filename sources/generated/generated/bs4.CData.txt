@@ -1,0 +1,128 @@
+bs4.CData
+=========
+
+.. currentmodule:: bs4
+
+.. autoclass:: CData
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~CData.append
+   ~CData.capitalize
+   ~CData.center
+   ~CData.count
+   ~CData.decode
+   ~CData.encode
+   ~CData.endswith
+   ~CData.expandtabs
+   ~CData.extract
+   ~CData.fetchNextSiblings
+   ~CData.fetchParents
+   ~CData.fetchPrevious
+   ~CData.fetchPreviousSiblings
+   ~CData.find
+   ~CData.findAllNext
+   ~CData.findAllPrevious
+   ~CData.findNext
+   ~CData.findNextSibling
+   ~CData.findNextSiblings
+   ~CData.findParent
+   ~CData.findParents
+   ~CData.findPrevious
+   ~CData.findPreviousSibling
+   ~CData.findPreviousSiblings
+   ~CData.find_all_next
+   ~CData.find_all_previous
+   ~CData.find_next
+   ~CData.find_next_sibling
+   ~CData.find_next_siblings
+   ~CData.find_parent
+   ~CData.find_parents
+   ~CData.find_previous
+   ~CData.find_previous_sibling
+   ~CData.find_previous_siblings
+   ~CData.format
+   ~CData.format_string
+   ~CData.index
+   ~CData.insert
+   ~CData.insert_after
+   ~CData.insert_before
+   ~CData.isalnum
+   ~CData.isalpha
+   ~CData.isdecimal
+   ~CData.isdigit
+   ~CData.islower
+   ~CData.isnumeric
+   ~CData.isspace
+   ~CData.istitle
+   ~CData.isupper
+   ~CData.join
+   ~CData.ljust
+   ~CData.lower
+   ~CData.lstrip
+   ~CData.nextGenerator
+   ~CData.nextSiblingGenerator
+   ~CData.output_ready
+   ~CData.parentGenerator
+   ~CData.partition
+   ~CData.previousGenerator
+   ~CData.previousSiblingGenerator
+   ~CData.replace
+   ~CData.replaceWith
+   ~CData.replaceWithChildren
+   ~CData.replace_with
+   ~CData.replace_with_children
+   ~CData.rfind
+   ~CData.rindex
+   ~CData.rjust
+   ~CData.rpartition
+   ~CData.rsplit
+   ~CData.rstrip
+   ~CData.setup
+   ~CData.split
+   ~CData.splitlines
+   ~CData.startswith
+   ~CData.strip
+   ~CData.swapcase
+   ~CData.title
+   ~CData.translate
+   ~CData.unwrap
+   ~CData.upper
+   ~CData.wrap
+   ~CData.zfill
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~CData.HTML_FORMATTERS
+   ~CData.PREFIX
+   ~CData.SUFFIX
+   ~CData.XML_FORMATTERS
+   ~CData.attribselect_re
+   ~CData.name
+   ~CData.next
+   ~CData.nextSibling
+   ~CData.next_elements
+   ~CData.next_siblings
+   ~CData.parents
+   ~CData.previous
+   ~CData.previousSibling
+   ~CData.previous_elements
+   ~CData.previous_siblings
+   ~CData.tag_name_re
+

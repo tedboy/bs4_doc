@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.select
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.select

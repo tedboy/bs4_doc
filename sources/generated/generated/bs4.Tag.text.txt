@@ -1,0 +1,6 @@
+bs4.Tag.text
+============
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.text

@@ -1,0 +1,6 @@
+bs4.NavigableString.insert_after
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.insert_after

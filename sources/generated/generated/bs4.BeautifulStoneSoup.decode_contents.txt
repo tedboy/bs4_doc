@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.decode_contents
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.decode_contents

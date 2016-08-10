@@ -1,0 +1,6 @@
+bs4.Doctype.wrap
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.wrap

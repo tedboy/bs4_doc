@@ -1,0 +1,6 @@
+bs4.Declaration.attribselect_re
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.attribselect_re

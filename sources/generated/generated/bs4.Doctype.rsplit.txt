@@ -1,0 +1,6 @@
+bs4.Doctype.rsplit
+==================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.rsplit

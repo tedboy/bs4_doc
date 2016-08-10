@@ -1,0 +1,6 @@
+bs4.NavigableString.splitlines
+==============================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.splitlines

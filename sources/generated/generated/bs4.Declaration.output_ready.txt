@@ -1,0 +1,6 @@
+bs4.Declaration.output_ready
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.output_ready

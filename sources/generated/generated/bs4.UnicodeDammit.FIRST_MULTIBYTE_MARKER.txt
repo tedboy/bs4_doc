@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.FIRST_MULTIBYTE_MARKER
+========================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.FIRST_MULTIBYTE_MARKER

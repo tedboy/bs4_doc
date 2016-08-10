@@ -1,0 +1,6 @@
+bs4.PageElement.fetchPrevious
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.fetchPrevious

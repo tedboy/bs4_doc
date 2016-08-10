@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.format_string
+====================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.format_string

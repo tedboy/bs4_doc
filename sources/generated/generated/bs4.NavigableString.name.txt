@@ -1,0 +1,6 @@
+bs4.NavigableString.name
+========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.name

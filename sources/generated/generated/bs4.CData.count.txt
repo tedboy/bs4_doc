@@ -1,0 +1,6 @@
+bs4.CData.count
+===============
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.count

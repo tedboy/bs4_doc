@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.parentGenerator
+=========================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.parentGenerator

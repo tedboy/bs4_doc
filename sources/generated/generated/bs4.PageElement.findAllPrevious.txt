@@ -1,0 +1,6 @@
+bs4.PageElement.findAllPrevious
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.findAllPrevious

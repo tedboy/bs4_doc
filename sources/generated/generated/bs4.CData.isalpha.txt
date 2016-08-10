@@ -1,0 +1,6 @@
+bs4.CData.isalpha
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.isalpha

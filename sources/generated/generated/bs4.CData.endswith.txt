@@ -1,0 +1,6 @@
+bs4.CData.endswith
+==================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.endswith

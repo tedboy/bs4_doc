@@ -1,0 +1,6 @@
+bs4.Tag.encode
+==============
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.encode

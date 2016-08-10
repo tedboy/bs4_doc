@@ -1,0 +1,6 @@
+bs4.Tag.fetchPrevious
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.fetchPrevious

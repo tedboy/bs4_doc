@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.encode
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.encode

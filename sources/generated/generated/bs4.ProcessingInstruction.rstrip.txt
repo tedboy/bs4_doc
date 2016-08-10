@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.rstrip
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.rstrip

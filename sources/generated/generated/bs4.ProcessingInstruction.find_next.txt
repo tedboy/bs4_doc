@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.find_next
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.find_next

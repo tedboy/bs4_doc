@@ -1,0 +1,6 @@
+bs4.CData.decode
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.decode

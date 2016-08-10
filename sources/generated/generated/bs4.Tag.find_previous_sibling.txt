@@ -1,0 +1,6 @@
+bs4.Tag.find_previous_sibling
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.find_previous_sibling

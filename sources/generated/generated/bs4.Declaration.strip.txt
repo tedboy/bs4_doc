@@ -1,0 +1,6 @@
+bs4.Declaration.strip
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.strip

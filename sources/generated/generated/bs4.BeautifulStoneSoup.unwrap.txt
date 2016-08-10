@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.unwrap
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.unwrap

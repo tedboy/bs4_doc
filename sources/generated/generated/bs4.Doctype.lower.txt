@@ -1,0 +1,6 @@
+bs4.Doctype.lower
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.lower

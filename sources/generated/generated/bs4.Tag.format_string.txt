@@ -1,0 +1,6 @@
+bs4.Tag.format_string
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.format_string

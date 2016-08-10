@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.endswith
+==================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.endswith

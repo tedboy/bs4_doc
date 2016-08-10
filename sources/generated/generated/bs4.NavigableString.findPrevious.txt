@@ -1,0 +1,6 @@
+bs4.NavigableString.findPrevious
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.findPrevious

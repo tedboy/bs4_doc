@@ -1,0 +1,6 @@
+bs4.Declaration.partition
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.partition

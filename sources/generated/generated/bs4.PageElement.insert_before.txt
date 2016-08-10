@@ -1,0 +1,6 @@
+bs4.PageElement.insert_before
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.insert_before

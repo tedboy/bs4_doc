@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.insert_after
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.insert_after

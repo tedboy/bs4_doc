@@ -1,0 +1,41 @@
+bs4.UnicodeDammit
+=================
+
+.. currentmodule:: bs4
+
+.. autoclass:: UnicodeDammit
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~UnicodeDammit.__init__
+   ~UnicodeDammit.detwingle
+   ~UnicodeDammit.find_codec
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~UnicodeDammit.CHARSET_ALIASES
+   ~UnicodeDammit.ENCODINGS_WITH_SMART_QUOTES
+   ~UnicodeDammit.FIRST_MULTIBYTE_MARKER
+   ~UnicodeDammit.LAST_MULTIBYTE_MARKER
+   ~UnicodeDammit.MS_CHARS
+   ~UnicodeDammit.MS_CHARS_TO_ASCII
+   ~UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES
+   ~UnicodeDammit.WINDOWS_1252_TO_UTF8
+   ~UnicodeDammit.declared_html_encoding
+

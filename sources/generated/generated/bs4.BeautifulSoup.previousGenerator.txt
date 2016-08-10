@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.previousGenerator
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.previousGenerator

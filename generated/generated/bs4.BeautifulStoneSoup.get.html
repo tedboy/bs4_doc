@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13.1.2.59. bs4.BeautifulStoneSoup.get &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="13.1.2. bs4.BeautifulStoneSoup" href="bs4.BeautifulStoneSoup.html"/>
+        <link rel="next" title="13.1.2.60. bs4.BeautifulStoneSoup.getText" href="bs4.BeautifulStoneSoup.getText.html"/>
+        <link rel="prev" title="13.1.2.58. bs4.BeautifulStoneSoup.format_string" href="bs4.BeautifulStoneSoup.format_string.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bs4.html">13. bs4</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bs4.html#classes">13.1. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulSoup.html">13.1.1. bs4.BeautifulSoup</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="bs4.BeautifulStoneSoup.html">13.1.2. bs4.BeautifulStoneSoup</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.children.html">13.1.2.1. bs4.BeautifulStoneSoup.children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.descendants.html">13.1.2.2. bs4.BeautifulStoneSoup.descendants</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.isSelfClosing.html">13.1.2.3. bs4.BeautifulStoneSoup.isSelfClosing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.is_empty_element.html">13.1.2.4. bs4.BeautifulStoneSoup.is_empty_element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.next.html">13.1.2.5. bs4.BeautifulStoneSoup.next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.nextSibling.html">13.1.2.6. bs4.BeautifulStoneSoup.nextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.next_elements.html">13.1.2.7. bs4.BeautifulStoneSoup.next_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.next_siblings.html">13.1.2.8. bs4.BeautifulStoneSoup.next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.parents.html">13.1.2.9. bs4.BeautifulStoneSoup.parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.parserClass.html">13.1.2.10. bs4.BeautifulStoneSoup.parserClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previous.html">13.1.2.11. bs4.BeautifulStoneSoup.previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previousSibling.html">13.1.2.12. bs4.BeautifulStoneSoup.previousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previous_elements.html">13.1.2.13. bs4.BeautifulStoneSoup.previous_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previous_siblings.html">13.1.2.14. bs4.BeautifulStoneSoup.previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.string.html">13.1.2.15. bs4.BeautifulStoneSoup.string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.strings.html">13.1.2.16. bs4.BeautifulStoneSoup.strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.stripped_strings.html">13.1.2.17. bs4.BeautifulStoneSoup.stripped_strings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.text.html">13.1.2.18. bs4.BeautifulStoneSoup.text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.append.html">13.1.2.19. bs4.BeautifulStoneSoup.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.childGenerator.html">13.1.2.20. bs4.BeautifulStoneSoup.childGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.clear.html">13.1.2.21. bs4.BeautifulStoneSoup.clear</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.decode.html">13.1.2.22. bs4.BeautifulStoneSoup.decode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.decode_contents.html">13.1.2.23. bs4.BeautifulStoneSoup.decode_contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.decompose.html">13.1.2.24. bs4.BeautifulStoneSoup.decompose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.encode.html">13.1.2.25. bs4.BeautifulStoneSoup.encode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.encode_contents.html">13.1.2.26. bs4.BeautifulStoneSoup.encode_contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.endData.html">13.1.2.27. bs4.BeautifulStoneSoup.endData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.extract.html">13.1.2.28. bs4.BeautifulStoneSoup.extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchNextSiblings.html">13.1.2.29. bs4.BeautifulStoneSoup.fetchNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchParents.html">13.1.2.30. bs4.BeautifulStoneSoup.fetchParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchPrevious.html">13.1.2.31. bs4.BeautifulStoneSoup.fetchPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.fetchPreviousSiblings.html">13.1.2.32. bs4.BeautifulStoneSoup.fetchPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find.html">13.1.2.33. bs4.BeautifulStoneSoup.find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findAll.html">13.1.2.34. bs4.BeautifulStoneSoup.findAll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findAllNext.html">13.1.2.35. bs4.BeautifulStoneSoup.findAllNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findAllPrevious.html">13.1.2.36. bs4.BeautifulStoneSoup.findAllPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findChild.html">13.1.2.37. bs4.BeautifulStoneSoup.findChild</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findChildren.html">13.1.2.38. bs4.BeautifulStoneSoup.findChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findNext.html">13.1.2.39. bs4.BeautifulStoneSoup.findNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findNextSibling.html">13.1.2.40. bs4.BeautifulStoneSoup.findNextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findNextSiblings.html">13.1.2.41. bs4.BeautifulStoneSoup.findNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findParent.html">13.1.2.42. bs4.BeautifulStoneSoup.findParent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findParents.html">13.1.2.43. bs4.BeautifulStoneSoup.findParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findPrevious.html">13.1.2.44. bs4.BeautifulStoneSoup.findPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findPreviousSibling.html">13.1.2.45. bs4.BeautifulStoneSoup.findPreviousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.findPreviousSiblings.html">13.1.2.46. bs4.BeautifulStoneSoup.findPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all.html">13.1.2.47. bs4.BeautifulStoneSoup.find_all</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all_next.html">13.1.2.48. bs4.BeautifulStoneSoup.find_all_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_all_previous.html">13.1.2.49. bs4.BeautifulStoneSoup.find_all_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next.html">13.1.2.50. bs4.BeautifulStoneSoup.find_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next_sibling.html">13.1.2.51. bs4.BeautifulStoneSoup.find_next_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_next_siblings.html">13.1.2.52. bs4.BeautifulStoneSoup.find_next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_parent.html">13.1.2.53. bs4.BeautifulStoneSoup.find_parent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_parents.html">13.1.2.54. bs4.BeautifulStoneSoup.find_parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous.html">13.1.2.55. bs4.BeautifulStoneSoup.find_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous_sibling.html">13.1.2.56. bs4.BeautifulStoneSoup.find_previous_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.find_previous_siblings.html">13.1.2.57. bs4.BeautifulStoneSoup.find_previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.format_string.html">13.1.2.58. bs4.BeautifulStoneSoup.format_string</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">13.1.2.59. bs4.BeautifulStoneSoup.get</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.getText.html">13.1.2.60. bs4.BeautifulStoneSoup.getText</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.get_text.html">13.1.2.61. bs4.BeautifulStoneSoup.get_text</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_data.html">13.1.2.62. bs4.BeautifulStoneSoup.handle_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_endtag.html">13.1.2.63. bs4.BeautifulStoneSoup.handle_endtag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.handle_starttag.html">13.1.2.64. bs4.BeautifulStoneSoup.handle_starttag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.has_attr.html">13.1.2.65. bs4.BeautifulStoneSoup.has_attr</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.has_key.html">13.1.2.66. bs4.BeautifulStoneSoup.has_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.index.html">13.1.2.67. bs4.BeautifulStoneSoup.index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.insert.html">13.1.2.68. bs4.BeautifulStoneSoup.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.insert_after.html">13.1.2.69. bs4.BeautifulStoneSoup.insert_after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.insert_before.html">13.1.2.70. bs4.BeautifulStoneSoup.insert_before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.new_string.html">13.1.2.71. bs4.BeautifulStoneSoup.new_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.new_tag.html">13.1.2.72. bs4.BeautifulStoneSoup.new_tag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.nextGenerator.html">13.1.2.73. bs4.BeautifulStoneSoup.nextGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.nextSiblingGenerator.html">13.1.2.74. bs4.BeautifulStoneSoup.nextSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.object_was_parsed.html">13.1.2.75. bs4.BeautifulStoneSoup.object_was_parsed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.parentGenerator.html">13.1.2.76. bs4.BeautifulStoneSoup.parentGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.popTag.html">13.1.2.77. bs4.BeautifulStoneSoup.popTag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.prettify.html">13.1.2.78. bs4.BeautifulStoneSoup.prettify</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previousGenerator.html">13.1.2.79. bs4.BeautifulStoneSoup.previousGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.previousSiblingGenerator.html">13.1.2.80. bs4.BeautifulStoneSoup.previousSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.pushTag.html">13.1.2.81. bs4.BeautifulStoneSoup.pushTag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.recursiveChildGenerator.html">13.1.2.82. bs4.BeautifulStoneSoup.recursiveChildGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.renderContents.html">13.1.2.83. bs4.BeautifulStoneSoup.renderContents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replaceWith.html">13.1.2.84. bs4.BeautifulStoneSoup.replaceWith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replaceWithChildren.html">13.1.2.85. bs4.BeautifulStoneSoup.replaceWithChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replace_with.html">13.1.2.86. bs4.BeautifulStoneSoup.replace_with</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.replace_with_children.html">13.1.2.87. bs4.BeautifulStoneSoup.replace_with_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.reset.html">13.1.2.88. bs4.BeautifulStoneSoup.reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.select.html">13.1.2.89. bs4.BeautifulStoneSoup.select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.select_one.html">13.1.2.90. bs4.BeautifulStoneSoup.select_one</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.setup.html">13.1.2.91. bs4.BeautifulStoneSoup.setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.unwrap.html">13.1.2.92. bs4.BeautifulStoneSoup.unwrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.BeautifulStoneSoup.wrap.html">13.1.2.93. bs4.BeautifulStoneSoup.wrap</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.CData.html">13.1.3. bs4.CData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Comment.html">13.1.4. bs4.Comment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Declaration.html">13.1.5. bs4.Declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Doctype.html">13.1.6. bs4.Doctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.NavigableString.html">13.1.7. bs4.NavigableString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.PageElement.html">13.1.8. bs4.PageElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ProcessingInstruction.html">13.1.9. bs4.ProcessingInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ResultSet.html">13.1.10. bs4.ResultSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.SoupStrainer.html">13.1.11. bs4.SoupStrainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Tag.html">13.1.12. bs4.Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.UnicodeDammit.html">13.1.13. bs4.UnicodeDammit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bs4.html#exceptions">13.2. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../bs4.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../bs4.html">13. bs4</a> &raquo;</li>
+        
+          <li><a href="bs4.BeautifulStoneSoup.html">13.1.2. bs4.BeautifulStoneSoup</a> &raquo;</li>
+        
+      <li>13.1.2.59. bs4.BeautifulStoneSoup.get</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/bs4.BeautifulStoneSoup.get.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bs4-beautifulstonesoup-get">
+<h1>13.1.2.59. bs4.BeautifulStoneSoup.get<a class="headerlink" href="#bs4-beautifulstonesoup-get" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="bs4.BeautifulStoneSoup.get">
+<code class="descclassname">BeautifulStoneSoup.</code><code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#bs4.BeautifulStoneSoup.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the value of the &#8216;key&#8217; attribute for the tag, or
+the value given for &#8216;default&#8217; if it doesn&#8217;t have that
+attribute.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.BeautifulStoneSoup.getText.html" class="btn btn-neutral float-right" title="13.1.2.60. bs4.BeautifulStoneSoup.getText" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bs4.BeautifulStoneSoup.format_string.html" class="btn btn-neutral" title="13.1.2.58. bs4.BeautifulStoneSoup.format_string" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

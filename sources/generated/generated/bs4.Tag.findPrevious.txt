@@ -1,0 +1,6 @@
+bs4.Tag.findPrevious
+====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.findPrevious

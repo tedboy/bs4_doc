@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8
+======================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.WINDOWS_1252_TO_UTF8

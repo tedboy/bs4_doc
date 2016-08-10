@@ -1,0 +1,6 @@
+bs4.CData.strip
+===============
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.strip

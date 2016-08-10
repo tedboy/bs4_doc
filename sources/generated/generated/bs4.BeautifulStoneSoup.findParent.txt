@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.findParent
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.findParent

@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.islower
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.islower

@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.replaceWith
+==================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.replaceWith

@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.output_ready
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.output_ready

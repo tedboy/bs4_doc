@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.CHARSET_ALIASES
+=================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.CHARSET_ALIASES

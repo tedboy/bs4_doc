@@ -1,0 +1,6 @@
+bs4.Doctype.previous_siblings
+=============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.previous_siblings

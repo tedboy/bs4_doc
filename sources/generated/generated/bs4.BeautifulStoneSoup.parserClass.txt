@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.parserClass
+==================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.parserClass

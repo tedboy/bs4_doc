@@ -1,0 +1,6 @@
+bs4.Comment.findNextSibling
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.findNextSibling

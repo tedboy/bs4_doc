@@ -1,0 +1,6 @@
+bs4.Declaration.parentGenerator
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.parentGenerator

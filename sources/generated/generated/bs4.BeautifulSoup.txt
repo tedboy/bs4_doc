@@ -1,0 +1,131 @@
+bs4.BeautifulSoup
+=================
+
+.. currentmodule:: bs4
+
+.. autoclass:: BeautifulSoup
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~BeautifulSoup.__init__
+   ~BeautifulSoup.append
+   ~BeautifulSoup.childGenerator
+   ~BeautifulSoup.clear
+   ~BeautifulSoup.decode
+   ~BeautifulSoup.decode_contents
+   ~BeautifulSoup.decompose
+   ~BeautifulSoup.encode
+   ~BeautifulSoup.encode_contents
+   ~BeautifulSoup.endData
+   ~BeautifulSoup.extract
+   ~BeautifulSoup.fetchNextSiblings
+   ~BeautifulSoup.fetchParents
+   ~BeautifulSoup.fetchPrevious
+   ~BeautifulSoup.fetchPreviousSiblings
+   ~BeautifulSoup.find
+   ~BeautifulSoup.findAll
+   ~BeautifulSoup.findAllNext
+   ~BeautifulSoup.findAllPrevious
+   ~BeautifulSoup.findChild
+   ~BeautifulSoup.findChildren
+   ~BeautifulSoup.findNext
+   ~BeautifulSoup.findNextSibling
+   ~BeautifulSoup.findNextSiblings
+   ~BeautifulSoup.findParent
+   ~BeautifulSoup.findParents
+   ~BeautifulSoup.findPrevious
+   ~BeautifulSoup.findPreviousSibling
+   ~BeautifulSoup.findPreviousSiblings
+   ~BeautifulSoup.find_all
+   ~BeautifulSoup.find_all_next
+   ~BeautifulSoup.find_all_previous
+   ~BeautifulSoup.find_next
+   ~BeautifulSoup.find_next_sibling
+   ~BeautifulSoup.find_next_siblings
+   ~BeautifulSoup.find_parent
+   ~BeautifulSoup.find_parents
+   ~BeautifulSoup.find_previous
+   ~BeautifulSoup.find_previous_sibling
+   ~BeautifulSoup.find_previous_siblings
+   ~BeautifulSoup.format_string
+   ~BeautifulSoup.get
+   ~BeautifulSoup.getText
+   ~BeautifulSoup.get_text
+   ~BeautifulSoup.handle_data
+   ~BeautifulSoup.handle_endtag
+   ~BeautifulSoup.handle_starttag
+   ~BeautifulSoup.has_attr
+   ~BeautifulSoup.has_key
+   ~BeautifulSoup.index
+   ~BeautifulSoup.insert
+   ~BeautifulSoup.insert_after
+   ~BeautifulSoup.insert_before
+   ~BeautifulSoup.new_string
+   ~BeautifulSoup.new_tag
+   ~BeautifulSoup.nextGenerator
+   ~BeautifulSoup.nextSiblingGenerator
+   ~BeautifulSoup.object_was_parsed
+   ~BeautifulSoup.parentGenerator
+   ~BeautifulSoup.popTag
+   ~BeautifulSoup.prettify
+   ~BeautifulSoup.previousGenerator
+   ~BeautifulSoup.previousSiblingGenerator
+   ~BeautifulSoup.pushTag
+   ~BeautifulSoup.recursiveChildGenerator
+   ~BeautifulSoup.renderContents
+   ~BeautifulSoup.replaceWith
+   ~BeautifulSoup.replaceWithChildren
+   ~BeautifulSoup.replace_with
+   ~BeautifulSoup.replace_with_children
+   ~BeautifulSoup.reset
+   ~BeautifulSoup.select
+   ~BeautifulSoup.select_one
+   ~BeautifulSoup.setup
+   ~BeautifulSoup.unwrap
+   ~BeautifulSoup.wrap
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~BeautifulSoup.ASCII_SPACES
+   ~BeautifulSoup.DEFAULT_BUILDER_FEATURES
+   ~BeautifulSoup.HTML_FORMATTERS
+   ~BeautifulSoup.NO_PARSER_SPECIFIED_WARNING
+   ~BeautifulSoup.ROOT_TAG_NAME
+   ~BeautifulSoup.XML_FORMATTERS
+   ~BeautifulSoup.attribselect_re
+   ~BeautifulSoup.children
+   ~BeautifulSoup.descendants
+   ~BeautifulSoup.isSelfClosing
+   ~BeautifulSoup.is_empty_element
+   ~BeautifulSoup.next
+   ~BeautifulSoup.nextSibling
+   ~BeautifulSoup.next_elements
+   ~BeautifulSoup.next_siblings
+   ~BeautifulSoup.parents
+   ~BeautifulSoup.parserClass
+   ~BeautifulSoup.previous
+   ~BeautifulSoup.previousSibling
+   ~BeautifulSoup.previous_elements
+   ~BeautifulSoup.previous_siblings
+   ~BeautifulSoup.string
+   ~BeautifulSoup.strings
+   ~BeautifulSoup.stripped_strings
+   ~BeautifulSoup.tag_name_re
+   ~BeautifulSoup.text
+

@@ -1,0 +1,128 @@
+bs4.Declaration
+===============
+
+.. currentmodule:: bs4
+
+.. autoclass:: Declaration
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~Declaration.append
+   ~Declaration.capitalize
+   ~Declaration.center
+   ~Declaration.count
+   ~Declaration.decode
+   ~Declaration.encode
+   ~Declaration.endswith
+   ~Declaration.expandtabs
+   ~Declaration.extract
+   ~Declaration.fetchNextSiblings
+   ~Declaration.fetchParents
+   ~Declaration.fetchPrevious
+   ~Declaration.fetchPreviousSiblings
+   ~Declaration.find
+   ~Declaration.findAllNext
+   ~Declaration.findAllPrevious
+   ~Declaration.findNext
+   ~Declaration.findNextSibling
+   ~Declaration.findNextSiblings
+   ~Declaration.findParent
+   ~Declaration.findParents
+   ~Declaration.findPrevious
+   ~Declaration.findPreviousSibling
+   ~Declaration.findPreviousSiblings
+   ~Declaration.find_all_next
+   ~Declaration.find_all_previous
+   ~Declaration.find_next
+   ~Declaration.find_next_sibling
+   ~Declaration.find_next_siblings
+   ~Declaration.find_parent
+   ~Declaration.find_parents
+   ~Declaration.find_previous
+   ~Declaration.find_previous_sibling
+   ~Declaration.find_previous_siblings
+   ~Declaration.format
+   ~Declaration.format_string
+   ~Declaration.index
+   ~Declaration.insert
+   ~Declaration.insert_after
+   ~Declaration.insert_before
+   ~Declaration.isalnum
+   ~Declaration.isalpha
+   ~Declaration.isdecimal
+   ~Declaration.isdigit
+   ~Declaration.islower
+   ~Declaration.isnumeric
+   ~Declaration.isspace
+   ~Declaration.istitle
+   ~Declaration.isupper
+   ~Declaration.join
+   ~Declaration.ljust
+   ~Declaration.lower
+   ~Declaration.lstrip
+   ~Declaration.nextGenerator
+   ~Declaration.nextSiblingGenerator
+   ~Declaration.output_ready
+   ~Declaration.parentGenerator
+   ~Declaration.partition
+   ~Declaration.previousGenerator
+   ~Declaration.previousSiblingGenerator
+   ~Declaration.replace
+   ~Declaration.replaceWith
+   ~Declaration.replaceWithChildren
+   ~Declaration.replace_with
+   ~Declaration.replace_with_children
+   ~Declaration.rfind
+   ~Declaration.rindex
+   ~Declaration.rjust
+   ~Declaration.rpartition
+   ~Declaration.rsplit
+   ~Declaration.rstrip
+   ~Declaration.setup
+   ~Declaration.split
+   ~Declaration.splitlines
+   ~Declaration.startswith
+   ~Declaration.strip
+   ~Declaration.swapcase
+   ~Declaration.title
+   ~Declaration.translate
+   ~Declaration.unwrap
+   ~Declaration.upper
+   ~Declaration.wrap
+   ~Declaration.zfill
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~Declaration.HTML_FORMATTERS
+   ~Declaration.PREFIX
+   ~Declaration.SUFFIX
+   ~Declaration.XML_FORMATTERS
+   ~Declaration.attribselect_re
+   ~Declaration.name
+   ~Declaration.next
+   ~Declaration.nextSibling
+   ~Declaration.next_elements
+   ~Declaration.next_siblings
+   ~Declaration.parents
+   ~Declaration.previous
+   ~Declaration.previousSibling
+   ~Declaration.previous_elements
+   ~Declaration.previous_siblings
+   ~Declaration.tag_name_re
+

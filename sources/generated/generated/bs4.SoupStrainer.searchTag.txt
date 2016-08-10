@@ -1,0 +1,6 @@
+bs4.SoupStrainer.searchTag
+==========================
+
+.. currentmodule:: bs4
+
+.. automethod:: SoupStrainer.searchTag

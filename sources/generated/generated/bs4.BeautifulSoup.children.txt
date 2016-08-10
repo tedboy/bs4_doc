@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.children
+==========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.children

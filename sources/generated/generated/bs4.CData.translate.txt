@@ -1,0 +1,6 @@
+bs4.CData.translate
+===================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.translate

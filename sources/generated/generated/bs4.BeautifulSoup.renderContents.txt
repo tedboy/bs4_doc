@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.renderContents
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.renderContents

@@ -1,0 +1,6 @@
+bs4.CData.append
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.append

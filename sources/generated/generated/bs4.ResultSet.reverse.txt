@@ -1,0 +1,6 @@
+bs4.ResultSet.reverse
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: ResultSet.reverse

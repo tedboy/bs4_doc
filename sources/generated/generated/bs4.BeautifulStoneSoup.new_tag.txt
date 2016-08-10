@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.new_tag
+==============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.new_tag

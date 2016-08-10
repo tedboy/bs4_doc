@@ -1,0 +1,6 @@
+bs4.CData.isdecimal
+===================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.isdecimal

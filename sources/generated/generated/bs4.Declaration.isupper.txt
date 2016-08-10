@@ -1,0 +1,6 @@
+bs4.Declaration.isupper
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.isupper

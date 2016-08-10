@@ -1,0 +1,6 @@
+bs4.CData.partition
+===================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.partition

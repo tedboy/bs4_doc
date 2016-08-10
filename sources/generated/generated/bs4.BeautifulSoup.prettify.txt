@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.prettify
+==========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.prettify

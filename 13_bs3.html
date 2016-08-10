@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Beautiful Soup 3 &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Beautiful Soup 3</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/13_bs3.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="beautiful-soup-3">
+<h1>Beautiful Soup 3<a class="headerlink" href="#beautiful-soup-3" title="Permalink to this headline">¶</a></h1>
+<p>Beautiful Soup 3 is the previous release series, and is no longer
+being actively developed. It&#8217;s currently packaged with all major Linux
+distributions:</p>
+<p><code class="kbd docutils literal"><span class="pre">$</span> <span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-beautifulsoup</span></code></p>
+<p>It&#8217;s also published through PyPi as <code class="docutils literal"><span class="pre">BeautifulSoup</span></code>.:</p>
+<p><code class="kbd docutils literal"><span class="pre">$</span> <span class="pre">easy_install</span> <span class="pre">BeautifulSoup</span></code></p>
+<p><code class="kbd docutils literal"><span class="pre">$</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">BeautifulSoup</span></code></p>
+<p>You can also <a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/bs3/download/3.x/BeautifulSoup-3.2.0.tar.gz">download a tarball of Beautiful Soup 3.2.0</a>.</p>
+<p>If you ran <code class="docutils literal"><span class="pre">easy_install</span> <span class="pre">beautifulsoup</span></code> or <code class="docutils literal"><span class="pre">easy_install</span>
+<span class="pre">BeautifulSoup</span></code>, but your code doesn&#8217;t work, you installed Beautiful
+Soup 3 by mistake. You need to run <code class="docutils literal"><span class="pre">easy_install</span> <span class="pre">beautifulsoup4</span></code>.</p>
+<p><a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html">The documentation for Beautiful Soup 3 is archived online</a>. If
+your first language is Chinese, it might be easier for you to read
+<a class="reference external" href="http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html">the Chinese translation of the Beautiful Soup 3 documentation</a>,
+then read this document to find out about the changes made in
+Beautiful Soup 4.</p>
+<div class="section" id="porting-code-to-bs4">
+<span id="porting-to-bs4"></span><h2>Porting code to BS4<a class="headerlink" href="#porting-code-to-bs4" title="Permalink to this headline">¶</a></h2>
+<p>Most code written against Beautiful Soup 3 will work against Beautiful
+Soup 4 with one simple change. All you should have to do is change the
+package name from <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> to <code class="docutils literal"><span class="pre">bs4</span></code>. So this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">BeautifulSoup</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+</pre></div>
+</div>
+<p>becomes this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>If you get the <code class="docutils literal"><span class="pre">ImportError</span></code> &#8220;No module named BeautifulSoup&#8221;, your
+problem is that you&#8217;re trying to run Beautiful Soup 3 code, but you
+only have Beautiful Soup 4 installed.</li>
+<li>If you get the <code class="docutils literal"><span class="pre">ImportError</span></code> &#8220;No module named bs4&#8221;, your problem
+is that you&#8217;re trying to run Beautiful Soup 4 code, but you only
+have Beautiful Soup 3 installed.</li>
+</ul>
+<p>Although BS4 is mostly backwards-compatible with BS3, most of its
+methods have been deprecated and given new names for <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">PEP 8 compliance</a>. There are numerous other
+renames and changes, and a few of them break backwards compatibility.</p>
+<p>Here&#8217;s what you&#8217;ll need to know to convert your BS3 code and habits to BS4:</p>
+<div class="section" id="you-need-a-parser">
+<h3>You need a parser<a class="headerlink" href="#you-need-a-parser" title="Permalink to this headline">¶</a></h3>
+<p>Beautiful Soup 3 used Python&#8217;s <code class="docutils literal"><span class="pre">SGMLParser</span></code>, a module that was
+deprecated and removed in Python 3.0. Beautiful Soup 4 uses
+<code class="docutils literal"><span class="pre">html.parser</span></code> by default, but you can plug in lxml or html5lib and
+use that instead. See <a class="reference internal" href="2_installation.html#parser-installation"><span class="std std-ref">Installing a parser</span></a> for a comparison.</p>
+<p>Since <code class="docutils literal"><span class="pre">html.parser</span></code> is not the same parser as <code class="docutils literal"><span class="pre">SGMLParser</span></code>, it
+will treat invalid markup differently. Usually the &#8220;difference&#8221; is
+that <code class="docutils literal"><span class="pre">html.parser</span></code> crashes. In that case, you&#8217;ll need to install
+another parser. But sometimes <code class="docutils literal"><span class="pre">html.parser</span></code> just creates a different
+parse tree than <code class="docutils literal"><span class="pre">SGMLParser</span></code> would. If this happens, you may need to
+update your BS3 scraping code to deal with the new tree.</p>
+</div>
+<div class="section" id="method-names">
+<h3>Method names<a class="headerlink" href="#method-names" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">renderContents</span></code> -&gt; <code class="docutils literal"><span class="pre">encode_contents</span></code></li>
+<li><code class="docutils literal"><span class="pre">replaceWith</span></code> -&gt; <code class="docutils literal"><span class="pre">replace_with</span></code></li>
+<li><code class="docutils literal"><span class="pre">replaceWithChildren</span></code> -&gt; <code class="docutils literal"><span class="pre">unwrap</span></code></li>
+<li><code class="docutils literal"><span class="pre">findAll</span></code> -&gt; <code class="docutils literal"><span class="pre">find_all</span></code></li>
+<li><code class="docutils literal"><span class="pre">findAllNext</span></code> -&gt; <code class="docutils literal"><span class="pre">find_all_next</span></code></li>
+<li><code class="docutils literal"><span class="pre">findAllPrevious</span></code> -&gt; <code class="docutils literal"><span class="pre">find_all_previous</span></code></li>
+<li><code class="docutils literal"><span class="pre">findNext</span></code> -&gt; <code class="docutils literal"><span class="pre">find_next</span></code></li>
+<li><code class="docutils literal"><span class="pre">findNextSibling</span></code> -&gt; <code class="docutils literal"><span class="pre">find_next_sibling</span></code></li>
+<li><code class="docutils literal"><span class="pre">findNextSiblings</span></code> -&gt; <code class="docutils literal"><span class="pre">find_next_siblings</span></code></li>
+<li><code class="docutils literal"><span class="pre">findParent</span></code> -&gt; <code class="docutils literal"><span class="pre">find_parent</span></code></li>
+<li><code class="docutils literal"><span class="pre">findParents</span></code> -&gt; <code class="docutils literal"><span class="pre">find_parents</span></code></li>
+<li><code class="docutils literal"><span class="pre">findPrevious</span></code> -&gt; <code class="docutils literal"><span class="pre">find_previous</span></code></li>
+<li><code class="docutils literal"><span class="pre">findPreviousSibling</span></code> -&gt; <code class="docutils literal"><span class="pre">find_previous_sibling</span></code></li>
+<li><code class="docutils literal"><span class="pre">findPreviousSiblings</span></code> -&gt; <code class="docutils literal"><span class="pre">find_previous_siblings</span></code></li>
+<li><code class="docutils literal"><span class="pre">nextSibling</span></code> -&gt; <code class="docutils literal"><span class="pre">next_sibling</span></code></li>
+<li><code class="docutils literal"><span class="pre">previousSibling</span></code> -&gt; <code class="docutils literal"><span class="pre">previous_sibling</span></code></li>
+</ul>
+<p>Some arguments to the Beautiful Soup constructor were renamed for the
+same reasons:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">BeautifulSoup(parseOnlyThese=...)</span></code> -&gt; <code class="docutils literal"><span class="pre">BeautifulSoup(parse_only=...)</span></code></li>
+<li><code class="docutils literal"><span class="pre">BeautifulSoup(fromEncoding=...)</span></code> -&gt; <code class="docutils literal"><span class="pre">BeautifulSoup(from_encoding=...)</span></code></li>
+</ul>
+<p>I renamed one method for compatibility with Python 3:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Tag.has_key()</span></code> -&gt; <code class="docutils literal"><span class="pre">Tag.has_attr()</span></code></li>
+</ul>
+<p>I renamed one attribute to use more accurate terminology:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">Tag.isSelfClosing</span></code> -&gt; <code class="docutils literal"><span class="pre">Tag.is_empty_element</span></code></li>
+</ul>
+<p>I renamed three attributes to avoid using words that have special
+meaning to Python. Unlike the others, these changes are <em>not backwards
+compatible.</em> If you used these attributes in BS3, your code will break
+on BS4 until you change them.</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">UnicodeDammit.unicode</span></code> -&gt; <code class="docutils literal"><span class="pre">UnicodeDammit.unicode_markup</span></code></li>
+<li><code class="docutils literal"><span class="pre">Tag.next</span></code> -&gt; <code class="docutils literal"><span class="pre">Tag.next_element</span></code></li>
+<li><code class="docutils literal"><span class="pre">Tag.previous</span></code> -&gt; <code class="docutils literal"><span class="pre">Tag.previous_element</span></code></li>
+</ul>
+</div>
+<div class="section" id="generators">
+<h3>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h3>
+<p>I gave the generators PEP 8-compliant names, and transformed them into
+properties:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">childGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">children</span></code></li>
+<li><code class="docutils literal"><span class="pre">nextGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">next_elements</span></code></li>
+<li><code class="docutils literal"><span class="pre">nextSiblingGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">next_siblings</span></code></li>
+<li><code class="docutils literal"><span class="pre">previousGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">previous_elements</span></code></li>
+<li><code class="docutils literal"><span class="pre">previousSiblingGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">previous_siblings</span></code></li>
+<li><code class="docutils literal"><span class="pre">recursiveChildGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">descendants</span></code></li>
+<li><code class="docutils literal"><span class="pre">parentGenerator()</span></code> -&gt; <code class="docutils literal"><span class="pre">parents</span></code></li>
+</ul>
+<p>So instead of this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">tag</span><span class="o">.</span><span class="n">parentGenerator</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>You can write this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">parent</span> <span class="ow">in</span> <span class="n">tag</span><span class="o">.</span><span class="n">parents</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>(But the old code will still work.)</p>
+<p>Some of the generators used to yield <code class="docutils literal"><span class="pre">None</span></code> after they were done, and
+then stop. That was a bug. Now the generators just stop.</p>
+<p>There are two new generators, <a class="reference internal" href="5_navigating_the_tree.html#string-generators"><span class="std std-ref">.strings and
+.stripped_strings</span></a>. <code class="docutils literal"><span class="pre">.strings</span></code> yields
+NavigableString objects, and <code class="docutils literal"><span class="pre">.stripped_strings</span></code> yields Python
+strings that have had whitespace stripped.</p>
+</div>
+<div class="section" id="xml">
+<h3>XML<a class="headerlink" href="#xml" title="Permalink to this headline">¶</a></h3>
+<p>There is no longer a <code class="docutils literal"><span class="pre">BeautifulStoneSoup</span></code> class for parsing XML. To
+parse XML you pass in &#8220;xml&#8221; as the second argument to the
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor. For the same reason, the
+<code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor no longer recognizes the <code class="docutils literal"><span class="pre">isHTML</span></code>
+argument.</p>
+<p>Beautiful Soup&#8217;s handling of empty-element XML tags has been
+improved. Previously when you parsed XML you had to explicitly say
+which tags were considered empty-element tags. The <code class="docutils literal"><span class="pre">selfClosingTags</span></code>
+argument to the constructor is no longer recognized. Instead,
+Beautiful Soup considers any empty tag to be an empty-element tag. If
+you add a child to an empty-element tag, it stops being an
+empty-element tag.</p>
+</div>
+<div class="section" id="entities">
+<h3>Entities<a class="headerlink" href="#entities" title="Permalink to this headline">¶</a></h3>
+<p>An incoming HTML or XML entity is always converted into the
+corresponding Unicode character. Beautiful Soup 3 had a number of
+overlapping ways of dealing with entities, which have been
+removed. The <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor no longer recognizes the
+<code class="docutils literal"><span class="pre">smartQuotesTo</span></code> or <code class="docutils literal"><span class="pre">convertEntities</span></code> arguments. (<a class="reference internal" href="10_encodings.html#unicode-damn"><span class="std std-ref">Unicode, Dammit</span></a> still has <code class="docutils literal"><span class="pre">smart_quotes_to</span></code>, but its default is now to turn
+smart quotes into Unicode.) The constants <code class="docutils literal"><span class="pre">HTML_ENTITIES</span></code>,
+<code class="docutils literal"><span class="pre">XML_ENTITIES</span></code>, and <code class="docutils literal"><span class="pre">XHTML_ENTITIES</span></code> have been removed, since they
+configure a feature (transforming some but not all entities into
+Unicode characters) that no longer exists.</p>
+<p>If you want to turn Unicode characters back into HTML entities on
+output, rather than turning them into UTF-8 characters, you need to
+use an <a class="reference internal" href="8_output.html#output-formatters"><span class="std std-ref">output formatter</span></a>.</p>
+</div>
+<div class="section" id="miscellaneous">
+<h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="5_navigating_the_tree.html#string"><span class="std std-ref">Tag.string</span></a> now operates recursively. If tag A
+contains a single tag B and nothing else, then A.string is the same as
+B.string. (Previously, it was None.)</p>
+<p><a class="reference internal" href="4_kind_of_objects.html#multivalue"><span class="std std-ref">Multi-valued attributes</span></a> like <code class="docutils literal"><span class="pre">class</span></code> have lists of strings as
+their values, not strings. This may affect the way you search by CSS
+class.</p>
+<p>If you pass one of the <code class="docutils literal"><span class="pre">find*</span></code> methods both <a class="reference internal" href="6_searching_the_tree.html#text"><span class="std std-ref">text</span></a> <cite>and</cite>
+a tag-specific argument like <a class="reference internal" href="6_searching_the_tree.html#name"><span class="std std-ref">name</span></a>, Beautiful Soup will
+search for tags that match your tag-specific criteria and whose
+<a class="reference internal" href="5_navigating_the_tree.html#string"><span class="std std-ref">Tag.string</span></a> matches your value for <a class="reference internal" href="6_searching_the_tree.html#text"><span class="std std-ref">text</span></a>. It will <cite>not</cite> find the strings themselves. Previously,
+Beautiful Soup ignored the tag-specific arguments and looked for
+strings.</p>
+<p>The <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor no longer recognizes the
+<cite>markupMassage</cite> argument. It&#8217;s now the parser&#8217;s responsibility to
+handle markup correctly.</p>
+<p>The rarely-used alternate parser classes like
+<code class="docutils literal"><span class="pre">ICantBelieveItsBeautifulSoup</span></code> and <code class="docutils literal"><span class="pre">BeautifulSOAP</span></code> have been
+removed. It&#8217;s now the parser&#8217;s decision how to handle ambiguous
+markup.</p>
+<p>The <code class="docutils literal"><span class="pre">prettify()</span></code> method now returns a Unicode string, not a bytestring.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

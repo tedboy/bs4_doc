@@ -1,0 +1,6 @@
+bs4.Declaration.next
+====================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.next

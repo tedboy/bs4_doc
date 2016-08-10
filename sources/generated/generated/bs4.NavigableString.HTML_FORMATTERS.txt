@@ -1,0 +1,6 @@
+bs4.NavigableString.HTML_FORMATTERS
+===================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.HTML_FORMATTERS

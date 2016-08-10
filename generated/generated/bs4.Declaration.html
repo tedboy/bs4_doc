@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>13.1.5. bs4.Declaration &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="../../index.html"/>
+        <link rel="up" title="13. bs4" href="../bs4.html"/>
+        <link rel="next" title="13.1.5.1. bs4.Declaration.name" href="bs4.Declaration.name.html"/>
+        <link rel="prev" title="13.1.4.93. bs4.Comment.zfill" href="bs4.Comment.zfill.html"/> 
+
+  
+  <script src="../../static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bs4.html">13. bs4</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bs4.html#classes">13.1. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulSoup.html">13.1.1. bs4.BeautifulSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulStoneSoup.html">13.1.2. bs4.BeautifulStoneSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.CData.html">13.1.3. bs4.CData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Comment.html">13.1.4. bs4.Comment</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">13.1.5. bs4.Declaration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.name.html">13.1.5.1. bs4.Declaration.name</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.next.html">13.1.5.2. bs4.Declaration.next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.nextSibling.html">13.1.5.3. bs4.Declaration.nextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.next_elements.html">13.1.5.4. bs4.Declaration.next_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.next_siblings.html">13.1.5.5. bs4.Declaration.next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.parents.html">13.1.5.6. bs4.Declaration.parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.previous.html">13.1.5.7. bs4.Declaration.previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.previousSibling.html">13.1.5.8. bs4.Declaration.previousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.previous_elements.html">13.1.5.9. bs4.Declaration.previous_elements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.previous_siblings.html">13.1.5.10. bs4.Declaration.previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.append.html">13.1.5.11. bs4.Declaration.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.capitalize.html">13.1.5.12. bs4.Declaration.capitalize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.center.html">13.1.5.13. bs4.Declaration.center</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.count.html">13.1.5.14. bs4.Declaration.count</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.decode.html">13.1.5.15. bs4.Declaration.decode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.encode.html">13.1.5.16. bs4.Declaration.encode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.endswith.html">13.1.5.17. bs4.Declaration.endswith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.expandtabs.html">13.1.5.18. bs4.Declaration.expandtabs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.extract.html">13.1.5.19. bs4.Declaration.extract</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.fetchNextSiblings.html">13.1.5.20. bs4.Declaration.fetchNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.fetchParents.html">13.1.5.21. bs4.Declaration.fetchParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.fetchPrevious.html">13.1.5.22. bs4.Declaration.fetchPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.fetchPreviousSiblings.html">13.1.5.23. bs4.Declaration.fetchPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find.html">13.1.5.24. bs4.Declaration.find</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findAllNext.html">13.1.5.25. bs4.Declaration.findAllNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findAllPrevious.html">13.1.5.26. bs4.Declaration.findAllPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findNext.html">13.1.5.27. bs4.Declaration.findNext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findNextSibling.html">13.1.5.28. bs4.Declaration.findNextSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findNextSiblings.html">13.1.5.29. bs4.Declaration.findNextSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findParent.html">13.1.5.30. bs4.Declaration.findParent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findParents.html">13.1.5.31. bs4.Declaration.findParents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findPrevious.html">13.1.5.32. bs4.Declaration.findPrevious</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findPreviousSibling.html">13.1.5.33. bs4.Declaration.findPreviousSibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.findPreviousSiblings.html">13.1.5.34. bs4.Declaration.findPreviousSiblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_all_next.html">13.1.5.35. bs4.Declaration.find_all_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_all_previous.html">13.1.5.36. bs4.Declaration.find_all_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_next.html">13.1.5.37. bs4.Declaration.find_next</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_next_sibling.html">13.1.5.38. bs4.Declaration.find_next_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_next_siblings.html">13.1.5.39. bs4.Declaration.find_next_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_parent.html">13.1.5.40. bs4.Declaration.find_parent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_parents.html">13.1.5.41. bs4.Declaration.find_parents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_previous.html">13.1.5.42. bs4.Declaration.find_previous</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_previous_sibling.html">13.1.5.43. bs4.Declaration.find_previous_sibling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.find_previous_siblings.html">13.1.5.44. bs4.Declaration.find_previous_siblings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.format.html">13.1.5.45. bs4.Declaration.format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.format_string.html">13.1.5.46. bs4.Declaration.format_string</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.index.html">13.1.5.47. bs4.Declaration.index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.insert.html">13.1.5.48. bs4.Declaration.insert</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.insert_after.html">13.1.5.49. bs4.Declaration.insert_after</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.insert_before.html">13.1.5.50. bs4.Declaration.insert_before</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isalnum.html">13.1.5.51. bs4.Declaration.isalnum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isalpha.html">13.1.5.52. bs4.Declaration.isalpha</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isdecimal.html">13.1.5.53. bs4.Declaration.isdecimal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isdigit.html">13.1.5.54. bs4.Declaration.isdigit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.islower.html">13.1.5.55. bs4.Declaration.islower</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isnumeric.html">13.1.5.56. bs4.Declaration.isnumeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isspace.html">13.1.5.57. bs4.Declaration.isspace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.istitle.html">13.1.5.58. bs4.Declaration.istitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.isupper.html">13.1.5.59. bs4.Declaration.isupper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.join.html">13.1.5.60. bs4.Declaration.join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.ljust.html">13.1.5.61. bs4.Declaration.ljust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.lower.html">13.1.5.62. bs4.Declaration.lower</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.lstrip.html">13.1.5.63. bs4.Declaration.lstrip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.nextGenerator.html">13.1.5.64. bs4.Declaration.nextGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.nextSiblingGenerator.html">13.1.5.65. bs4.Declaration.nextSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.output_ready.html">13.1.5.66. bs4.Declaration.output_ready</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.parentGenerator.html">13.1.5.67. bs4.Declaration.parentGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.partition.html">13.1.5.68. bs4.Declaration.partition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.previousGenerator.html">13.1.5.69. bs4.Declaration.previousGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.previousSiblingGenerator.html">13.1.5.70. bs4.Declaration.previousSiblingGenerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.replace.html">13.1.5.71. bs4.Declaration.replace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.replaceWith.html">13.1.5.72. bs4.Declaration.replaceWith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.replaceWithChildren.html">13.1.5.73. bs4.Declaration.replaceWithChildren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.replace_with.html">13.1.5.74. bs4.Declaration.replace_with</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.replace_with_children.html">13.1.5.75. bs4.Declaration.replace_with_children</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.rfind.html">13.1.5.76. bs4.Declaration.rfind</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.rindex.html">13.1.5.77. bs4.Declaration.rindex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.rjust.html">13.1.5.78. bs4.Declaration.rjust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.rpartition.html">13.1.5.79. bs4.Declaration.rpartition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.rsplit.html">13.1.5.80. bs4.Declaration.rsplit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.rstrip.html">13.1.5.81. bs4.Declaration.rstrip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.setup.html">13.1.5.82. bs4.Declaration.setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.split.html">13.1.5.83. bs4.Declaration.split</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.splitlines.html">13.1.5.84. bs4.Declaration.splitlines</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.startswith.html">13.1.5.85. bs4.Declaration.startswith</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.strip.html">13.1.5.86. bs4.Declaration.strip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.swapcase.html">13.1.5.87. bs4.Declaration.swapcase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.title.html">13.1.5.88. bs4.Declaration.title</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.translate.html">13.1.5.89. bs4.Declaration.translate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.unwrap.html">13.1.5.90. bs4.Declaration.unwrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.upper.html">13.1.5.91. bs4.Declaration.upper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.wrap.html">13.1.5.92. bs4.Declaration.wrap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bs4.Declaration.zfill.html">13.1.5.93. bs4.Declaration.zfill</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Doctype.html">13.1.6. bs4.Doctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.NavigableString.html">13.1.7. bs4.NavigableString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.PageElement.html">13.1.8. bs4.PageElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ProcessingInstruction.html">13.1.9. bs4.ProcessingInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ResultSet.html">13.1.10. bs4.ResultSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.SoupStrainer.html">13.1.11. bs4.SoupStrainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Tag.html">13.1.12. bs4.Tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.UnicodeDammit.html">13.1.13. bs4.UnicodeDammit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bs4.html#exceptions">13.2. Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../bs4.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../bs4.html">13. bs4</a> &raquo;</li>
+        
+      <li>13.1.5. bs4.Declaration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../sources/generated/generated/bs4.Declaration.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="bs4-declaration">
+<h1>13.1.5. bs4.Declaration<a class="headerlink" href="#bs4-declaration" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bs4.Declaration">
+<em class="property">class </em><code class="descclassname">bs4.</code><code class="descname">Declaration</code><a class="reference internal" href="../../modules/bs4/element.html#Declaration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#bs4.Declaration" title="Permalink to this definition">¶</a></dt>
+<dd><p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.name.html#bs4.Declaration.name" title="bs4.Declaration.name"><code class="xref py py-obj docutils literal"><span class="pre">name</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.next.html#bs4.Declaration.next" title="bs4.Declaration.next"><code class="xref py py-obj docutils literal"><span class="pre">next</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.nextSibling.html#bs4.Declaration.nextSibling" title="bs4.Declaration.nextSibling"><code class="xref py py-obj docutils literal"><span class="pre">nextSibling</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.next_elements.html#bs4.Declaration.next_elements" title="bs4.Declaration.next_elements"><code class="xref py py-obj docutils literal"><span class="pre">next_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.next_siblings.html#bs4.Declaration.next_siblings" title="bs4.Declaration.next_siblings"><code class="xref py py-obj docutils literal"><span class="pre">next_siblings</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.parents.html#bs4.Declaration.parents" title="bs4.Declaration.parents"><code class="xref py py-obj docutils literal"><span class="pre">parents</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.previous.html#bs4.Declaration.previous" title="bs4.Declaration.previous"><code class="xref py py-obj docutils literal"><span class="pre">previous</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.previousSibling.html#bs4.Declaration.previousSibling" title="bs4.Declaration.previousSibling"><code class="xref py py-obj docutils literal"><span class="pre">previousSibling</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.previous_elements.html#bs4.Declaration.previous_elements" title="bs4.Declaration.previous_elements"><code class="xref py py-obj docutils literal"><span class="pre">previous_elements</span></code></a></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.previous_siblings.html#bs4.Declaration.previous_siblings" title="bs4.Declaration.previous_siblings"><code class="xref py py-obj docutils literal"><span class="pre">previous_siblings</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.append.html#bs4.Declaration.append" title="bs4.Declaration.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(tag)</td>
+<td>Appends the given tag to the contents of this tag.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.capitalize.html#bs4.Declaration.capitalize" title="bs4.Declaration.capitalize"><code class="xref py py-obj docutils literal"><span class="pre">capitalize</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a capitalized version of S, i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.center.html#bs4.Declaration.center" title="bs4.Declaration.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return S centered in a Unicode string of length width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.count.html#bs4.Declaration.count" title="bs4.Declaration.count"><code class="xref py py-obj docutils literal"><span class="pre">count</span></code></a>((sub[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the number of non-overlapping occurrences of substring sub in Unicode string S[start:end].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.decode.html#bs4.Declaration.decode" title="bs4.Declaration.decode"><code class="xref py py-obj docutils literal"><span class="pre">decode</span></code></a>(...)</td>
+<td>Decodes S using the codec registered for encoding.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.encode.html#bs4.Declaration.encode" title="bs4.Declaration.encode"><code class="xref py py-obj docutils literal"><span class="pre">encode</span></code></a>(...)</td>
+<td>Encodes S using the codec registered for encoding.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.endswith.html#bs4.Declaration.endswith" title="bs4.Declaration.endswith"><code class="xref py py-obj docutils literal"><span class="pre">endswith</span></code></a>((suffix[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S ends with the specified suffix, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.expandtabs.html#bs4.Declaration.expandtabs" title="bs4.Declaration.expandtabs"><code class="xref py py-obj docutils literal"><span class="pre">expandtabs</span></code></a>(([tabsize])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S where all tab characters are expanded using spaces.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.extract.html#bs4.Declaration.extract" title="bs4.Declaration.extract"><code class="xref py py-obj docutils literal"><span class="pre">extract</span></code></a>()</td>
+<td>Destructively rips this element out of the tree.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.fetchNextSiblings.html#bs4.Declaration.fetchNextSiblings" title="bs4.Declaration.fetchNextSiblings"><code class="xref py py-obj docutils literal"><span class="pre">fetchNextSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.fetchParents.html#bs4.Declaration.fetchParents" title="bs4.Declaration.fetchParents"><code class="xref py py-obj docutils literal"><span class="pre">fetchParents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.fetchPrevious.html#bs4.Declaration.fetchPrevious" title="bs4.Declaration.fetchPrevious"><code class="xref py py-obj docutils literal"><span class="pre">fetchPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.fetchPreviousSiblings.html#bs4.Declaration.fetchPreviousSiblings" title="bs4.Declaration.fetchPreviousSiblings"><code class="xref py py-obj docutils literal"><span class="pre">fetchPreviousSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.find.html#bs4.Declaration.find" title="bs4.Declaration.find"><code class="xref py py-obj docutils literal"><span class="pre">find</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the lowest index in S where substring sub is found, such that sub is contained within S[start:end].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.findAllNext.html#bs4.Declaration.findAllNext" title="bs4.Declaration.findAllNext"><code class="xref py py-obj docutils literal"><span class="pre">findAllNext</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.findAllPrevious.html#bs4.Declaration.findAllPrevious" title="bs4.Declaration.findAllPrevious"><code class="xref py py-obj docutils literal"><span class="pre">findAllPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.findNext.html#bs4.Declaration.findNext" title="bs4.Declaration.findNext"><code class="xref py py-obj docutils literal"><span class="pre">findNext</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.findNextSibling.html#bs4.Declaration.findNextSibling" title="bs4.Declaration.findNextSibling"><code class="xref py py-obj docutils literal"><span class="pre">findNextSibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.findNextSiblings.html#bs4.Declaration.findNextSiblings" title="bs4.Declaration.findNextSiblings"><code class="xref py py-obj docutils literal"><span class="pre">findNextSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.findParent.html#bs4.Declaration.findParent" title="bs4.Declaration.findParent"><code class="xref py py-obj docutils literal"><span class="pre">findParent</span></code></a>([name,&nbsp;attrs])</td>
+<td>Returns the closest parent of this Tag that matches the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.findParents.html#bs4.Declaration.findParents" title="bs4.Declaration.findParents"><code class="xref py py-obj docutils literal"><span class="pre">findParents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.findPrevious.html#bs4.Declaration.findPrevious" title="bs4.Declaration.findPrevious"><code class="xref py py-obj docutils literal"><span class="pre">findPrevious</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.findPreviousSibling.html#bs4.Declaration.findPreviousSibling" title="bs4.Declaration.findPreviousSibling"><code class="xref py py-obj docutils literal"><span class="pre">findPreviousSibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.findPreviousSiblings.html#bs4.Declaration.findPreviousSiblings" title="bs4.Declaration.findPreviousSiblings"><code class="xref py py-obj docutils literal"><span class="pre">findPreviousSiblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.find_all_next.html#bs4.Declaration.find_all_next" title="bs4.Declaration.find_all_next"><code class="xref py py-obj docutils literal"><span class="pre">find_all_next</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.find_all_previous.html#bs4.Declaration.find_all_previous" title="bs4.Declaration.find_all_previous"><code class="xref py py-obj docutils literal"><span class="pre">find_all_previous</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns all items that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.find_next.html#bs4.Declaration.find_next" title="bs4.Declaration.find_next"><code class="xref py py-obj docutils literal"><span class="pre">find_next</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.find_next_sibling.html#bs4.Declaration.find_next_sibling" title="bs4.Declaration.find_next_sibling"><code class="xref py py-obj docutils literal"><span class="pre">find_next_sibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears after this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.find_next_siblings.html#bs4.Declaration.find_next_siblings" title="bs4.Declaration.find_next_siblings"><code class="xref py py-obj docutils literal"><span class="pre">find_next_siblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;limit])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear after this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.find_parent.html#bs4.Declaration.find_parent" title="bs4.Declaration.find_parent"><code class="xref py py-obj docutils literal"><span class="pre">find_parent</span></code></a>([name,&nbsp;attrs])</td>
+<td>Returns the closest parent of this Tag that matches the given criteria.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.find_parents.html#bs4.Declaration.find_parents" title="bs4.Declaration.find_parents"><code class="xref py py-obj docutils literal"><span class="pre">find_parents</span></code></a>([name,&nbsp;attrs,&nbsp;limit])</td>
+<td>Returns the parents of this Tag that match the given criteria.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.find_previous.html#bs4.Declaration.find_previous" title="bs4.Declaration.find_previous"><code class="xref py py-obj docutils literal"><span class="pre">find_previous</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the first item that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.find_previous_sibling.html#bs4.Declaration.find_previous_sibling" title="bs4.Declaration.find_previous_sibling"><code class="xref py py-obj docutils literal"><span class="pre">find_previous_sibling</span></code></a>([name,&nbsp;attrs,&nbsp;text])</td>
+<td>Returns the closest sibling to this Tag that matches the given criteria and appears before this Tag in the document.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.find_previous_siblings.html#bs4.Declaration.find_previous_siblings" title="bs4.Declaration.find_previous_siblings"><code class="xref py py-obj docutils literal"><span class="pre">find_previous_siblings</span></code></a>([name,&nbsp;attrs,&nbsp;text,&nbsp;...])</td>
+<td>Returns the siblings of this Tag that match the given criteria and appear before this Tag in the document.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.format.html#bs4.Declaration.format" title="bs4.Declaration.format"><code class="xref py py-obj docutils literal"><span class="pre">format</span></code></a>((*args,&nbsp;**kwargs)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a formatted version of S, using substitutions from args and kwargs.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.format_string.html#bs4.Declaration.format_string" title="bs4.Declaration.format_string"><code class="xref py py-obj docutils literal"><span class="pre">format_string</span></code></a>(s[,&nbsp;formatter])</td>
+<td>Format the given string using the given formatter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.index.html#bs4.Declaration.index" title="bs4.Declaration.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Like S.find() but raise ValueError when the substring is not found.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.insert.html#bs4.Declaration.insert" title="bs4.Declaration.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(position,&nbsp;new_child)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.insert_after.html#bs4.Declaration.insert_after" title="bs4.Declaration.insert_after"><code class="xref py py-obj docutils literal"><span class="pre">insert_after</span></code></a>(successor)</td>
+<td>Makes the given element the immediate successor of this one.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.insert_before.html#bs4.Declaration.insert_before" title="bs4.Declaration.insert_before"><code class="xref py py-obj docutils literal"><span class="pre">insert_before</span></code></a>(predecessor)</td>
+<td>Makes the given element the immediate predecessor of this one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.isalnum.html#bs4.Declaration.isalnum" title="bs4.Declaration.isalnum"><code class="xref py py-obj docutils literal"><span class="pre">isalnum</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are alphanumeric and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.isalpha.html#bs4.Declaration.isalpha" title="bs4.Declaration.isalpha"><code class="xref py py-obj docutils literal"><span class="pre">isalpha</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are alphabetic and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.isdecimal.html#bs4.Declaration.isdecimal" title="bs4.Declaration.isdecimal"><code class="xref py py-obj docutils literal"><span class="pre">isdecimal</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if there are only decimal characters in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.isdigit.html#bs4.Declaration.isdigit" title="bs4.Declaration.isdigit"><code class="xref py py-obj docutils literal"><span class="pre">isdigit</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are digits and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.islower.html#bs4.Declaration.islower" title="bs4.Declaration.islower"><code class="xref py py-obj docutils literal"><span class="pre">islower</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all cased characters in S are lowercase and there is at least one cased character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.isnumeric.html#bs4.Declaration.isnumeric" title="bs4.Declaration.isnumeric"><code class="xref py py-obj docutils literal"><span class="pre">isnumeric</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if there are only numeric characters in S, False otherwise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.isspace.html#bs4.Declaration.isspace" title="bs4.Declaration.isspace"><code class="xref py py-obj docutils literal"><span class="pre">isspace</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all characters in S are whitespace and there is at least one character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.istitle.html#bs4.Declaration.istitle" title="bs4.Declaration.istitle"><code class="xref py py-obj docutils literal"><span class="pre">istitle</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S is a titlecased string and there is at least one character in S, i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.isupper.html#bs4.Declaration.isupper" title="bs4.Declaration.isupper"><code class="xref py py-obj docutils literal"><span class="pre">isupper</span></code></a>(()&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if all cased characters in S are uppercase and there is at least one cased character in S, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.join.html#bs4.Declaration.join" title="bs4.Declaration.join"><code class="xref py py-obj docutils literal"><span class="pre">join</span></code></a>((iterable)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a string which is the concatenation of the strings in the iterable.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.ljust.html#bs4.Declaration.ljust" title="bs4.Declaration.ljust"><code class="xref py py-obj docutils literal"><span class="pre">ljust</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return S left-justified in a Unicode string of length width.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.lower.html#bs4.Declaration.lower" title="bs4.Declaration.lower"><code class="xref py py-obj docutils literal"><span class="pre">lower</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S converted to lowercase.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.lstrip.html#bs4.Declaration.lstrip" title="bs4.Declaration.lstrip"><code class="xref py py-obj docutils literal"><span class="pre">lstrip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with leading whitespace removed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.nextGenerator.html#bs4.Declaration.nextGenerator" title="bs4.Declaration.nextGenerator"><code class="xref py py-obj docutils literal"><span class="pre">nextGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.nextSiblingGenerator.html#bs4.Declaration.nextSiblingGenerator" title="bs4.Declaration.nextSiblingGenerator"><code class="xref py py-obj docutils literal"><span class="pre">nextSiblingGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.output_ready.html#bs4.Declaration.output_ready" title="bs4.Declaration.output_ready"><code class="xref py py-obj docutils literal"><span class="pre">output_ready</span></code></a>([formatter])</td>
+<td>CData strings are passed into the formatter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.parentGenerator.html#bs4.Declaration.parentGenerator" title="bs4.Declaration.parentGenerator"><code class="xref py py-obj docutils literal"><span class="pre">parentGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.partition.html#bs4.Declaration.partition" title="bs4.Declaration.partition"><code class="xref py py-obj docutils literal"><span class="pre">partition</span></code></a>(sep)&nbsp;-&gt;&nbsp;(head,&nbsp;sep,&nbsp;tail)</td>
+<td>Search for the separator sep in S, and return the part before it, the separator itself, and the part after it.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.previousGenerator.html#bs4.Declaration.previousGenerator" title="bs4.Declaration.previousGenerator"><code class="xref py py-obj docutils literal"><span class="pre">previousGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.previousSiblingGenerator.html#bs4.Declaration.previousSiblingGenerator" title="bs4.Declaration.previousSiblingGenerator"><code class="xref py py-obj docutils literal"><span class="pre">previousSiblingGenerator</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.replace.html#bs4.Declaration.replace" title="bs4.Declaration.replace"><code class="xref py py-obj docutils literal"><span class="pre">replace</span></code></a>((old,&nbsp;new[,&nbsp;count])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S with all occurrences of substring old replaced by new.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.replaceWith.html#bs4.Declaration.replaceWith" title="bs4.Declaration.replaceWith"><code class="xref py py-obj docutils literal"><span class="pre">replaceWith</span></code></a>(replace_with)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.replaceWithChildren.html#bs4.Declaration.replaceWithChildren" title="bs4.Declaration.replaceWithChildren"><code class="xref py py-obj docutils literal"><span class="pre">replaceWithChildren</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.replace_with.html#bs4.Declaration.replace_with" title="bs4.Declaration.replace_with"><code class="xref py py-obj docutils literal"><span class="pre">replace_with</span></code></a>(replace_with)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.replace_with_children.html#bs4.Declaration.replace_with_children" title="bs4.Declaration.replace_with_children"><code class="xref py py-obj docutils literal"><span class="pre">replace_with_children</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.rfind.html#bs4.Declaration.rfind" title="bs4.Declaration.rfind"><code class="xref py py-obj docutils literal"><span class="pre">rfind</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Return the highest index in S where substring sub is found, such that sub is contained within S[start:end].</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.rindex.html#bs4.Declaration.rindex" title="bs4.Declaration.rindex"><code class="xref py py-obj docutils literal"><span class="pre">rindex</span></code></a>((sub&nbsp;[,start&nbsp;[,end]])&nbsp;-&gt;&nbsp;int)</td>
+<td>Like S.rfind() but raise ValueError when the substring is not found.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.rjust.html#bs4.Declaration.rjust" title="bs4.Declaration.rjust"><code class="xref py py-obj docutils literal"><span class="pre">rjust</span></code></a>((width[,&nbsp;fillchar])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return S right-justified in a Unicode string of length width.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.rpartition.html#bs4.Declaration.rpartition" title="bs4.Declaration.rpartition"><code class="xref py py-obj docutils literal"><span class="pre">rpartition</span></code></a>(sep)&nbsp;-&gt;&nbsp;(head,&nbsp;sep,&nbsp;tail)</td>
+<td>Search for the separator sep in S, starting at the end of S, and return the part before it, the separator itself, and the part after it.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.rsplit.html#bs4.Declaration.rsplit" title="bs4.Declaration.rsplit"><code class="xref py py-obj docutils literal"><span class="pre">rsplit</span></code></a>(([sep&nbsp;[,maxsplit]])&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the words in S, using sep as the delimiter string, starting at the end of the string and working to the front.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.rstrip.html#bs4.Declaration.rstrip" title="bs4.Declaration.rstrip"><code class="xref py py-obj docutils literal"><span class="pre">rstrip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with trailing whitespace removed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.setup.html#bs4.Declaration.setup" title="bs4.Declaration.setup"><code class="xref py py-obj docutils literal"><span class="pre">setup</span></code></a>([parent,&nbsp;previous_element,&nbsp;...])</td>
+<td>Sets up the initial relations between this element and other elements.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.split.html#bs4.Declaration.split" title="bs4.Declaration.split"><code class="xref py py-obj docutils literal"><span class="pre">split</span></code></a>(([sep&nbsp;[,maxsplit]])&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the words in S, using sep as the delimiter string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.splitlines.html#bs4.Declaration.splitlines" title="bs4.Declaration.splitlines"><code class="xref py py-obj docutils literal"><span class="pre">splitlines</span></code></a>((keepends=False)&nbsp;-&gt;&nbsp;list&nbsp;of&nbsp;strings)</td>
+<td>Return a list of the lines in S, breaking at line boundaries.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.startswith.html#bs4.Declaration.startswith" title="bs4.Declaration.startswith"><code class="xref py py-obj docutils literal"><span class="pre">startswith</span></code></a>((prefix[,&nbsp;start[,&nbsp;end]])&nbsp;-&gt;&nbsp;bool)</td>
+<td>Return True if S starts with the specified prefix, False otherwise.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.strip.html#bs4.Declaration.strip" title="bs4.Declaration.strip"><code class="xref py py-obj docutils literal"><span class="pre">strip</span></code></a>(([chars])&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S with leading and trailing whitespace removed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.swapcase.html#bs4.Declaration.swapcase" title="bs4.Declaration.swapcase"><code class="xref py py-obj docutils literal"><span class="pre">swapcase</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S with uppercase characters converted to lowercase and vice versa.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.title.html#bs4.Declaration.title" title="bs4.Declaration.title"><code class="xref py py-obj docutils literal"><span class="pre">title</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a titlecased version of S, i.e.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.translate.html#bs4.Declaration.translate" title="bs4.Declaration.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>((table)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of the string S, where all characters have been mapped through the given translation table, which must be a mapping of Unicode ordinals to Unicode ordinals, Unicode strings or None.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.unwrap.html#bs4.Declaration.unwrap" title="bs4.Declaration.unwrap"><code class="xref py py-obj docutils literal"><span class="pre">unwrap</span></code></a>()</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.upper.html#bs4.Declaration.upper" title="bs4.Declaration.upper"><code class="xref py py-obj docutils literal"><span class="pre">upper</span></code></a>(()&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Return a copy of S converted to uppercase.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="bs4.Declaration.wrap.html#bs4.Declaration.wrap" title="bs4.Declaration.wrap"><code class="xref py py-obj docutils literal"><span class="pre">wrap</span></code></a>(wrap_inside)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="bs4.Declaration.zfill.html#bs4.Declaration.zfill" title="bs4.Declaration.zfill"><code class="xref py py-obj docutils literal"><span class="pre">zfill</span></code></a>((width)&nbsp;-&gt;&nbsp;unicode)</td>
+<td>Pad a numeric string S with zeros on the left, to fill a field of the specified width.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.Declaration.name.html" class="btn btn-neutral float-right" title="13.1.5.1. bs4.Declaration.name" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bs4.Comment.zfill.html" class="btn btn-neutral" title="13.1.4.93. bs4.Comment.zfill" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../static/jquery.js"></script>
+      <script type="text/javascript" src="../../static/underscore.js"></script>
+      <script type="text/javascript" src="../../static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

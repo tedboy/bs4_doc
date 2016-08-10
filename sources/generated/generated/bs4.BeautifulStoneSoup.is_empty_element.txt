@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.is_empty_element
+=======================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.is_empty_element

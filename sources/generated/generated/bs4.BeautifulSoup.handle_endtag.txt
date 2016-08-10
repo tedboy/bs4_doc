@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.handle_endtag
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.handle_endtag

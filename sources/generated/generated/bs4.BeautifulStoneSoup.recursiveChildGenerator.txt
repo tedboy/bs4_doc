@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.recursiveChildGenerator
+==============================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.recursiveChildGenerator

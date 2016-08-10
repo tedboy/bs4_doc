@@ -1,0 +1,6 @@
+bs4.Declaration.isalpha
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.isalpha

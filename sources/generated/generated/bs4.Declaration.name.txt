@@ -1,0 +1,6 @@
+bs4.Declaration.name
+====================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.name

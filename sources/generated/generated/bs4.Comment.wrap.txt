@@ -1,0 +1,6 @@
+bs4.Comment.wrap
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.wrap

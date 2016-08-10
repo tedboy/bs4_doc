@@ -1,0 +1,6 @@
+bs4.Doctype.name
+================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.name

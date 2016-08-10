@@ -1,0 +1,6 @@
+bs4.PageElement.setup
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.setup

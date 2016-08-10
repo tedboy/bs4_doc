@@ -1,0 +1,6 @@
+bs4.Declaration.title
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.title

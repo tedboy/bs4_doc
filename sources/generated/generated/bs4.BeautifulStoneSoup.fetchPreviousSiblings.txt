@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.fetchPreviousSiblings
+============================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.fetchPreviousSiblings

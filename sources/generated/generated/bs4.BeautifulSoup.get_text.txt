@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.get_text
+==========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.get_text

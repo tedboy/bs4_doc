@@ -1,0 +1,6 @@
+bs4.Doctype.translate
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.translate

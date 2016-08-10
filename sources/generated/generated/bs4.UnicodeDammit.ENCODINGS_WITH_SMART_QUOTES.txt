@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.ENCODINGS_WITH_SMART_QUOTES
+=============================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.ENCODINGS_WITH_SMART_QUOTES

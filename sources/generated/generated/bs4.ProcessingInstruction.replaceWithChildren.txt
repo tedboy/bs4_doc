@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.replaceWithChildren
+=============================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.replaceWithChildren

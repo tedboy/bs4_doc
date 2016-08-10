@@ -1,0 +1,6 @@
+bs4.CData.format_string
+=======================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.format_string

@@ -1,0 +1,6 @@
+bs4.Declaration.unwrap
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.unwrap

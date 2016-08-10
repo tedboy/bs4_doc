@@ -1,0 +1,6 @@
+bs4.Tag.childGenerator
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.childGenerator

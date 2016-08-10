@@ -1,0 +1,6 @@
+bs4.PageElement.attribselect_re
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: PageElement.attribselect_re

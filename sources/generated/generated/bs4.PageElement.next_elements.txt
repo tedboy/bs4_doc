@@ -1,0 +1,6 @@
+bs4.PageElement.next_elements
+=============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: PageElement.next_elements

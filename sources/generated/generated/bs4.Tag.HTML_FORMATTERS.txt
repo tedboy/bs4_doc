@@ -1,0 +1,6 @@
+bs4.Tag.HTML_FORMATTERS
+=======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.HTML_FORMATTERS

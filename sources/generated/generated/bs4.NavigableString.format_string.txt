@@ -1,0 +1,6 @@
+bs4.NavigableString.format_string
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.format_string

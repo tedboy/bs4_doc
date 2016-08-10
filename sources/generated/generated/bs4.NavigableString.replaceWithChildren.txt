@@ -1,0 +1,6 @@
+bs4.NavigableString.replaceWithChildren
+=======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.replaceWithChildren

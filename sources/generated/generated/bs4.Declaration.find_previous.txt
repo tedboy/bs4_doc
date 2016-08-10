@@ -1,0 +1,6 @@
+bs4.Declaration.find_previous
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.find_previous

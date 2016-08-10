@@ -1,0 +1,6 @@
+bs4.Doctype.isupper
+===================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.isupper

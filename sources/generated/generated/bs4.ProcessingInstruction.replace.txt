@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.replace
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.replace

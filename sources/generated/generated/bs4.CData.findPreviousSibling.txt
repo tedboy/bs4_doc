@@ -1,0 +1,6 @@
+bs4.CData.findPreviousSibling
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.findPreviousSibling

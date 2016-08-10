@@ -1,0 +1,6 @@
+bs4.FeatureNotFound
+===================
+
+.. currentmodule:: bs4
+
+.. autoexception:: FeatureNotFound

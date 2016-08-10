@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.isupper
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.isupper

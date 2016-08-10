@@ -1,0 +1,6 @@
+bs4.Doctype.format_string
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.format_string

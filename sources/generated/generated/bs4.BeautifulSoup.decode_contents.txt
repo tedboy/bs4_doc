@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.decode_contents
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.decode_contents

@@ -1,0 +1,6 @@
+bs4.Declaration.fetchNextSiblings
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.fetchNextSiblings

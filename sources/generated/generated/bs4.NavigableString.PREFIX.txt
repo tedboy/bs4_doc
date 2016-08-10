@@ -1,0 +1,6 @@
+bs4.NavigableString.PREFIX
+==========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.PREFIX

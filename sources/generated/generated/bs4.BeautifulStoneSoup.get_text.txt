@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.get_text
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.get_text

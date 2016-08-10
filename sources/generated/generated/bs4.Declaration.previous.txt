@@ -1,0 +1,6 @@
+bs4.Declaration.previous
+========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.previous

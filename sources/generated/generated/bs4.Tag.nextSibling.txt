@@ -1,0 +1,6 @@
+bs4.Tag.nextSibling
+===================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.nextSibling

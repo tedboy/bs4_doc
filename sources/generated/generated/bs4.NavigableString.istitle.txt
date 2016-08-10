@@ -1,0 +1,6 @@
+bs4.NavigableString.istitle
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.istitle

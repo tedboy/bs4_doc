@@ -1,0 +1,6 @@
+bs4.NavigableString.find_previous_siblings
+==========================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.find_previous_siblings

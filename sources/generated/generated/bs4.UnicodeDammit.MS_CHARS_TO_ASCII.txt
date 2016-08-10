@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.MS_CHARS_TO_ASCII
+===================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.MS_CHARS_TO_ASCII

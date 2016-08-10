@@ -1,0 +1,6 @@
+bs4.Doctype.SUFFIX
+==================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.SUFFIX

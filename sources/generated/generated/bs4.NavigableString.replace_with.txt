@@ -1,0 +1,6 @@
+bs4.NavigableString.replace_with
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.replace_with

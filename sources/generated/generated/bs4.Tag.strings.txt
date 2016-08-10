@@ -1,0 +1,6 @@
+bs4.Tag.strings
+===============
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.strings

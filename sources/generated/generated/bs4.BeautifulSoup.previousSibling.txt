@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.previousSibling
+=================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.previousSibling

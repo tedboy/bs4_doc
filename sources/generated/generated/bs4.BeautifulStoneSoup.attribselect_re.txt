@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.attribselect_re
+======================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.attribselect_re

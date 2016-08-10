@@ -1,0 +1,6 @@
+bs4.Declaration.findParents
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.findParents

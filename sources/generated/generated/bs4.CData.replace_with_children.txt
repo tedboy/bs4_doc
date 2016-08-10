@@ -1,0 +1,6 @@
+bs4.CData.replace_with_children
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.replace_with_children

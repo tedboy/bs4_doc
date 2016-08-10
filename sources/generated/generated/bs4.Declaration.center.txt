@@ -1,0 +1,6 @@
+bs4.Declaration.center
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.center

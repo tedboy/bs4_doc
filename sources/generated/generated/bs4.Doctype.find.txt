@@ -1,0 +1,6 @@
+bs4.Doctype.find
+================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.find

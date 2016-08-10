@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.findPrevious
+======================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.findPrevious

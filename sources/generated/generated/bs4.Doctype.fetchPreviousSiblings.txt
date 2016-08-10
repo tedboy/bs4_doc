@@ -1,0 +1,6 @@
+bs4.Doctype.fetchPreviousSiblings
+=================================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.fetchPreviousSiblings

@@ -1,0 +1,6 @@
+bs4.Doctype.decode
+==================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.decode

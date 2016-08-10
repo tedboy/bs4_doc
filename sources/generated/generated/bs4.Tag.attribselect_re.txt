@@ -1,0 +1,6 @@
+bs4.Tag.attribselect_re
+=======================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.attribselect_re

@@ -1,0 +1,6 @@
+bs4.CData.HTML_FORMATTERS
+=========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: CData.HTML_FORMATTERS

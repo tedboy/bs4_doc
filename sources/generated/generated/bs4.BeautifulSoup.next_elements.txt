@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.next_elements
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.next_elements

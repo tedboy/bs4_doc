@@ -1,0 +1,6 @@
+bs4.CData.fetchNextSiblings
+===========================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.fetchNextSiblings

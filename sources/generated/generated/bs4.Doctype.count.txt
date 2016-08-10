@@ -1,0 +1,6 @@
+bs4.Doctype.count
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.count

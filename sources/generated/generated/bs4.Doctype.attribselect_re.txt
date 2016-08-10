@@ -1,0 +1,6 @@
+bs4.Doctype.attribselect_re
+===========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Doctype.attribselect_re

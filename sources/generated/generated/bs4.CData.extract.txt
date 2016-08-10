@@ -1,0 +1,6 @@
+bs4.CData.extract
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.extract

@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.partition
+===================================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.partition

@@ -1,0 +1,464 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>10. Encodings &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/>
+        <link rel="next" title="11. Parsing only part of a document" href="11_parsing_parts_of_doc.html"/>
+        <link rel="prev" title="9. Specifying the parser to use" href="9_specifying_the_parser.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_kind_of_objects.html">4. Kinds of objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Encodings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#output-encoding">10.1. Output encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#unicode-dammit">10.2. Unicode, Dammit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#smart-quotes">10.2.1. Smart quotes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inconsistent-encodings">10.2.2. Inconsistent encodings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>10. Encodings</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/10_encodings.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="encodings">
+<span id="id1"></span><h1>10. Encodings<a class="headerlink" href="#encodings" title="Permalink to this headline">¶</a></h1>
+<p>Any HTML or XML document is written in a specific encoding like ASCII
+or UTF-8.  But when you load that document into Beautiful Soup, you&#8217;ll
+discover it&#8217;s been converted to Unicode:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s2">&quot;&lt;h1&gt;Sacr</span><span class="se">\xc3\xa9</span><span class="s2"> bleu!&lt;/h1&gt;&quot;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">h1</span>
+<span class="c1"># &lt;h1&gt;Sacré bleu!&lt;/h1&gt;</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">h1</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;Sacr\xe9 bleu!&#39;</span>
+</pre></div>
+</div>
+<p>It&#8217;s not magic. (That sure would be nice.) Beautiful Soup uses a
+sub-library called <a class="reference internal" href="#unicode-dammit">Unicode, Dammit</a> to detect a document&#8217;s encoding
+and convert it to Unicode. The autodetected encoding is available as
+the <code class="docutils literal"><span class="pre">.original_encoding</span></code> attribute of the <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">original_encoding</span>
+<span class="s1">&#39;utf-8&#39;</span>
+</pre></div>
+</div>
+<p>Unicode, Dammit guesses correctly most of the time, but sometimes it
+makes mistakes. Sometimes it guesses correctly, but only after a
+byte-by-byte search of the document that takes a very long time. If
+you happen to know a document&#8217;s encoding ahead of time, you can avoid
+mistakes and delays by passing it to the <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor
+as <code class="docutils literal"><span class="pre">from_encoding</span></code>.</p>
+<p>Here&#8217;s a document written in ISO-8859-8. The document is so short that
+Unicode, Dammit can&#8217;t get a good lock on it, and misidentifies it as
+ISO-8859-7:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="n">b</span><span class="s2">&quot;&lt;h1&gt;</span><span class="se">\xed\xe5\xec\xf9</span><span class="s2">&lt;/h1&gt;&quot;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">h1</span>
+<span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">νεμω</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">original_encoding</span>
+<span class="s1">&#39;ISO-8859-7&#39;</span>
+</pre></div>
+</div>
+<p>We can fix this by passing in the correct <code class="docutils literal"><span class="pre">from_encoding</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="n">from_encoding</span><span class="o">=</span><span class="s2">&quot;iso-8859-8&quot;</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">h1</span>
+<span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">םולש</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="n">soup</span><span class="o">.</span><span class="n">original_encoding</span>
+<span class="s1">&#39;iso8859-8&#39;</span>
+</pre></div>
+</div>
+<p>In rare cases (usually when a UTF-8 document contains text written in
+a completely different encoding), the only way to get Unicode may be
+to replace some characters with the special Unicode character
+&#8220;REPLACEMENT CHARACTER&#8221; (U+FFFD, �). If Unicode, Dammit needs to do
+this, it will set the <code class="docutils literal"><span class="pre">.contains_replacement_characters</span></code> attribute
+to <code class="docutils literal"><span class="pre">True</span></code> on the <code class="docutils literal"><span class="pre">UnicodeDammit</span></code> or <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object. This
+lets you know that the Unicode representation is not an exact
+representation of the original&#8211;some data was lost. If a document
+contains �, but <code class="docutils literal"><span class="pre">.contains_replacement_characters</span></code> is <code class="docutils literal"><span class="pre">False</span></code>,
+you&#8217;ll know that the � was there originally (as it is in this
+paragraph) and doesn&#8217;t stand in for missing data.</p>
+<div class="section" id="output-encoding">
+<h2>10.1. Output encoding<a class="headerlink" href="#output-encoding" title="Permalink to this headline">¶</a></h2>
+<p>When you write out a document from Beautiful Soup, you get a UTF-8
+document, even if the document wasn&#8217;t in UTF-8 to begin with. Here&#8217;s a
+document written in the Latin-1 encoding:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="n">b</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1"> &lt;html&gt;</span>
+<span class="s1">  &lt;head&gt;</span>
+<span class="s1">   &lt;meta content=&quot;text/html; charset=ISO-Latin-1&quot; http-equiv=&quot;Content-type&quot; /&gt;</span>
+<span class="s1">  &lt;/head&gt;</span>
+<span class="s1">  &lt;body&gt;</span>
+<span class="s1">   &lt;p&gt;Sacr</span><span class="se">\xe9</span><span class="s1"> bleu!&lt;/p&gt;</span>
+<span class="s1">  &lt;/body&gt;</span>
+<span class="s1"> &lt;/html&gt;</span>
+<span class="s1">&#39;&#39;&#39;</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span class="c1"># &lt;html&gt;</span>
+<span class="c1">#  &lt;head&gt;</span>
+<span class="c1">#   &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-type&quot; /&gt;</span>
+<span class="c1">#  &lt;/head&gt;</span>
+<span class="c1">#  &lt;body&gt;</span>
+<span class="c1">#   &lt;p&gt;</span>
+<span class="c1">#    Sacré bleu!</span>
+<span class="c1">#   &lt;/p&gt;</span>
+<span class="c1">#  &lt;/body&gt;</span>
+<span class="c1"># &lt;/html&gt;</span>
+</pre></div>
+</div>
+<p>Note that the &lt;meta&gt; tag has been rewritten to reflect the fact that
+the document is now in UTF-8.</p>
+<p>If you don&#8217;t want UTF-8, you can pass an encoding into <code class="docutils literal"><span class="pre">prettify()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">(</span><span class="s2">&quot;latin-1&quot;</span><span class="p">))</span>
+<span class="c1"># &lt;html&gt;</span>
+<span class="c1">#  &lt;head&gt;</span>
+<span class="c1">#   &lt;meta content=&quot;text/html; charset=latin-1&quot; http-equiv=&quot;Content-type&quot; /&gt;</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>You can also call encode() on the <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object, or any
+element in the soup, just as if it were a Python string:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;latin-1&quot;</span><span class="p">)</span>
+<span class="c1"># &#39;&lt;p&gt;Sacr\xe9 bleu!&lt;/p&gt;&#39;</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<span class="c1"># &#39;&lt;p&gt;Sacr\xc3\xa9 bleu!&lt;/p&gt;&#39;</span>
+</pre></div>
+</div>
+<p>Any characters that can&#8217;t be represented in your chosen encoding will
+be converted into numeric XML entity references. Here&#8217;s a document
+that includes the Unicode character SNOWMAN:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s2">u&quot;&lt;b&gt;</span><span class="se">\N{SNOWMAN}</span><span class="s2">&lt;/b&gt;&quot;</span>
+<span class="n">snowman_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">snowman_soup</span><span class="o">.</span><span class="n">b</span>
+</pre></div>
+</div>
+<p>The SNOWMAN character can be part of a UTF-8 document (it looks like
+☃), but there&#8217;s no representation for that character in ISO-Latin-1 or
+ASCII, so it&#8217;s converted into &#8220;&amp;#9731&#8221; for those encodings:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="c1"># &lt;b&gt;☃&lt;/b&gt;</span>
+
+<span class="nb">print</span> <span class="n">tag</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;latin-1&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;b&gt;&amp;#9731;&lt;/b&gt;</span>
+
+<span class="nb">print</span> <span class="n">tag</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span>
+<span class="c1"># &lt;b&gt;&amp;#9731;&lt;/b&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unicode-dammit">
+<span id="unicode-damn"></span><h2>10.2. Unicode, Dammit<a class="headerlink" href="#unicode-dammit" title="Permalink to this headline">¶</a></h2>
+<p>You can use Unicode, Dammit without using Beautiful Soup. It&#8217;s useful
+whenever you have data in an unknown encoding and you just want it to
+become Unicode:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">UnicodeDammit</span>
+<span class="n">dammit</span> <span class="o">=</span> <span class="n">UnicodeDammit</span><span class="p">(</span><span class="s2">&quot;Sacr</span><span class="se">\xc3\xa9</span><span class="s2"> bleu!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dammit</span><span class="o">.</span><span class="n">unicode_markup</span><span class="p">)</span>
+<span class="c1"># Sacré bleu!</span>
+<span class="n">dammit</span><span class="o">.</span><span class="n">original_encoding</span>
+<span class="c1"># &#39;utf-8&#39;</span>
+</pre></div>
+</div>
+<p>Unicode, Dammit&#8217;s guesses will get a lot more accurate if you install
+the <code class="docutils literal"><span class="pre">chardet</span></code> or <code class="docutils literal"><span class="pre">cchardet</span></code> Python libraries. The more data you
+give Unicode, Dammit, the more accurately it will guess. If you have
+your own suspicions as to what the encoding might be, you can pass
+them in as a list:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">dammit</span> <span class="o">=</span> <span class="n">UnicodeDammit</span><span class="p">(</span><span class="s2">&quot;Sacr</span><span class="se">\xe9</span><span class="s2"> bleu!&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;latin-1&quot;</span><span class="p">,</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dammit</span><span class="o">.</span><span class="n">unicode_markup</span><span class="p">)</span>
+<span class="c1"># Sacré bleu!</span>
+<span class="n">dammit</span><span class="o">.</span><span class="n">original_encoding</span>
+<span class="c1"># &#39;latin-1&#39;</span>
+</pre></div>
+</div>
+<p>Unicode, Dammit has two special features that Beautiful Soup doesn&#8217;t
+use.</p>
+<div class="section" id="smart-quotes">
+<h3>10.2.1. Smart quotes<a class="headerlink" href="#smart-quotes" title="Permalink to this headline">¶</a></h3>
+<p>You can use Unicode, Dammit to convert Microsoft smart quotes to HTML or XML
+entities:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="n">b</span><span class="s2">&quot;&lt;p&gt;I just </span><span class="se">\x93</span><span class="s2">love</span><span class="se">\x94</span><span class="s2"> Microsoft Word</span><span class="se">\x92</span><span class="s2">s smart quotes&lt;/p&gt;&quot;</span>
+
+<span class="n">UnicodeDammit</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;windows-1252&quot;</span><span class="p">],</span> <span class="n">smart_quotes_to</span><span class="o">=</span><span class="s2">&quot;html&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">unicode_markup</span>
+<span class="c1"># u&#39;&lt;p&gt;I just &amp;ldquo;love&amp;rdquo; Microsoft Word&amp;rsquo;s smart quotes&lt;/p&gt;&#39;</span>
+
+<span class="n">UnicodeDammit</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;windows-1252&quot;</span><span class="p">],</span> <span class="n">smart_quotes_to</span><span class="o">=</span><span class="s2">&quot;xml&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">unicode_markup</span>
+<span class="c1"># u&#39;&lt;p&gt;I just &amp;#x201C;love&amp;#x201D; Microsoft Word&amp;#x2019;s smart quotes&lt;/p&gt;&#39;</span>
+</pre></div>
+</div>
+<p>You can also convert Microsoft smart quotes to ASCII quotes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">UnicodeDammit</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;windows-1252&quot;</span><span class="p">],</span> <span class="n">smart_quotes_to</span><span class="o">=</span><span class="s2">&quot;ascii&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">unicode_markup</span>
+<span class="c1"># u&#39;&lt;p&gt;I just &quot;love&quot; Microsoft Word\&#39;s smart quotes&lt;/p&gt;&#39;</span>
+</pre></div>
+</div>
+<p>Hopefully you&#8217;ll find this feature useful, but Beautiful Soup doesn&#8217;t
+use it. Beautiful Soup prefers the default behavior, which is to
+convert Microsoft smart quotes to Unicode characters along with
+everything else:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">UnicodeDammit</span><span class="p">(</span><span class="n">markup</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;windows-1252&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">unicode_markup</span>
+<span class="c1"># u&#39;&lt;p&gt;I just \u201clove\u201d Microsoft Word\u2019s smart quotes&lt;/p&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="inconsistent-encodings">
+<h3>10.2.2. Inconsistent encodings<a class="headerlink" href="#inconsistent-encodings" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes a document is mostly in UTF-8, but contains Windows-1252
+characters such as (again) Microsoft smart quotes. This can happen
+when a website includes data from multiple sources. You can use
+<code class="docutils literal"><span class="pre">UnicodeDammit.detwingle()</span></code> to turn such a document into pure
+UTF-8. Here&#8217;s a simple example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">snowmen</span> <span class="o">=</span> <span class="p">(</span><span class="s2">u&quot;</span><span class="se">\N{SNOWMAN}</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">quote</span> <span class="o">=</span> <span class="p">(</span><span class="s2">u&quot;</span><span class="se">\N{LEFT DOUBLE QUOTATION MARK}</span><span class="s2">I like snowmen!</span><span class="se">\N{RIGHT DOUBLE QUOTATION MARK}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">doc</span> <span class="o">=</span> <span class="n">snowmen</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="n">quote</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;windows_1252&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This document is a mess. The snowmen are in UTF-8 and the quotes are
+in Windows-1252. You can display the snowmen or the quotes, but not
+both:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+<span class="c1"># ☃☃☃�I like snowmen!�</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;windows-1252&quot;</span><span class="p">))</span>
+<span class="c1"># â˜ƒâ˜ƒâ˜ƒ“I like snowmen!”</span>
+</pre></div>
+</div>
+<p>Decoding the document as UTF-8 raises a <code class="docutils literal"><span class="pre">UnicodeDecodeError</span></code>, and
+decoding it as Windows-1252 gives you gibberish. Fortunately,
+<code class="docutils literal"><span class="pre">UnicodeDammit.detwingle()</span></code> will convert the string to pure UTF-8,
+allowing you to decode it to Unicode and display the snowmen and quote
+marks simultaneously:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">new_doc</span> <span class="o">=</span> <span class="n">UnicodeDammit</span><span class="o">.</span><span class="n">detwingle</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_doc</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">))</span>
+<span class="c1"># ☃☃☃“I like snowmen!”</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">UnicodeDammit.detwingle()</span></code> only knows how to handle Windows-1252
+embedded in UTF-8 (or vice versa, I suppose), but this is the most
+common case.</p>
+<p>Note that you must know to call <code class="docutils literal"><span class="pre">UnicodeDammit.detwingle()</span></code> on your
+data before passing it into <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> or the <code class="docutils literal"><span class="pre">UnicodeDammit</span></code>
+constructor. Beautiful Soup assumes that a document has a single
+encoding, whatever it might be. If you pass it a document that
+contains both UTF-8 and Windows-1252, it&#8217;s likely to think the whole
+document is Windows-1252, and the document will come out looking like
+` â˜ƒâ˜ƒâ˜ƒ“I like snowmen!”<a href="#id2"><span class="problematic" id="id3">`</span></a>.</p>
+<p><code class="docutils literal"><span class="pre">UnicodeDammit.detwingle()</span></code> is new in Beautiful Soup 4.1.0.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="11_parsing_parts_of_doc.html" class="btn btn-neutral float-right" title="11. Parsing only part of a document" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="9_specifying_the_parser.html" class="btn btn-neutral" title="9. Specifying the parser to use" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

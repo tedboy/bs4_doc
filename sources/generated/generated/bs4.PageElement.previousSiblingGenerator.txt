@@ -1,0 +1,6 @@
+bs4.PageElement.previousSiblingGenerator
+========================================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.previousSiblingGenerator

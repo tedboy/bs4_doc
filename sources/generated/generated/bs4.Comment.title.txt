@@ -1,0 +1,6 @@
+bs4.Comment.title
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.title

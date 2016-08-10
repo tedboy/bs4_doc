@@ -1,0 +1,6 @@
+bs4.CData.nextSibling
+=====================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: CData.nextSibling

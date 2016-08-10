@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.find_codec
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: UnicodeDammit.find_codec

@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. Kinds of objects &mdash; PROJECT_NAME 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PROJECT_NAME 1 documentation" href="index.html"/>
+        <link rel="next" title="5. Navigating the tree" href="5_navigating_the_tree.html"/>
+        <link rel="prev" title="3. Making the soup" href="3_making_the_soup.html"/> 
+
+  
+  <script src="static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> PROJECT_NAME
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Kinds of objects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tag">4.1. <code class="docutils literal"><span class="pre">Tag</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#name">4.1.1. Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes">4.1.2. Attributes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#multi-valued-attributes">4.1.2.1. Multi-valued attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#navigablestring">4.2. <code class="docutils literal"><span class="pre">NavigableString</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beautifulsoup">4.3. <code class="docutils literal"><span class="pre">BeautifulSoup</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comments-and-other-special-strings">4.4. Comments and other special strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_navigating_the_tree.html">5. Navigating the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_searching_the_tree.html">6. Searching the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_modifying_the_tree.html">7. Modifying the tree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_output.html">8. Output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_specifying_the_parser.html">9. Specifying the parser to use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">PROJECT_NAME</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>4. Kinds of objects</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="sources/4_kind_of_objects.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="kinds-of-objects">
+<h1>4. Kinds of objects<a class="headerlink" href="#kinds-of-objects" title="Permalink to this headline">¶</a></h1>
+<p>Beautiful Soup transforms a complex HTML document into a complex tree
+of Python objects. But you&#8217;ll only ever have to deal with about four
+<cite>kinds</cite> of objects.</p>
+<div class="section" id="tag">
+<span id="id1"></span><h2>4.1. <code class="docutils literal"><span class="pre">Tag</span></code><a class="headerlink" href="#tag" title="Permalink to this headline">¶</a></h2>
+<p>A <code class="docutils literal"><span class="pre">Tag</span></code> object corresponds to an XML or HTML tag in the original document:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;b class=&quot;boldest&quot;&gt;Extremely bold&lt;/b&gt;&#39;</span><span class="p">)</span>
+<span class="n">tag</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">tag</span><span class="p">)</span>
+<span class="c1"># &lt;class &#39;bs4.element.Tag&#39;&gt;</span>
+</pre></div>
+</div>
+<p>Tags have a lot of attributes and methods, and I&#8217;ll cover most of them
+in <a class="reference internal" href="5_navigating_the_tree.html#navigating-the-tree"><span class="std std-ref">Navigating the tree</span></a> and <a class="reference internal" href="6_searching_the_tree.html#searching-the-tree"><span class="std std-ref">Searching the tree</span></a>. For now, the most
+important features of a tag are its name and attributes.</p>
+<div class="section" id="name">
+<h3>4.1.1. Name<a class="headerlink" href="#name" title="Permalink to this headline">¶</a></h3>
+<p>Every tag has a name, accessible as <code class="docutils literal"><span class="pre">.name</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;b&#39;</span>
+</pre></div>
+</div>
+<p>If you change a tag&#8217;s name, the change will be reflected in any HTML
+markup generated by Beautiful Soup:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;blockquote&quot;</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;blockquote class=&quot;boldest&quot;&gt;Extremely bold&lt;/blockquote&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="attributes">
+<span id="kind-of-obj-attributes"></span><h3>4.1.2. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>A tag may have any number of attributes. The tag <code class="docutils literal"><span class="pre">&lt;b</span>
+<span class="pre">class=&quot;boldest&quot;&gt;</span></code> has an attribute &#8220;class&#8221; whose value is
+&#8220;boldest&#8221;. You can access a tag&#8217;s attributes by treating the tag like
+a dictionary:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># u&#39;boldest&#39;</span>
+</pre></div>
+</div>
+<p>You can access that dictionary directly as <code class="docutils literal"><span class="pre">.attrs</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">attrs</span>
+<span class="c1"># {u&#39;class&#39;: u&#39;boldest&#39;}</span>
+</pre></div>
+</div>
+<p>You can add, remove, and modify a tag&#8217;s attributes. Again, this is
+done by treating the tag as a dictionary:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;verybold&#39;</span>
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;blockquote class=&quot;verybold&quot; id=&quot;1&quot;&gt;Extremely bold&lt;/blockquote&gt;</span>
+
+<span class="k">del</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">tag</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;blockquote&gt;Extremely bold&lt;/blockquote&gt;</span>
+
+<span class="n">tag</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># KeyError: &#39;class&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">))</span>
+<span class="c1"># None</span>
+</pre></div>
+</div>
+<div class="section" id="multi-valued-attributes">
+<span id="multivalue"></span><h4>4.1.2.1. Multi-valued attributes<a class="headerlink" href="#multi-valued-attributes" title="Permalink to this headline">¶</a></h4>
+<p>HTML 4 defines a few attributes that can have multiple values. HTML 5
+removes a couple of them, but defines a few more. The most common
+multi-valued attribute is <code class="docutils literal"><span class="pre">class</span></code> (that is, a tag can have more than
+one CSS class). Others include <code class="docutils literal"><span class="pre">rel</span></code>, <code class="docutils literal"><span class="pre">rev</span></code>, <code class="docutils literal"><span class="pre">accept-charset</span></code>,
+<code class="docutils literal"><span class="pre">headers</span></code>, and <code class="docutils literal"><span class="pre">accesskey</span></code>. Beautiful Soup presents the value(s)
+of a multi-valued attribute as a list:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">css_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">css_soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># [&quot;body&quot;, &quot;strikeout&quot;]</span>
+
+<span class="n">css_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;body&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">css_soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># [&quot;body&quot;]</span>
+</pre></div>
+</div>
+<p>If an attribute <cite>looks</cite> like it has more than one value, but it&#8217;s not
+a multi-valued attribute as defined by any version of the HTML
+standard, Beautiful Soup will leave the attribute alone:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">id_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p id=&quot;my id&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">id_soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="c1"># &#39;my id&#39;</span>
+</pre></div>
+</div>
+<p>When you turn a tag back into a string, multiple attribute values are
+consolidated:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rel_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p&gt;Back to the &lt;a rel=&quot;index&quot;&gt;homepage&lt;/a&gt;&lt;/p&gt;&#39;</span><span class="p">)</span>
+<span class="n">rel_soup</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;rel&#39;</span><span class="p">]</span>
+<span class="c1"># [&#39;index&#39;]</span>
+<span class="n">rel_soup</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;rel&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="s1">&#39;contents&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rel_soup</span><span class="o">.</span><span class="n">p</span><span class="p">)</span>
+<span class="c1"># &lt;p&gt;Back to the &lt;a rel=&quot;index contents&quot;&gt;homepage&lt;/a&gt;&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>If you parse a document as XML, there are no multi-valued attributes:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">xml_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="s1">&#39;&lt;p class=&quot;body strikeout&quot;&gt;&lt;/p&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;xml&#39;</span><span class="p">)</span>
+<span class="n">xml_soup</span><span class="o">.</span><span class="n">p</span><span class="p">[</span><span class="s1">&#39;class&#39;</span><span class="p">]</span>
+<span class="c1"># u&#39;body strikeout&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="navigablestring">
+<h2>4.2. <code class="docutils literal"><span class="pre">NavigableString</span></code><a class="headerlink" href="#navigablestring" title="Permalink to this headline">¶</a></h2>
+<p>A string corresponds to a bit of text within a tag. Beautiful Soup
+uses the <code class="docutils literal"><span class="pre">NavigableString</span></code> class to contain these bits of text:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">string</span>
+<span class="c1"># u&#39;Extremely bold&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+<span class="c1"># &lt;class &#39;bs4.element.NavigableString&#39;&gt;</span>
+</pre></div>
+</div>
+<p>A <code class="docutils literal"><span class="pre">NavigableString</span></code> is just like a Python Unicode string, except
+that it also supports some of the features described in <a class="reference internal" href="5_navigating_the_tree.html#navigating-the-tree"><span class="std std-ref">Navigating the tree</span></a> and <a class="reference internal" href="6_searching_the_tree.html#searching-the-tree"><span class="std std-ref">Searching the tree</span></a>. You can convert a
+<code class="docutils literal"><span class="pre">NavigableString</span></code> to a Unicode string with <code class="docutils literal"><span class="pre">unicode()</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unicode_string</span> <span class="o">=</span> <span class="n">unicode</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="p">)</span>
+<span class="n">unicode_string</span>
+<span class="c1"># u&#39;Extremely bold&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">unicode_string</span><span class="p">)</span>
+<span class="c1"># &lt;type &#39;unicode&#39;&gt;</span>
+</pre></div>
+</div>
+<p>You can&#8217;t edit a string in place, but you can replace one string with
+another, using <a class="reference internal" href="7_modifying_the_tree.html#replace-with"><span class="std std-ref">replace_with()</span></a>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tag</span><span class="o">.</span><span class="n">string</span><span class="o">.</span><span class="n">replace_with</span><span class="p">(</span><span class="s2">&quot;No longer bold&quot;</span><span class="p">)</span>
+<span class="n">tag</span>
+<span class="c1"># &lt;blockquote&gt;No longer bold&lt;/blockquote&gt;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">NavigableString</span></code> supports most of the features described in
+<a class="reference internal" href="5_navigating_the_tree.html#navigating-the-tree"><span class="std std-ref">Navigating the tree</span></a> and <a class="reference internal" href="6_searching_the_tree.html#searching-the-tree"><span class="std std-ref">Searching the tree</span></a>, but not all of
+them. In particular, since a string can&#8217;t contain anything (the way a
+tag may contain a string or another tag), strings don&#8217;t support the
+<code class="docutils literal"><span class="pre">.contents</span></code> or <code class="docutils literal"><span class="pre">.string</span></code> attributes, or the <code class="docutils literal"><span class="pre">find()</span></code> method.</p>
+<p>If you want to use a <code class="docutils literal"><span class="pre">NavigableString</span></code> outside of Beautiful Soup,
+you should call <code class="docutils literal"><span class="pre">unicode()</span></code> on it to turn it into a normal Python
+Unicode string. If you don&#8217;t, your string will carry around a
+reference to the entire Beautiful Soup parse tree, even when you&#8217;re
+done using Beautiful Soup. This is a big waste of memory.</p>
+</div>
+<div class="section" id="beautifulsoup">
+<h2>4.3. <code class="docutils literal"><span class="pre">BeautifulSoup</span></code><a class="headerlink" href="#beautifulsoup" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object itself represents the document as a
+whole. For most purposes, you can treat it as a <a class="reference internal" href="#tag"><span class="std std-ref">Tag</span></a>
+object. This means it supports most of the methods described in
+<a class="reference internal" href="5_navigating_the_tree.html#navigating-the-tree"><span class="std std-ref">Navigating the tree</span></a> and <a class="reference internal" href="6_searching_the_tree.html#searching-the-tree"><span class="std std-ref">Searching the tree</span></a>.</p>
+<p>Since the <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> object doesn&#8217;t correspond to an actual
+HTML or XML tag, it has no name and no attributes. But sometimes it&#8217;s
+useful to look at its <code class="docutils literal"><span class="pre">.name</span></code>, so it&#8217;s been given the special
+<code class="docutils literal"><span class="pre">.name</span></code> &#8220;[document]&#8221;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">name</span>
+<span class="c1"># u&#39;[document]&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="comments-and-other-special-strings">
+<h2>4.4. Comments and other special strings<a class="headerlink" href="#comments-and-other-special-strings" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">Tag</span></code>, <code class="docutils literal"><span class="pre">NavigableString</span></code>, and <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> cover almost
+everything you&#8217;ll see in an HTML or XML file, but there are a few
+leftover bits. The only one you&#8217;ll probably ever need to worry about
+is the comment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">markup</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;&lt;!--Hey, buddy. Want to buy a used parser?--&gt;&lt;/b&gt;&quot;</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">string</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span>
+<span class="c1"># &lt;class &#39;bs4.element.Comment&#39;&gt;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">Comment</span></code> object is just a special type of <code class="docutils literal"><span class="pre">NavigableString</span></code>:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">comment</span>
+<span class="c1"># u&#39;Hey, buddy. Want to buy a used parser&#39;</span>
+</pre></div>
+</div>
+<p>But when it appears as part of an HTML document, a <code class="docutils literal"><span class="pre">Comment</span></code> is
+displayed with special formatting:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span class="c1"># &lt;b&gt;</span>
+<span class="c1">#  &lt;!--Hey, buddy. Want to buy a used parser?--&gt;</span>
+<span class="c1"># &lt;/b&gt;</span>
+</pre></div>
+</div>
+<p>Beautiful Soup defines classes for anything else that might show up in
+an XML document: <code class="docutils literal"><span class="pre">CData</span></code>, <code class="docutils literal"><span class="pre">ProcessingInstruction</span></code>,
+<code class="docutils literal"><span class="pre">Declaration</span></code>, and <code class="docutils literal"><span class="pre">Doctype</span></code>. Just like <code class="docutils literal"><span class="pre">Comment</span></code>, these classes
+are subclasses of <code class="docutils literal"><span class="pre">NavigableString</span></code> that add something extra to the
+string. Here&#8217;s an example that replaces the comment with a CDATA
+block:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">CData</span>
+<span class="n">cdata</span> <span class="o">=</span> <span class="n">CData</span><span class="p">(</span><span class="s2">&quot;A CDATA block&quot;</span><span class="p">)</span>
+<span class="n">comment</span><span class="o">.</span><span class="n">replace_with</span><span class="p">(</span><span class="n">cdata</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+<span class="c1"># &lt;b&gt;</span>
+<span class="c1">#  &lt;![CDATA[A CDATA block]]&gt;</span>
+<span class="c1"># &lt;/b&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="5_navigating_the_tree.html" class="btn btn-neutral float-right" title="5. Navigating the tree" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="3_making_the_soup.html" class="btn btn-neutral" title="3. Making the soup" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="static/jquery.js"></script>
+      <script type="text/javascript" src="static/underscore.js"></script>
+      <script type="text/javascript" src="static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

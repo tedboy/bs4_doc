@@ -1,0 +1,215 @@
+Beautiful Soup 3
+================
+
+Beautiful Soup 3 is the previous release series, and is no longer
+being actively developed. It's currently packaged with all major Linux
+distributions:
+
+:kbd:`$ apt-get install python-beautifulsoup`
+
+It's also published through PyPi as ``BeautifulSoup``.:
+
+:kbd:`$ easy_install BeautifulSoup`
+
+:kbd:`$ pip install BeautifulSoup`
+
+You can also `download a tarball of Beautiful Soup 3.2.0
+<http://www.crummy.com/software/BeautifulSoup/bs3/download/3.x/BeautifulSoup-3.2.0.tar.gz>`_.
+
+If you ran ``easy_install beautifulsoup`` or ``easy_install
+BeautifulSoup``, but your code doesn't work, you installed Beautiful
+Soup 3 by mistake. You need to run ``easy_install beautifulsoup4``.
+
+`The documentation for Beautiful Soup 3 is archived online
+<http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html>`_. If
+your first language is Chinese, it might be easier for you to read
+`the Chinese translation of the Beautiful Soup 3 documentation
+<http://www.crummy.com/software/BeautifulSoup/bs3/documentation.zh.html>`_,
+then read this document to find out about the changes made in
+Beautiful Soup 4.
+
+.. _porting_to_bs4:
+
+Porting code to BS4
+-------------------
+
+Most code written against Beautiful Soup 3 will work against Beautiful
+Soup 4 with one simple change. All you should have to do is change the
+package name from ``BeautifulSoup`` to ``bs4``. So this::
+
+  from BeautifulSoup import BeautifulSoup
+
+becomes this::
+
+  from bs4 import BeautifulSoup
+
+* If you get the ``ImportError`` "No module named BeautifulSoup", your
+  problem is that you're trying to run Beautiful Soup 3 code, but you
+  only have Beautiful Soup 4 installed.
+
+* If you get the ``ImportError`` "No module named bs4", your problem
+  is that you're trying to run Beautiful Soup 4 code, but you only
+  have Beautiful Soup 3 installed.
+
+Although BS4 is mostly backwards-compatible with BS3, most of its
+methods have been deprecated and given new names for `PEP 8 compliance
+<http://www.python.org/dev/peps/pep-0008/>`_. There are numerous other
+renames and changes, and a few of them break backwards compatibility.
+
+Here's what you'll need to know to convert your BS3 code and habits to BS4:
+
+You need a parser
+^^^^^^^^^^^^^^^^^
+
+Beautiful Soup 3 used Python's ``SGMLParser``, a module that was
+deprecated and removed in Python 3.0. Beautiful Soup 4 uses
+``html.parser`` by default, but you can plug in lxml or html5lib and
+use that instead. See :ref:`parser-installation` for a comparison.
+
+Since ``html.parser`` is not the same parser as ``SGMLParser``, it
+will treat invalid markup differently. Usually the "difference" is
+that ``html.parser`` crashes. In that case, you'll need to install
+another parser. But sometimes ``html.parser`` just creates a different
+parse tree than ``SGMLParser`` would. If this happens, you may need to
+update your BS3 scraping code to deal with the new tree.
+
+Method names
+^^^^^^^^^^^^
+
+* ``renderContents`` -> ``encode_contents``
+* ``replaceWith`` -> ``replace_with``
+* ``replaceWithChildren`` -> ``unwrap``
+* ``findAll`` -> ``find_all``
+* ``findAllNext`` -> ``find_all_next``
+* ``findAllPrevious`` -> ``find_all_previous``
+* ``findNext`` -> ``find_next``
+* ``findNextSibling`` -> ``find_next_sibling``
+* ``findNextSiblings`` -> ``find_next_siblings``
+* ``findParent`` -> ``find_parent``
+* ``findParents`` -> ``find_parents``
+* ``findPrevious`` -> ``find_previous``
+* ``findPreviousSibling`` -> ``find_previous_sibling``
+* ``findPreviousSiblings`` -> ``find_previous_siblings``
+* ``nextSibling`` -> ``next_sibling``
+* ``previousSibling`` -> ``previous_sibling``
+
+Some arguments to the Beautiful Soup constructor were renamed for the
+same reasons:
+
+* ``BeautifulSoup(parseOnlyThese=...)`` -> ``BeautifulSoup(parse_only=...)``
+* ``BeautifulSoup(fromEncoding=...)`` -> ``BeautifulSoup(from_encoding=...)``
+
+I renamed one method for compatibility with Python 3:
+
+* ``Tag.has_key()`` -> ``Tag.has_attr()``
+
+I renamed one attribute to use more accurate terminology:
+
+* ``Tag.isSelfClosing`` -> ``Tag.is_empty_element``
+
+I renamed three attributes to avoid using words that have special
+meaning to Python. Unlike the others, these changes are *not backwards
+compatible.* If you used these attributes in BS3, your code will break
+on BS4 until you change them.
+
+* ``UnicodeDammit.unicode`` -> ``UnicodeDammit.unicode_markup``
+* ``Tag.next`` -> ``Tag.next_element``
+* ``Tag.previous`` -> ``Tag.previous_element``
+
+Generators
+^^^^^^^^^^
+
+I gave the generators PEP 8-compliant names, and transformed them into
+properties:
+
+* ``childGenerator()`` -> ``children``
+* ``nextGenerator()`` -> ``next_elements``
+* ``nextSiblingGenerator()`` -> ``next_siblings``
+* ``previousGenerator()`` -> ``previous_elements``
+* ``previousSiblingGenerator()`` -> ``previous_siblings``
+* ``recursiveChildGenerator()`` -> ``descendants``
+* ``parentGenerator()`` -> ``parents``
+
+So instead of this::
+
+ for parent in tag.parentGenerator():
+     ...
+
+You can write this::
+
+ for parent in tag.parents:
+     ...
+
+(But the old code will still work.)
+
+Some of the generators used to yield ``None`` after they were done, and
+then stop. That was a bug. Now the generators just stop.
+
+There are two new generators, :ref:`.strings and
+.stripped_strings <string-generators>`. ``.strings`` yields
+NavigableString objects, and ``.stripped_strings`` yields Python
+strings that have had whitespace stripped.
+
+XML
+^^^
+
+There is no longer a ``BeautifulStoneSoup`` class for parsing XML. To
+parse XML you pass in "xml" as the second argument to the
+``BeautifulSoup`` constructor. For the same reason, the
+``BeautifulSoup`` constructor no longer recognizes the ``isHTML``
+argument.
+
+Beautiful Soup's handling of empty-element XML tags has been
+improved. Previously when you parsed XML you had to explicitly say
+which tags were considered empty-element tags. The ``selfClosingTags``
+argument to the constructor is no longer recognized. Instead,
+Beautiful Soup considers any empty tag to be an empty-element tag. If
+you add a child to an empty-element tag, it stops being an
+empty-element tag.
+
+Entities
+^^^^^^^^
+
+An incoming HTML or XML entity is always converted into the
+corresponding Unicode character. Beautiful Soup 3 had a number of
+overlapping ways of dealing with entities, which have been
+removed. The ``BeautifulSoup`` constructor no longer recognizes the
+``smartQuotesTo`` or ``convertEntities`` arguments. (:ref:`unicode damn` still has ``smart_quotes_to``, but its default is now to turn
+smart quotes into Unicode.) The constants ``HTML_ENTITIES``,
+``XML_ENTITIES``, and ``XHTML_ENTITIES`` have been removed, since they
+configure a feature (transforming some but not all entities into
+Unicode characters) that no longer exists.
+
+If you want to turn Unicode characters back into HTML entities on
+output, rather than turning them into UTF-8 characters, you need to
+use an :ref:`output formatter <output_formatters>`.
+
+Miscellaneous
+^^^^^^^^^^^^^
+
+:ref:`Tag.string <.string>` now operates recursively. If tag A
+contains a single tag B and nothing else, then A.string is the same as
+B.string. (Previously, it was None.)
+
+:ref:`multivalue` like ``class`` have lists of strings as
+their values, not strings. This may affect the way you search by CSS
+class.
+
+If you pass one of the ``find*`` methods both :ref:`text <text>` `and`
+a tag-specific argument like :ref:`name <name>`, Beautiful Soup will
+search for tags that match your tag-specific criteria and whose
+:ref:`Tag.string <.string>` matches your value for :ref:`text
+<text>`. It will `not` find the strings themselves. Previously,
+Beautiful Soup ignored the tag-specific arguments and looked for
+strings.
+
+The ``BeautifulSoup`` constructor no longer recognizes the
+`markupMassage` argument. It's now the parser's responsibility to
+handle markup correctly.
+
+The rarely-used alternate parser classes like
+``ICantBelieveItsBeautifulSoup`` and ``BeautifulSOAP`` have been
+removed. It's now the parser's decision how to handle ambiguous
+markup.
+
+The ``prettify()`` method now returns a Unicode string, not a bytestring.

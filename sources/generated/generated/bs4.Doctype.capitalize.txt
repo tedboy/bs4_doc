@@ -1,0 +1,6 @@
+bs4.Doctype.capitalize
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.capitalize

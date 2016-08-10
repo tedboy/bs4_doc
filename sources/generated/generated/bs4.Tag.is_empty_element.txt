@@ -1,0 +1,6 @@
+bs4.Tag.is_empty_element
+========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.is_empty_element

@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.extract
+==============================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulStoneSoup.extract

@@ -1,0 +1,6 @@
+bs4.Doctype.nextSiblingGenerator
+================================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.nextSiblingGenerator

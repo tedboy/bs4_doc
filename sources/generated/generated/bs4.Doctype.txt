@@ -1,0 +1,129 @@
+bs4.Doctype
+===========
+
+.. currentmodule:: bs4
+
+.. autoclass:: Doctype
+
+
+
+
+
+.. autosummary::
+   :toctree:
+   :hidden:
+
+
+   ~Doctype.append
+   ~Doctype.capitalize
+   ~Doctype.center
+   ~Doctype.count
+   ~Doctype.decode
+   ~Doctype.encode
+   ~Doctype.endswith
+   ~Doctype.expandtabs
+   ~Doctype.extract
+   ~Doctype.fetchNextSiblings
+   ~Doctype.fetchParents
+   ~Doctype.fetchPrevious
+   ~Doctype.fetchPreviousSiblings
+   ~Doctype.find
+   ~Doctype.findAllNext
+   ~Doctype.findAllPrevious
+   ~Doctype.findNext
+   ~Doctype.findNextSibling
+   ~Doctype.findNextSiblings
+   ~Doctype.findParent
+   ~Doctype.findParents
+   ~Doctype.findPrevious
+   ~Doctype.findPreviousSibling
+   ~Doctype.findPreviousSiblings
+   ~Doctype.find_all_next
+   ~Doctype.find_all_previous
+   ~Doctype.find_next
+   ~Doctype.find_next_sibling
+   ~Doctype.find_next_siblings
+   ~Doctype.find_parent
+   ~Doctype.find_parents
+   ~Doctype.find_previous
+   ~Doctype.find_previous_sibling
+   ~Doctype.find_previous_siblings
+   ~Doctype.for_name_and_ids
+   ~Doctype.format
+   ~Doctype.format_string
+   ~Doctype.index
+   ~Doctype.insert
+   ~Doctype.insert_after
+   ~Doctype.insert_before
+   ~Doctype.isalnum
+   ~Doctype.isalpha
+   ~Doctype.isdecimal
+   ~Doctype.isdigit
+   ~Doctype.islower
+   ~Doctype.isnumeric
+   ~Doctype.isspace
+   ~Doctype.istitle
+   ~Doctype.isupper
+   ~Doctype.join
+   ~Doctype.ljust
+   ~Doctype.lower
+   ~Doctype.lstrip
+   ~Doctype.nextGenerator
+   ~Doctype.nextSiblingGenerator
+   ~Doctype.output_ready
+   ~Doctype.parentGenerator
+   ~Doctype.partition
+   ~Doctype.previousGenerator
+   ~Doctype.previousSiblingGenerator
+   ~Doctype.replace
+   ~Doctype.replaceWith
+   ~Doctype.replaceWithChildren
+   ~Doctype.replace_with
+   ~Doctype.replace_with_children
+   ~Doctype.rfind
+   ~Doctype.rindex
+   ~Doctype.rjust
+   ~Doctype.rpartition
+   ~Doctype.rsplit
+   ~Doctype.rstrip
+   ~Doctype.setup
+   ~Doctype.split
+   ~Doctype.splitlines
+   ~Doctype.startswith
+   ~Doctype.strip
+   ~Doctype.swapcase
+   ~Doctype.title
+   ~Doctype.translate
+   ~Doctype.unwrap
+   ~Doctype.upper
+   ~Doctype.wrap
+   ~Doctype.zfill
+
+
+
+
+
+
+
+.. autosummary::
+  :toctree:
+  :hidden:
+
+
+   ~Doctype.HTML_FORMATTERS
+   ~Doctype.PREFIX
+   ~Doctype.SUFFIX
+   ~Doctype.XML_FORMATTERS
+   ~Doctype.attribselect_re
+   ~Doctype.name
+   ~Doctype.next
+   ~Doctype.nextSibling
+   ~Doctype.next_elements
+   ~Doctype.next_siblings
+   ~Doctype.parents
+   ~Doctype.previous
+   ~Doctype.previousSibling
+   ~Doctype.previous_elements
+   ~Doctype.previous_siblings
+   ~Doctype.tag_name_re
+

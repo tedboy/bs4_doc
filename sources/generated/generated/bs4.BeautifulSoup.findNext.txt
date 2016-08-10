@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.findNext
+==========================
+
+.. currentmodule:: bs4
+
+.. automethod:: BeautifulSoup.findNext

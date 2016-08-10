@@ -1,0 +1,6 @@
+bs4.Comment.previous_elements
+=============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Comment.previous_elements

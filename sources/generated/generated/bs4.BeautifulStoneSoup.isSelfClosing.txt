@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.isSelfClosing
+====================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.isSelfClosing

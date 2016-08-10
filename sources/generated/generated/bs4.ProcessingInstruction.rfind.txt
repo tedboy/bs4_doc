@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.rfind
+===============================
+
+.. currentmodule:: bs4
+
+.. automethod:: ProcessingInstruction.rfind

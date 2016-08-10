@@ -1,0 +1,6 @@
+bs4.Comment.find_parents
+========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Comment.find_parents

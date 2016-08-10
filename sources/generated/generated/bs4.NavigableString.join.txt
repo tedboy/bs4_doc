@@ -1,0 +1,6 @@
+bs4.NavigableString.join
+========================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.join

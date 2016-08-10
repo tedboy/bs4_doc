@@ -1,0 +1,6 @@
+bs4.UnicodeDammit.MS_CHARS
+==========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: UnicodeDammit.MS_CHARS

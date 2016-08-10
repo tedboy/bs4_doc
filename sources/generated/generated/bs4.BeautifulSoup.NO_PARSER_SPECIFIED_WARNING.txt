@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.NO_PARSER_SPECIFIED_WARNING
+=============================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.NO_PARSER_SPECIFIED_WARNING

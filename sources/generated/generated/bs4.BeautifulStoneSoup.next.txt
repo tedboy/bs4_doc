@@ -1,0 +1,6 @@
+bs4.BeautifulStoneSoup.next
+===========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulStoneSoup.next

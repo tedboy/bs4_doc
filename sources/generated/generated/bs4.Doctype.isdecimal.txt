@@ -1,0 +1,6 @@
+bs4.Doctype.isdecimal
+=====================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.isdecimal

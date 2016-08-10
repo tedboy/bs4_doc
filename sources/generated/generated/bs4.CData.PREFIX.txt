@@ -1,0 +1,6 @@
+bs4.CData.PREFIX
+================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: CData.PREFIX

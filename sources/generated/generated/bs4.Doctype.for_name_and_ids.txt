@@ -1,0 +1,6 @@
+bs4.Doctype.for_name_and_ids
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Doctype.for_name_and_ids

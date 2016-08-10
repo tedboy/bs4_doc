@@ -1,0 +1,6 @@
+bs4.Declaration.isnumeric
+=========================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.isnumeric

@@ -1,0 +1,6 @@
+bs4.Declaration.format_string
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: Declaration.format_string

@@ -1,0 +1,6 @@
+bs4.NavigableString.parents
+===========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: NavigableString.parents

@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.name
+==============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: ProcessingInstruction.name

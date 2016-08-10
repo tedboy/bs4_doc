@@ -1,0 +1,6 @@
+bs4.NavigableString.isdecimal
+=============================
+
+.. currentmodule:: bs4
+
+.. automethod:: NavigableString.isdecimal

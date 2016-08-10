@@ -1,0 +1,6 @@
+bs4.PageElement.replace_with
+============================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.replace_with

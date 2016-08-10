@@ -1,0 +1,6 @@
+bs4.Tag.parserClass
+===================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.parserClass

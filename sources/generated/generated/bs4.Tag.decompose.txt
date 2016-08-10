@@ -1,0 +1,6 @@
+bs4.Tag.decompose
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: Tag.decompose

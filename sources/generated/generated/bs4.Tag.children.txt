@@ -1,0 +1,6 @@
+bs4.Tag.children
+================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Tag.children

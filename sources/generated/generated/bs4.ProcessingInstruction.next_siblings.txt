@@ -1,0 +1,6 @@
+bs4.ProcessingInstruction.next_siblings
+=======================================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: ProcessingInstruction.next_siblings

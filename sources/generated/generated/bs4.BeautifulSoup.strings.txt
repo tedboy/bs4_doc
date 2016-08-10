@@ -1,0 +1,6 @@
+bs4.BeautifulSoup.strings
+=========================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: BeautifulSoup.strings

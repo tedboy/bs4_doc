@@ -1,0 +1,6 @@
+bs4.CData.istitle
+=================
+
+.. currentmodule:: bs4
+
+.. automethod:: CData.istitle

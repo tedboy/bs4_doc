@@ -1,0 +1,6 @@
+bs4.Declaration.HTML_FORMATTERS
+===============================
+
+.. currentmodule:: bs4
+
+.. autoattribute:: Declaration.HTML_FORMATTERS

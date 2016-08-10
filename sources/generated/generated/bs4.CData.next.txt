@@ -1,0 +1,6 @@
+bs4.CData.next
+==============
+
+.. currentmodule:: bs4
+
+.. autoattribute:: CData.next

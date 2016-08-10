@@ -1,0 +1,6 @@
+bs4.StopParsing
+===============
+
+.. currentmodule:: bs4
+
+.. autoexception:: StopParsing

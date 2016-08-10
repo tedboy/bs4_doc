@@ -1,0 +1,6 @@
+bs4.PageElement.unwrap
+======================
+
+.. currentmodule:: bs4
+
+.. automethod:: PageElement.unwrap
