@@ -3,10 +3,10 @@ bs4.ProcessingInstruction
 
 .. currentmodule:: bs4
 
+:func:`ProcessingInstruction.__init__`
+
 .. autoclass:: ProcessingInstruction
-
-
-
+    :members: __init__
 
 
 .. autosummary::

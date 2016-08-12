@@ -3,10 +3,10 @@ bs4.Doctype
 
 .. currentmodule:: bs4
 
+:func:`Doctype.__init__`
+
 .. autoclass:: Doctype
-
-
-
+    :members: __init__
 
 
 .. autosummary::

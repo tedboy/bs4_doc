@@ -3,10 +3,10 @@ bs4.ResultSet
 
 .. currentmodule:: bs4
 
+:func:`ResultSet.__init__`
+
 .. autoclass:: ResultSet
-
-
-
+    :members: __init__
 
 
 .. autosummary::

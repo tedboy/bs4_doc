@@ -3,10 +3,10 @@ bs4.SoupStrainer
 
 .. currentmodule:: bs4
 
+:func:`SoupStrainer.__init__`
+
 .. autoclass:: SoupStrainer
-
-
-
+    :members: __init__
 
 
 .. autosummary::

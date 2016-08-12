@@ -3,10 +3,10 @@ bs4.Declaration
 
 .. currentmodule:: bs4
 
+:func:`Declaration.__init__`
+
 .. autoclass:: Declaration
-
-
-
+    :members: __init__
 
 
 .. autosummary::

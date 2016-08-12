@@ -3,10 +3,10 @@ bs4.BeautifulSoup
 
 .. currentmodule:: bs4
 
+:func:`BeautifulSoup.__init__`
+
 .. autoclass:: BeautifulSoup
-
-
-
+    :members: __init__
 
 
 .. autosummary::

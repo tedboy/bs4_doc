@@ -3,10 +3,10 @@ bs4.PageElement
 
 .. currentmodule:: bs4
 
+:func:`PageElement.__init__`
+
 .. autoclass:: PageElement
-
-
-
+    :members: __init__
 
 
 .. autosummary::

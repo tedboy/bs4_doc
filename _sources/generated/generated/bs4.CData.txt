@@ -3,10 +3,10 @@ bs4.CData
 
 .. currentmodule:: bs4
 
+:func:`CData.__init__`
+
 .. autoclass:: CData
-
-
-
+    :members: __init__
 
 
 .. autosummary::

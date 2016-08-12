@@ -3,10 +3,10 @@ bs4.NavigableString
 
 .. currentmodule:: bs4
 
+:func:`NavigableString.__init__`
+
 .. autoclass:: NavigableString
-
-
-
+    :members: __init__
 
 
 .. autosummary::

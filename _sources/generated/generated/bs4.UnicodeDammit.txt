@@ -3,10 +3,10 @@ bs4.UnicodeDammit
 
 .. currentmodule:: bs4
 
+:func:`UnicodeDammit.__init__`
+
 .. autoclass:: UnicodeDammit
-
-
-
+    :members: __init__
 
 
 .. autosummary::

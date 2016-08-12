@@ -3,10 +3,10 @@ bs4.Comment
 
 .. currentmodule:: bs4
 
+:func:`Comment.__init__`
+
 .. autoclass:: Comment
-
-
-
+    :members: __init__
 
 
 .. autosummary::
