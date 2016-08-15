@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8 &mdash; Beautiful Soup Doc 1 documentation</title>
+  <title>14.1.13.2.8. bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8 &mdash; My Project v1</title>
   
 
   
@@ -30,7 +30,10 @@
   
 
   
-    <link rel="top" title="Beautiful Soup Doc 1 documentation" href="../../index.html"/> 
+    <link rel="top" title="My Project v1" href="../../index.html"/>
+        <link rel="up" title="14.1.13. bs4.UnicodeDammit" href="bs4.UnicodeDammit.html"/>
+        <link rel="next" title="14.1.13.2.9. bs4.UnicodeDammit.declared_html_encoding" href="bs4.UnicodeDammit.declared_html_encoding.html"/>
+        <link rel="prev" title="14.1.13.2.7. bs4.UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES" href="bs4.UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -49,7 +52,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> Beautiful Soup Doc
+            <a href="../../index.html" class="icon icon-home"> My Project
           
 
           
@@ -81,7 +84,7 @@
             
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../1_quick_start.html">1. Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../2_installation.html">2. Installing Beautiful Soup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../3_making_the_soup.html">3. Making the soup</a></li>
@@ -94,7 +97,31 @@
 <li class="toctree-l1"><a class="reference internal" href="../../10_encodings.html">10. Encodings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../12_troubleshooting.html">12. Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../bs4.html">13. bs4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../13_bs3.html">13. Beautiful Soup 3</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../bs4.html">14. bs4</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../bs4.html#classes">14.1. Classes</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulSoup.html">14.1.1. bs4.BeautifulSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.BeautifulStoneSoup.html">14.1.2. bs4.BeautifulStoneSoup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.CData.html">14.1.3. bs4.CData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Comment.html">14.1.4. bs4.Comment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Declaration.html">14.1.5. bs4.Declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Doctype.html">14.1.6. bs4.Doctype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.NavigableString.html">14.1.7. bs4.NavigableString</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.PageElement.html">14.1.8. bs4.PageElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ProcessingInstruction.html">14.1.9. bs4.ProcessingInstruction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.ResultSet.html">14.1.10. bs4.ResultSet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.SoupStrainer.html">14.1.11. bs4.SoupStrainer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bs4.Tag.html">14.1.12. bs4.Tag</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="bs4.UnicodeDammit.html">14.1.13. bs4.UnicodeDammit</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="bs4.UnicodeDammit.html#methods">14.1.13.1. Methods</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="bs4.UnicodeDammit.html#attributes">14.1.13.2. Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../bs4.html#exceptions">14.2. Exceptions</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -109,7 +136,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">Beautiful Soup Doc</a>
+          <a href="../../index.html">My Project</a>
         
       </nav>
 
@@ -136,7 +163,13 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8</li>
+          <li><a href="../../bs4.html">&lt;no title&gt;</a> &raquo;</li>
+        
+          <li><a href="../bs4.html">14. bs4</a> &raquo;</li>
+        
+          <li><a href="bs4.UnicodeDammit.html">14.1.13. bs4.UnicodeDammit</a> &raquo;</li>
+        
+      <li>14.1.13.2.8. bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,7 +187,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="bs4-unicodedammit-windows-1252-to-utf8">
-<h1>bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8<a class="headerlink" href="#bs4-unicodedammit-windows-1252-to-utf8" title="Permalink to this headline">¶</a></h1>
+<h1>14.1.13.2.8. bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8<a class="headerlink" href="#bs4-unicodedammit-windows-1252-to-utf8" title="Permalink to this headline">¶</a></h1>
 <dl class="attribute">
 <dt id="bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8">
 <code class="descclassname">UnicodeDammit.</code><code class="descname">WINDOWS_1252_TO_UTF8</code><em class="property"> = {128: '\xe2\x82\xac', 130: '\xe2\x80\x9a', 131: '\xc6\x92', 132: '\xe2\x80\x9e', 133: '\xe2\x80\xa6', 134: '\xe2\x80\xa0', 135: '\xe2\x80\xa1', 136: '\xcb\x86', 137: '\xe2\x80\xb0', 138: '\xc5\xa0', 139: '\xe2\x80\xb9', 140: '\xc5\x92', 142: '\xc5\xbd', 145: '\xe2\x80\x98', 146: '\xe2\x80\x99', 147: '\xe2\x80\x9c', 148: '\xe2\x80\x9d', 149: '\xe2\x80\xa2', 150: '\xe2\x80\x93', 151: '\xe2\x80\x94', 152: '\xcb\x9c', 153: '\xe2\x84\xa2', 154: '\xc5\xa1', 155: '\xe2\x80\xba', 156: '\xc5\x93', 158: '\xc5\xbe', 159: '\xc5\xb8', 160: '\xc2\xa0', 161: '\xc2\xa1', 162: '\xc2\xa2', 163: '\xc2\xa3', 164: '\xc2\xa4', 165: '\xc2\xa5', 166: '\xc2\xa6', 167: '\xc2\xa7', 168: '\xc2\xa8', 169: '\xc2\xa9', 170: '\xc2\xaa', 171: '\xc2\xab', 172: '\xc2\xac', 173: '\xc2\xad', 174: '\xc2\xae', 175: '\xc2\xaf', 176: '\xc2\xb0', 177: '\xc2\xb1', 178: '\xc2\xb2', 179: '\xc2\xb3', 180: '\xc2\xb4', 181: '\xc2\xb5', 182: '\xc2\xb6', 183: '\xc2\xb7', 184: '\xc2\xb8', 185: '\xc2\xb9', 186: '\xc2\xba', 187: '\xc2\xbb', 188: '\xc2\xbc', 189: '\xc2\xbd', 190: '\xc2\xbe', 191: '\xc2\xbf', 192: '\xc3\x80', 193: '\xc3\x81', 194: '\xc3\x82', 195: '\xc3\x83', 196: '\xc3\x84', 197: '\xc3\x85', 198: '\xc3\x86', 199: '\xc3\x87', 200: '\xc3\x88', 201: '\xc3\x89', 202: '\xc3\x8a', 203: '\xc3\x8b', 204: '\xc3\x8c', 205: '\xc3\x8d', 206: '\xc3\x8e', 207: '\xc3\x8f', 208: '\xc3\x90', 209: '\xc3\x91', 210: '\xc3\x92', 211: '\xc3\x93', 212: '\xc3\x94', 213: '\xc3\x95', 214: '\xc3\x96', 215: '\xc3\x97', 216: '\xc3\x98', 217: '\xc3\x99', 218: '\xc3\x9a', 219: '\xc3\x9b', 220: '\xc3\x9c', 221: '\xc3\x9d', 222: '\xc3\x9e', 223: '\xc3\x9f', 224: '\xc3\xa0', 225: '\xa1', 226: '\xc3\xa2', 227: '\xc3\xa3', 228: '\xc3\xa4', 229: '\xc3\xa5', 230: '\xc3\xa6', 231: '\xc3\xa7', 232: '\xc3\xa8', 233: '\xc3\xa9', 234: '\xc3\xaa', 235: '\xc3\xab', 236: '\xc3\xac', 237: '\xc3\xad', 238: '\xc3\xae', 239: '\xc3\xaf', 240: '\xc3\xb0', 241: '\xc3\xb1', 242: '\xc3\xb2', 243: '\xc3\xb3', 244: '\xc3\xb4', 245: '\xc3\xb5', 246: '\xc3\xb6', 247: '\xc3\xb7', 248: '\xc3\xb8', 249: '\xc3\xb9', 250: '\xc3\xba', 251: '\xc3\xbb', 252: '\xc3\xbc', 253: '\xc3\xbd', 254: '\xc3\xbe'}</em><a class="headerlink" href="#bs4.UnicodeDammit.WINDOWS_1252_TO_UTF8" title="Permalink to this definition">¶</a></dt>
@@ -166,6 +199,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.UnicodeDammit.declared_html_encoding.html" class="btn btn-neutral float-right" title="14.1.13.2.9. bs4.UnicodeDammit.declared_html_encoding" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="bs4.UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES.html" class="btn btn-neutral" title="14.1.13.2.7. bs4.UnicodeDammit.MULTIBYTE_MARKERS_AND_SIZES" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

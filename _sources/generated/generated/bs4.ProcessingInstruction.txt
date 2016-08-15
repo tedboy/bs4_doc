@@ -2,16 +2,15 @@ bs4.ProcessingInstruction
 =========================
 
 .. currentmodule:: bs4
-
-:func:`ProcessingInstruction.__init__`
-
 .. autoclass:: ProcessingInstruction
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~ProcessingInstruction.append
@@ -102,11 +101,10 @@ bs4.ProcessingInstruction
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~ProcessingInstruction.HTML_FORMATTERS

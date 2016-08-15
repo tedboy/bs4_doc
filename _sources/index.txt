@@ -54,4 +54,5 @@ that document.
     10_encodings.rst
     11_parsing_parts_of_doc.rst
     12_troubleshooting.rst
+    13_bs3.rst
     bs4

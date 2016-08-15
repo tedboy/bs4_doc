@@ -2,16 +2,15 @@ bs4.Comment
 ===========
 
 .. currentmodule:: bs4
-
-:func:`Comment.__init__`
-
 .. autoclass:: Comment
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~Comment.append
@@ -102,11 +101,10 @@ bs4.Comment
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~Comment.HTML_FORMATTERS

@@ -2,16 +2,15 @@ bs4.Doctype
 ===========
 
 .. currentmodule:: bs4
-
-:func:`Doctype.__init__`
-
 .. autoclass:: Doctype
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~Doctype.append
@@ -103,11 +102,10 @@ bs4.Doctype
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~Doctype.HTML_FORMATTERS

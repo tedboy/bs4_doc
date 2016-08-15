@@ -2,16 +2,15 @@ bs4.NavigableString
 ===================
 
 .. currentmodule:: bs4
-
-:func:`NavigableString.__init__`
-
 .. autoclass:: NavigableString
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~NavigableString.append
@@ -102,11 +101,10 @@ bs4.NavigableString
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~NavigableString.HTML_FORMATTERS

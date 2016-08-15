@@ -2,16 +2,15 @@ bs4.CData
 =========
 
 .. currentmodule:: bs4
-
-:func:`CData.__init__`
-
 .. autoclass:: CData
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~CData.append
@@ -102,11 +101,10 @@ bs4.CData
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~CData.HTML_FORMATTERS

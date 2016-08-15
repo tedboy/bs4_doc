@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Beautiful Soup 3 &mdash; Beautiful Soup Doc 1 documentation</title>
+  <title>13. Beautiful Soup 3 &mdash; My Project v1</title>
   
 
   
@@ -30,7 +30,9 @@
   
 
   
-    <link rel="top" title="Beautiful Soup Doc 1 documentation" href="index.html"/> 
+    <link rel="top" title="My Project v1" href="index.html"/>
+        <link rel="next" title="&lt;no title&gt;" href="bs4.html"/>
+        <link rel="prev" title="12. Troubleshooting" href="12_troubleshooting.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -49,7 +51,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home"> Beautiful Soup Doc
+            <a href="index.html" class="icon icon-home"> My Project
           
 
           
@@ -81,7 +83,7 @@
             
             
                 <p class="caption"><span class="caption-text">Table of Contents</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="1_quick_start.html">1. Quick Start</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2_installation.html">2. Installing Beautiful Soup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3_making_the_soup.html">3. Making the soup</a></li>
@@ -94,7 +96,19 @@
 <li class="toctree-l1"><a class="reference internal" href="10_encodings.html">10. Encodings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="11_parsing_parts_of_doc.html">11. Parsing only part of a document</a></li>
 <li class="toctree-l1"><a class="reference internal" href="12_troubleshooting.html">12. Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">13. bs4</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">13. Beautiful Soup 3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#porting-code-to-bs4">13.1. Porting code to BS4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#you-need-a-parser">13.1.1. You need a parser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-names">13.1.2. Method names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generators">13.1.3. Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xml">13.1.4. XML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entities">13.1.5. Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miscellaneous">13.1.6. Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="generated/bs4.html">14. bs4</a></li>
 </ul>
 
             
@@ -109,7 +123,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Beautiful Soup Doc</a>
+          <a href="index.html">My Project</a>
         
       </nav>
 
@@ -136,7 +150,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Beautiful Soup 3</li>
+      <li>13. Beautiful Soup 3</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,7 +168,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="beautiful-soup-3">
-<h1>Beautiful Soup 3<a class="headerlink" href="#beautiful-soup-3" title="Permalink to this headline">¶</a></h1>
+<h1>13. Beautiful Soup 3<a class="headerlink" href="#beautiful-soup-3" title="Permalink to this headline">¶</a></h1>
 <p>Beautiful Soup 3 is the previous release series, and is no longer
 being actively developed. It&#8217;s currently packaged with all major Linux
 distributions:</p>
@@ -172,7 +186,7 @@ your first language is Chinese, it might be easier for you to read
 then read this document to find out about the changes made in
 Beautiful Soup 4.</p>
 <div class="section" id="porting-code-to-bs4">
-<span id="porting-to-bs4"></span><h2>Porting code to BS4<a class="headerlink" href="#porting-code-to-bs4" title="Permalink to this headline">¶</a></h2>
+<span id="porting-to-bs4"></span><h2>13.1. Porting code to BS4<a class="headerlink" href="#porting-code-to-bs4" title="Permalink to this headline">¶</a></h2>
 <p>Most code written against Beautiful Soup 3 will work against Beautiful
 Soup 4 with one simple change. All you should have to do is change the
 package name from <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> to <code class="docutils literal"><span class="pre">bs4</span></code>. So this:</p>
@@ -196,7 +210,7 @@ methods have been deprecated and given new names for <a class="reference externa
 renames and changes, and a few of them break backwards compatibility.</p>
 <p>Here&#8217;s what you&#8217;ll need to know to convert your BS3 code and habits to BS4:</p>
 <div class="section" id="you-need-a-parser">
-<h3>You need a parser<a class="headerlink" href="#you-need-a-parser" title="Permalink to this headline">¶</a></h3>
+<h3>13.1.1. You need a parser<a class="headerlink" href="#you-need-a-parser" title="Permalink to this headline">¶</a></h3>
 <p>Beautiful Soup 3 used Python&#8217;s <code class="docutils literal"><span class="pre">SGMLParser</span></code>, a module that was
 deprecated and removed in Python 3.0. Beautiful Soup 4 uses
 <code class="docutils literal"><span class="pre">html.parser</span></code> by default, but you can plug in lxml or html5lib and
@@ -209,7 +223,7 @@ parse tree than <code class="docutils literal"><span class="pre">SGMLParser</spa
 update your BS3 scraping code to deal with the new tree.</p>
 </div>
 <div class="section" id="method-names">
-<h3>Method names<a class="headerlink" href="#method-names" title="Permalink to this headline">¶</a></h3>
+<h3>13.1.2. Method names<a class="headerlink" href="#method-names" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">renderContents</span></code> -&gt; <code class="docutils literal"><span class="pre">encode_contents</span></code></li>
 <li><code class="docutils literal"><span class="pre">replaceWith</span></code> -&gt; <code class="docutils literal"><span class="pre">replace_with</span></code></li>
@@ -253,7 +267,7 @@ on BS4 until you change them.</p>
 </ul>
 </div>
 <div class="section" id="generators">
-<h3>Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h3>
+<h3>13.1.3. Generators<a class="headerlink" href="#generators" title="Permalink to this headline">¶</a></h3>
 <p>I gave the generators PEP 8-compliant names, and transformed them into
 properties:</p>
 <ul class="simple">
@@ -284,7 +298,7 @@ NavigableString objects, and <code class="docutils literal"><span class="pre">.s
 strings that have had whitespace stripped.</p>
 </div>
 <div class="section" id="xml">
-<h3>XML<a class="headerlink" href="#xml" title="Permalink to this headline">¶</a></h3>
+<h3>13.1.4. XML<a class="headerlink" href="#xml" title="Permalink to this headline">¶</a></h3>
 <p>There is no longer a <code class="docutils literal"><span class="pre">BeautifulStoneSoup</span></code> class for parsing XML. To
 parse XML you pass in &#8220;xml&#8221; as the second argument to the
 <code class="docutils literal"><span class="pre">BeautifulSoup</span></code> constructor. For the same reason, the
@@ -299,7 +313,7 @@ you add a child to an empty-element tag, it stops being an
 empty-element tag.</p>
 </div>
 <div class="section" id="entities">
-<h3>Entities<a class="headerlink" href="#entities" title="Permalink to this headline">¶</a></h3>
+<h3>13.1.5. Entities<a class="headerlink" href="#entities" title="Permalink to this headline">¶</a></h3>
 <p>An incoming HTML or XML entity is always converted into the
 corresponding Unicode character. Beautiful Soup 3 had a number of
 overlapping ways of dealing with entities, which have been
@@ -314,7 +328,7 @@ output, rather than turning them into UTF-8 characters, you need to
 use an <a class="reference internal" href="8_output.html#output-formatters"><span class="std std-ref">output formatter</span></a>.</p>
 </div>
 <div class="section" id="miscellaneous">
-<h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
+<h3>13.1.6. Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference internal" href="5_navigating_the_tree.html#string"><span class="std std-ref">Tag.string</span></a> now operates recursively. If tag A
 contains a single tag B and nothing else, then A.string is the same as
 B.string. (Previously, it was None.)</p>
@@ -343,6 +357,15 @@ markup.</p>
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bs4.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="12_troubleshooting.html" class="btn btn-neutral" title="12. Troubleshooting" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

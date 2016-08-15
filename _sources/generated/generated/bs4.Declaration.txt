@@ -2,16 +2,15 @@ bs4.Declaration
 ===============
 
 .. currentmodule:: bs4
-
-:func:`Declaration.__init__`
-
 .. autoclass:: Declaration
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~Declaration.append
@@ -102,11 +101,10 @@ bs4.Declaration
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~Declaration.HTML_FORMATTERS

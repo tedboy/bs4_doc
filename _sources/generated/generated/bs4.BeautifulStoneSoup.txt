@@ -2,16 +2,15 @@ bs4.BeautifulStoneSoup
 ======================
 
 .. currentmodule:: bs4
-
-:func:`BeautifulStoneSoup.__init__`
-
 .. autoclass:: BeautifulStoneSoup
-    :members: __init__
+   :members: __init__
+   :undoc-members:
 
 
+Methods
+-------
 .. autosummary::
    :toctree:
-   :hidden:
 
 
    ~BeautifulStoneSoup.__init__
@@ -95,11 +94,10 @@ bs4.BeautifulStoneSoup
 
 
 
-
-
+Attributes
+----------
 .. autosummary::
   :toctree:
-  :hidden:
 
 
    ~BeautifulStoneSoup.ASCII_SPACES
